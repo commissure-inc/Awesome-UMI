@@ -1,0 +1,126 @@
+name: Add device
+description: Propose a new UMI-style device for the catalog
+title: "[add] "
+labels:
+  - submission
+  - device
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit a **new device** for review. See the [contributor docs](https://github.com/commissure-inc/UMI-Data-Collection/blob/main/docs/ADD_DEVICE.md) and [scope](https://github.com/commissure-inc/UMI-Data-Collection/blob/main/docs/SCOPE.md) in the maintainer repository.
+
+        Submissions are not published immediately. At least one primary source URL is required.
+
+  - type: input
+    id: name
+    attributes:
+      label: Device name
+      description: Common or official name
+      placeholder: e.g. TacUMI
+    validations:
+      required: true
+
+  - type: input
+    id: suggested_id
+    attributes:
+      label: Suggested ID (optional)
+      description: Lowercase slug `[a-z0-9_]+`. Maintainers may adjust.
+      placeholder: e.g. tac_umi
+
+  - type: input
+    id: project_url
+    attributes:
+      label: Primary URL
+      description: Project page, paper (arXiv/DOI), or GitHub repository
+      placeholder: https://
+    validations:
+      required: true
+
+  - type: input
+    id: extra_urls
+    attributes:
+      label: Additional URLs (optional)
+      description: Comma-separated GitHub, paper, demo video, etc.
+      placeholder: https://github.com/..., https://arxiv.org/abs/...
+
+  - type: dropdown
+    id: form_category
+    attributes:
+      label: Form category
+      description: See SCOPE.md for in-scope categories
+      options:
+        - handheld_gripper
+        - wearable_hand
+        - wearable_arm
+        - sensor_module
+        - robot_arm_kit
+        - unsure / other (explain below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commercialization_stage
+    attributes:
+      label: Commercialization stage
+      options:
+        - paper_only
+        - oss_diy
+        - commercial_product
+        - full_stack_business
+        - oss_ecosystem
+        - unsure
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country / region code (optional)
+      placeholder: us, jp, china, germany, ...
+
+  - type: input
+    id: year_first
+    attributes:
+      label: Year first public (optional)
+      placeholder: "2025"
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why add this device?
+      description: 1–3 sentences. What makes it relevant to UMI-style tactile / motion data collection?
+    validations:
+      required: true
+
+  - type: textarea
+    id: specs
+    attributes:
+      label: Known specs (optional)
+      description: Tactile, force/torque, pose tracking, bimanual, license, key innovation, etc.
+      placeholder: |
+        tactile_integration: vision_based
+        pose_tracking: visual_slam
+        key_innovation: ...
+
+  - type: checkboxes
+    id: scope_ack
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: I confirm this is a UMI-style handheld or hand/wearable data-collection interface (not a dedicated egocentric-only platform)
+          required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: GitHub handle, email, or affiliation if we need clarification
+      placeholder: "@you or you@example.org"
+
+  - type: textarea
+    id: candidate_json
+    attributes:
+      label: Candidate JSON (optional)
+      description: Paste output from the Web Contribute tab if you have it
+      render: json

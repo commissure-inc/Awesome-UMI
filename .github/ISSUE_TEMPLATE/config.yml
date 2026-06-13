@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing guide (maintainer repo)
+    url: https://github.com/commissure-inc/UMI-Data-Collection/blob/main/CONTRIBUTING.md
+    about: Overview of ways to contribute
+  - name: Add a device (documentation)
+    url: https://github.com/commissure-inc/UMI-Data-Collection/blob/main/docs/ADD_DEVICE.md
+    about: Step-by-step guide for new device submissions

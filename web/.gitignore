@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# TypeScript / Vite cache
+*.tsbuildinfo
+.vite/
+
+# npm cache (local install cache)
+.npm-cache/
+
+# Local env overrides
+*.local
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

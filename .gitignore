@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Build output
+web/dist/
+web/dist-ssr/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# TypeScript / Vite cache
+*.tsbuildinfo
+web/.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

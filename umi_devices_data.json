@@ -1,0 +1,2590 @@
+{
+  "metadata": {
+    "title": "Awesome UMI",
+    "version": "0.1.0",
+    "last_updated": "2026-06-07",
+    "data_sources": "Public-only (papers, project pages, GitHub repos, press releases, curated articles and videos)",
+    "scope": "UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection (excludes dedicated egocentric video platforms; see docs/SCOPE.md)"
+  },
+  "filter_axes": {
+    "form_factor": {
+      "label": "Form factor",
+      "values": [
+        "handheld_parallel_jaw",
+        "handheld_multi_finger",
+        "wearable_exoskeleton_hand",
+        "wearable_full_arm",
+        "mocap_glove",
+        "smart_glasses",
+        "stick_with_phone",
+        "ar_virtual",
+        "rgb_camera_only",
+        "humanoid_teleop",
+        "seated_teleop",
+        "finger_worn",
+        "sensor_pad_module",
+        "wearable_full_arm_chest",
+        "robotic_arm",
+        "tactile_sensor_fingertip",
+        "bimanual_imitation_kit",
+        "wearable_exoskeleton_hand_passive"
+      ]
+    },
+    "tactile_integration": {
+      "label": "Tactile sensor",
+      "values": [
+        "none",
+        "type_unspecified",
+        "vision_based",
+        "contact_microphone",
+        "piezoresistive",
+        "hall_array",
+        "emf"
+      ]
+    },
+    "force_torque_integration": {
+      "label": "Force / torque sensor",
+      "values": [
+        "none",
+        "6axis_ft",
+        "contact_microphone",
+        "single_axis",
+        "joint_torque"
+      ]
+    },
+    "pose_tracking": {
+      "label": "Pose tracking",
+      "values": [
+        "visual_slam",
+        "visual_inertial",
+        "vr_controller_tracker",
+        "external_mocap"
+      ]
+    },
+    "bimanual": [
+      "yes",
+      "no",
+      "extensible"
+    ],
+    "license": [
+      "mit",
+      "apache",
+      "mpl_2",
+      "partial_oss",
+      "commercial_closed",
+      "diy_open"
+    ],
+    "commercialization_stage": [
+      "paper_only",
+      "oss_diy",
+      "commercial_product",
+      "full_stack_business",
+      "oss_ecosystem"
+    ],
+    "country": [
+      "us",
+      "china",
+      "japan",
+      "germany",
+      "uae",
+      "russia",
+      "uk",
+      "south_korea",
+      "canada",
+      "china_global"
+    ],
+    "year_range": [
+      2023,
+      2026
+    ],
+    "form_category": {
+      "label": "Form",
+      "values": [
+        "handheld_gripper",
+        "wearable_hand",
+        "wearable_arm",
+        "head_mounted",
+        "teleop_station",
+        "software_only",
+        "sensor_module",
+        "robot_arm_kit",
+        "platform_infrastructure"
+      ]
+    }
+  },
+  "products": [
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://umi-gripper.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/real-stanford/universal_manipulation_interface",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2402.10329",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2402.10329"
+        }
+      ],
+      "full_name": "Universal Manipulation Interface",
+      "license": "mit",
+      "confidence": "medium",
+      "last_verified_at": "2026-05-13",
+      "id": "umi",
+      "country": "us",
+      "image_url": "https://umi-gripper.github.io/images/UMI_hardware.jpg",
+      "force_torque_integration": "none",
+      "year_first": 2024,
+      "organization": [
+        "Stanford University",
+        "Columbia University",
+        "Toyota Research Institute"
+      ],
+      "bimanual": "extensible",
+      "name": "UMI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Relative-trajectory action representation, inference-time latency matching",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "year_latest": 2024,
+        "venue": "RSS 2024",
+        "endeffector": "parallel_jaw_3d_printed",
+        "cost_usd": 371,
+        "cost_breakdown": "Gripper $73 (BOM, 3D printed) + GoPro Hero 9 with accessories $298",
+        "main_camera": "GoPro Hero 9 + Max Lens Mod 1.0",
+        "fov_deg": 155,
+        "stereo_method": "Physical side mirrors (implicit stereo)",
+        "audio_integration": "none",
+        "tracking_details": "GoPro built-in IMU + ORB-SLAM3-derived VIO",
+        "gripper_width_method": "trigger_activated",
+        "finger_joint_tracking": "none",
+        "policy_framework": [
+          "diffusion_policy"
+        ],
+        "supported_robots": [
+          "UR5e",
+          "Franka FR2"
+        ],
+        "datasets_public": true,
+        "data_modalities": [
+          "rgb_fisheye",
+          "imu",
+          "eef_pose"
+        ],
+        "business_model": "academic_oss",
+        "significance": "Progenitor; de facto comparison baseline for follow-on research",
+        "key_authors": [
+          "Cheng Chi",
+          "Zhenjia Xu",
+          "Chuer Pan",
+          "Eric Cousineau",
+          "Benjamin Burchfiel",
+          "Siyuan Feng",
+          "Russ Tedrake",
+          "Shuran Song"
+        ]
+      },
+      "notes": "legacy_category: academic_origin"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://fastumi.com/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/zxzm-zak/FastUMI_Data",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2409.19499",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2409.19499"
+        }
+      ],
+      "full_name": "Fast-UMI: A Scalable and Hardware-Independent Universal Manipulation Interface",
+      "license": "mit",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "fast_umi",
+      "country": "china",
+      "image_url": "https://raw.githubusercontent.com/zxzm-zak/FastUMI_Data/main/docs/fastumi.jpg",
+      "force_torque_integration": "none",
+      "year_first": 2024,
+      "organization": [
+        "Shanghai AI Lab",
+        "Shanghai Jiao Tong University",
+        "Fudan University",
+        "The University of Hong Kong",
+        "University of Bristol"
+      ],
+      "bimanual": "no",
+      "name": "Fast-UMI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "No SLAM calibration required; decoupled hardware design",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "year_latest": 2025,
+        "endeffector": "parallel_jaw",
+        "main_camera": "GoPro (fisheye 155°)",
+        "auxiliary_sensor": "Intel RealSense T265",
+        "tracking_details": "RealSense T265 on-chip VIO (replaces UMI Visual SLAM)",
+        "gripper_width_method": "aruco_markers",
+        "supported_robots": [
+          "ISO-standard mount compatible robots"
+        ],
+        "ros_support": "ros_noetic",
+        "datasets_public": true,
+        "datasets": [
+          {
+            "name": "FastUMI-100K",
+            "size": "100,000+ trajectories",
+            "tasks": 54,
+            "arxiv": "2510.08022"
+          }
+        ]
+      },
+      "notes": "legacy_category: umi_derivative"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://mv-umi.github.io",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2509.18757",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2509.18757"
+        }
+      ],
+      "full_name": "MV-UMI: A Scalable Multi-View Interface for Cross-Embodiment Learning",
+      "license": "diy_open",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "mv_umi",
+      "country": "uae",
+      "image_url": "https://mv-umi.github.io/static/images/handheld_shot.png",
+      "force_torque_integration": "none",
+      "year_first": 2025,
+      "organization": [
+        "NYU Abu Dhabi"
+      ],
+      "name": "MV-UMI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Third-person view reduces OOD gap; ~47% gain on scene-understanding tasks",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "year_latest": 2025,
+        "main_camera": "GoPro + third-person view camera",
+        "key_authors": [
+          "Omar Rayyan",
+          "John Abanes",
+          "Mahmoud Hafez",
+          "Anthony Tzes",
+          "Fares Abu-Dakka"
+        ]
+      },
+      "notes": "legacy_category: umi_derivative",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2511.09302",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2511.09302"
+        }
+      ],
+      "full_name": "UMIGen: A Unified Framework for Egocentric Point Cloud Generation and Cross-Embodiment Robotic Imitation Learning",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "cloud_umi",
+      "country": "china",
+      "image_url": "https://arxiv.org/html/2511.09302v1/x2.png",
+      "year_first": 2025,
+      "organization": [
+        "Tsinghua University (Shenzhen International Graduate School)"
+      ],
+      "name": "Cloud-UMI / UMIGen",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Records RGB and point cloud jointly; no Visual SLAM; visibility-aware optimization",
+      "commercialization_stage": "paper_only",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "main_camera": "Intel RealSense L515 (depth)",
+        "auxiliary_sensor": "Intel RealSense T265 (tracking)"
+      },
+      "notes": "legacy_category: umi_derivative",
+      "force_torque_integration": "none",
+      "bimanual": "no",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://umi-3d.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.14089",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2604.14089"
+        }
+      ],
+      "full_name": "UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "umi_3d",
+      "country": "china",
+      "image_url": "https://umi-3d.github.io/images/umi3d_real_gripper.jpg",
+      "year_first": 2026,
+      "organization": [
+        "The University of Hong Kong",
+        "University of Science and Technology of China"
+      ],
+      "name": "UMI-3D",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Adds 3D spatial perception while preserving UMI low cost and portability",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "compatibility": "Fully mechanically compatible with UMI; custom top cover only"
+      },
+      "notes": "legacy_category: umi_derivative",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "partial_oss"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://ut-hcrl.github.io/LEGATO",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2411.03682",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2411.03682"
+        }
+      ],
+      "full_name": "LEGATO: Cross-Embodiment Imitation Using a Grasping Tool",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "legato",
+      "country": "us",
+      "image_url": "https://ut-hcrl.github.io/LEGATO/src/figure/hardware.png",
+      "year_first": 2024,
+      "organization": [
+        "UT Austin Human Centered Robotics Lab",
+        "AI Institute"
+      ],
+      "name": "LEGATO",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Cross-embodiment morphology support; same tool mountable on robot side",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "main_camera": "egocentric stereo camera"
+      },
+      "notes": "legacy_category: cross_embodiment_handheld",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "license": "mit"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://chuanyune.github.io/ViTaMIn_page",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2504.06156",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2504.06156"
+        }
+      ],
+      "full_name": "ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "vitamin",
+      "country": "us",
+      "image_url": "https://arxiv.org/html/2504.06156v1/x2.png",
+      "year_first": 2025,
+      "organization": [
+        "UC Berkeley",
+        "Tsinghua University"
+      ],
+      "name": "ViTaMIn",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "key_innovation": "No teleop robot required; visuo-tactile integration",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "endeffector": "compliant_fin_ray",
+        "key_authors": [
+          "Fangchen Liu",
+          "Chuanyu Li",
+          "Yihua Qin",
+          "Jing Xu",
+          "Pieter Abbeel",
+          "Rui Chen"
+        ]
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://chuanyune.github.io/ViTaMIn-B_page/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/chuanyune/ViTaMIn-B_code",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2511.05858",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2511.05858"
+        }
+      ],
+      "full_name": "ViTaMIn-B: A Reliable and Efficient Visuo-Tactile Bimanual Manipulation Interface",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "vitamin_b",
+      "country": "china",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQogsufYJyz5jd6h95AxjRUG75OWYwJI5Tx3Q&s",
+      "year_first": 2025,
+      "organization": [
+        "Tsinghua University",
+        "UC Berkeley",
+        "JD Explore Academy",
+        "Hong Kong Polytechnic University"
+      ],
+      "bimanual": "yes",
+      "name": "ViTaMIn-B",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "key_innovation": "Eliminates SLAM drift; bimanual 6DoF unified via Quest 3",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "main_camera": "GoPro Hero 10",
+        "tactile_sensor_name": "DuoTact (compliant frame)",
+        "tracking_details": "Meta Quest 3 controllers for 6-DoF bimanual pose",
+        "trigger_method": "foot_pedal"
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://binghao-huang.github.io/touch_in_the_wild/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/YolandaXinyueZhu/touch_in_the_wild",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/YolandaXinyueZhu/touch_in_the_wild-data-collection",
+          "retrieved_at": "2026-06-13",
+          "title": "ROS2 & data collection"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2507.15062",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2507.15062"
+        }
+      ],
+      "full_name": "Touch in the Wild: Learning Fine-Grained Manipulation with a Portable Visuo-Tactile Gripper",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "touch_in_the_wild",
+      "country": "us",
+      "image_url": "https://binghao-huang.github.io/touch_in_the_wild/static/img/visuo-tactile-gripper.png",
+      "year_first": 2025,
+      "organization": [
+        "Columbia University"
+      ],
+      "name": "Touch in the Wild",
+      "tactile_integration": "piezoresistive",
+      "status": "active",
+      "key_innovation": "In/outdoor in-the-wild visuo-tactile sync; joint representation learning via mask reconstruction encoder",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "venue": "NeurIPS 2025",
+        "main_camera": "fisheye RGB",
+        "tactile_sensor_name": "FlexiTac (flexible piezoresistive)",
+        "supported_robots": [
+          "XArm 850"
+        ],
+        "key_authors": [
+          "Xinyue Zhu",
+          "Binghao Huang",
+          "Yunzhu Li"
+        ]
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "license": "mit"
+    },
+    {
+      "form_category": "sensor_module",
+      "form_factor": "sensor_pad_module",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://flexitac.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.28156",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2604.28156"
+        }
+      ],
+      "full_name": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
+      "license": "diy_open",
+      "confidence": "medium",
+      "last_verified_at": "2026-05-13",
+      "id": "flexitac",
+      "country": "us",
+      "year_first": 2026,
+      "organization": [
+        "UIUC"
+      ],
+      "name": "FlexiTac",
+      "tactile_integration": "piezoresistive",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "sensor_structure": "FPC-Velostat-FPC 3-layer laminate",
+        "sampling_rate_hz": 100,
+        "interface": "serial",
+        "deployment_examples": [
+          "VT-Refine (CoRL 2025)",
+          "Touch in the Wild (NeurIPS 2025)"
+        ]
+      },
+      "notes": "legacy_category: tactile_sensor_only"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://tac-umi.github.io/TacUMI/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "documentation",
+          "url": "https://tac-umi.github.io/TacUMI/3d-print-models.html",
+          "retrieved_at": "2026-06-13",
+          "title": "3D print models"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/martelzhang/TouchGuide",
+          "retrieved_at": "2026-06-13",
+          "title": "TacUMI hardware & data collection"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2601.14550",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2601.14550"
+        }
+      ],
+      "full_name": "TacUMI: A Multi-Modal Universal Manipulation Interface for Contact-Rich Tasks",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "tacumi",
+      "country": "germany",
+      "image_url": "https://tac-umi.github.io/TacUMI/imgs/All_parts.jpg",
+      "force_torque_integration": "6axis_ft",
+      "year_first": 2026,
+      "organization": [
+        "Technical University of Munich",
+        "Agile Robots SE",
+        "Nanjing University",
+        "Shanghai University"
+      ],
+      "name": "TacUMI",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "tactile_sensor_name": "ViTac",
+        "tracking_details": "HTC Vive Tracker (VR controller / tracker, 6-DoF pose)",
+        "compatibility": "UMI compatible; preserves robot arm–EE layout",
+        "algorithm": "Long-horizon task segmentation via BiLSTM",
+        "validation": "90%+ segmentation accuracy on cable routing task"
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "bimanual": "extensible",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://silicx.github.io/exUMI",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2509.14688",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2509.14688"
+        }
+      ],
+      "full_name": "exUMI: Extensible Robot Teaching System with Action-aware Task-agnostic Tactile Representation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "exumi",
+      "country": "china",
+      "image_url": "https://silicx.github.io/exUMI/static/images/hardware.png",
+      "year_first": 2025,
+      "organization": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "exUMI",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "venue": "CoRL 2025",
+        "tactile_sensor_name": "9DTact (revised version)",
+        "tracking_details": "Meta Quest 3 + AR MoCap + magnetic rotary encoder (AS5600)",
+        "data_usability": "~100%",
+        "time_sync_error_ms": 50,
+        "tactile_frames_collected": "1M+",
+        "algorithm": "Tactile Prediction Pretraining (TPP)"
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "bimanual": "no",
+      "license": "mit"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://opendrivelab.com/TAMEn",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.07335",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2604.07335"
+        }
+      ],
+      "full_name": "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "tamen",
+      "country": "china",
+      "image_url": "https://ik.imagekit.io/7rgtwup0y/3dmodel.jpg",
+      "year_first": 2026,
+      "organization": [
+        "Fudan University",
+        "Shanghai Innovation Institute",
+        "OpenDriveLab",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "TAMEn",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "modes": [
+          "high_precision_stationary",
+          "portable_with_vr_handle"
+        ],
+        "additional_features": [
+          "AR app (tAmeR)",
+          "online feasibility check"
+        ]
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "pose_tracking": "external_mocap",
+      "bimanual": "yes",
+      "license": "apache"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "finger_worn",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://opendrivelab.com/FreeTacMan",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2506.01941",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2506.01941"
+        }
+      ],
+      "full_name": "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "freetacman",
+      "country": "china",
+      "image_url": "https://arxiv.org/html/2506.01941v1/x1.png",
+      "year_first": 2025,
+      "organization": [
+        "OpenDriveLab",
+        "The University of Hong Kong",
+        "Shanghai Innovation Institute",
+        "Shanghai Jiao Tong University",
+        "Fudan University"
+      ],
+      "name": "FreeTacMan",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "external_mocap",
+      "specs": {
+        "tactile_setup": "dual visuo-tactile sensors (gel + camera + programmable lighting)",
+        "dataset_size": {
+          "tasks": 50,
+          "trajectories": "10K+",
+          "image_pairs": "3M+"
+        },
+        "supported_robots": [
+          "PIPER",
+          "Franka"
+        ],
+        "user_study_result": "Outperforms ALOHA and UMI on completion rate, efficiency, and CPUT scores"
+      },
+      "notes": "legacy_category: visuo_tactile",
+      "force_torque_integration": "none",
+      "bimanual": "no",
+      "license": "apache"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://forcemimic.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/ForceMimic",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2410.07554",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2410.07554"
+        }
+      ],
+      "full_name": "ForceMimic: Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "forcemimic",
+      "country": "china",
+      "image_url": "https://forcemimic.github.io/static/images/hardware.png",
+      "force_torque_integration": "6axis_ft",
+      "year_first": 2024,
+      "organization": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "ForceMimic / ForceCapture",
+      "tactile_integration": "none",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "mechanical_design": "Ratchet lock + gravity compensation",
+        "algorithm": "HybridIL (wrench-position hybrid control)",
+        "validation": "Zucchini peeling 5 min vs teleop 13+ min"
+      },
+      "notes": "legacy_category: force_centric",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "license": "mit"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "mocap_glove",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dex-cap.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/j96w/DexCap",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2403.07788",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2403.07788"
+        }
+      ],
+      "full_name": "DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "dexcap_stanford",
+      "country": "us",
+      "image_url": "https://github.com/j96w/DexCap/raw/main/assets/overview.gif",
+      "year_first": 2024,
+      "organization": [
+        "Stanford University"
+      ],
+      "name": "DexCap (Stanford)",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "external_mocap",
+      "specs": {
+        "venue": "RSS 2024",
+        "main_camera": "RGB-D LiDAR (chest) + 3× SLAM tracking cameras",
+        "glove": "Rokoko motion capture gloves (EMF)",
+        "tracking_details": "Wrist via 3× SLAM tracking cameras on hand mounts; finger motion via Rokoko EMF mocap gloves (not onboard VIO)",
+        "sampling_rate_hz": 60,
+        "operating_time_min": 40,
+        "algorithm": "DexIL (IK + point cloud Diffusion Policy)",
+        "supported_robots": [
+          "LEAP Hand"
+        ],
+        "throughput_vs_teleop": "~3x faster",
+        "key_authors": [
+          "Chen Wang",
+          "Haochen Shi",
+          "Weizhuo Wang",
+          "Ruohan Zhang",
+          "Li Fei-Fei",
+          "C. Karen Liu"
+        ]
+      },
+      "notes": "legacy_category: mocap_glove",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "bimanual": "yes",
+      "license": "mit"
+    },
+    {
+      "form_category": "wearable_arm",
+      "form_factor": "wearable_full_arm",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://www.dex-robot.com/en/dexCap",
+          "retrieved_at": "2026-06-05"
+        }
+      ],
+      "full_name": "DexCap by DexRobot (commercial product)",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "dexcap_dexrobot",
+      "country": "china",
+      "image_url": "https://activestatic.brandsh.cn/dexrobot/image/dexCap/coreFunctionImage.png",
+      "year_first": 2025,
+      "organization": [
+        "DexRobot"
+      ],
+      "bimanual": "yes",
+      "name": "DexCap (DexRobot)",
+      "status": "active",
+      "commercialization_stage": "commercial_product",
+      "specs": {
+        "encoders": "65 magnetic absolute encoders",
+        "latency": "millisecond",
+        "accessories": "Hub, 10000mAh×2 power bank, 3000mAh×4 battery, wireless receivers×3, gloves (S/M/L×2), arm straps",
+        "name_collision_warning": "Entirely separate from Stanford DexCap"
+      },
+      "notes": "legacy_category: commercial_wearable",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dex-umi.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/real-stanford/DexUMI",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2505.21864",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2505.21864"
+        }
+      ],
+      "full_name": "DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation",
+      "license": "mit",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "dexumi",
+      "country": "us",
+      "image_url": "https://dex-umi.github.io/static/images/teaser.png",
+      "year_first": 2025,
+      "organization": [
+        "Stanford University",
+        "Columbia University",
+        "J.P. Morgan AI Research",
+        "Carnegie Mellon University",
+        "NVIDIA"
+      ],
+      "name": "DexUMI",
+      "tactile_integration": "piezoresistive",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "venue": "CoRL 2025 (Best Paper Finalist)",
+        "tactile_sensor_details": "Exoskeleton-mounted tactile sensors (electromagnetic on XHand, FSR on Inspire Hand) for policy input; operator haptic feedback is separate",
+        "wrist_tracking": "Record3D (iPhone)",
+        "software_adaptation": "SAM2 + ProPainter for hand inpainting",
+        "supported_robots": [
+          "XHand",
+          "Inspire Hand"
+        ],
+        "task_success_rate": "86%",
+        "key_authors": [
+          "Mengda Xu",
+          "Han Zhang",
+          "Yifan Hou",
+          "Zhenjia Xu",
+          "Linxi Fan",
+          "Manuela Veloso",
+          "Shuran Song"
+        ]
+      },
+      "notes": "legacy_category: dexterous_exoskeleton",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "handheld_multi_finger",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://research.beingbeyond.com/realdexumi",
+          "retrieved_at": "2026-06-05",
+          "title": "RealDexUMI project page"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2606.06033",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2606.06033"
+        },
+        {
+          "type": "product_page",
+          "url": "https://beingbeyond.com/en/solutions/U1",
+          "retrieved_at": "2026-06-05",
+          "title": "BeingBeyond U1 product page"
+        },
+        {
+          "type": "press",
+          "url": "https://beingbeyond.com/en/newsInfo/1196.html",
+          "retrieved_at": "2026-06-05",
+          "title": "BeingBeyond U1 launch announcement"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=CkSxiHJFJw8",
+          "retrieved_at": "2026-06-05",
+          "title": "Introducing BeingBeyond U1"
+        }
+      ],
+      "full_name": "RealDexUMI: A Wearable Universal Manipulation Interface for Dexterous Robot Learning",
+      "license": "commercial_closed",
+      "confidence": "high",
+      "last_verified_at": "2026-06-05",
+      "id": "realdexumi",
+      "country": "china",
+      "image_url": "https://qiniu.mfdemo.cn/zhizaiwujie/2026/04/15/YXZgkoQ7FvRMl.webp",
+      "force_torque_integration": "none",
+      "year_first": 2026,
+      "organization": [
+        "BeingBeyond"
+      ],
+      "bimanual": "yes",
+      "name": "RealDexUMI",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "Shared dexterous end-effector module with in-hand vision and fingertip tactile sensing; zero-gap collection-to-deployment data via matched observations, contacts, and hand actions",
+      "commercialization_stage": "commercial_product",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "product_name": "BeingBeyond U1",
+        "weight_g": 680,
+        "dof": 11,
+        "dof_active": 6,
+        "dof_passive": 5,
+        "payload_kg": 5,
+        "tactile_sensor_details": "Fingertip-integrated tactile sensors on all five fingers",
+        "tracking_details": "Dedicated 6-DoF tracker rigidly mounted on hand module (sub-mm dynamic tracking; max error <1 mm, avg <0.1 mm); palm-side isomorphic teleoperation glove provides joint commands separately",
+        "interface": "palm-side isomorphic teleoperation glove; retargeting-free real-time joint mapping",
+        "supported_robots": [
+          "Cross-embodiment transfer (3 embodiments in paper eval)"
+        ],
+        "data_modalities": [
+          "rgb",
+          "tactile",
+          "eef_pose",
+          "finger_joints"
+        ],
+        "task_success_rate": "88.75%",
+        "business_model": "full_stack_business",
+        "key_authors": [
+          "Chaoyi Xu",
+          "Yixuan Jiang",
+          "Jiahui Huan",
+          "Yuhui Fu",
+          "Haoyu Zhou",
+          "Weitian Yuan",
+          "Jiayi Yu",
+          "Wanpeng Zhang",
+          "Haoqi Yuan",
+          "Zongqing Lu"
+        ]
+      },
+      "notes": "legacy_category: commercial_product"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand_passive",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dex-op.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2509.04441",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2509.04441"
+        }
+      ],
+      "full_name": "DEXOP: A Device for Robotic Transfer of Dexterous Human Manipulation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "dexop",
+      "country": "us",
+      "image_url": "https://dex-op.github.io/static/images/dexop.png",
+      "year_first": 2025,
+      "organization": [
+        "MIT Improbable AI Lab",
+        "UC Berkeley"
+      ],
+      "name": "DEXOP",
+      "status": "active",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "paradigm_name": "Perioperation",
+        "sensors": [
+          "precision position encoders",
+          "tactile sensors"
+        ],
+        "compatible_hands": [
+          "EyeSight Hand"
+        ],
+        "variants": [
+          "DEXOP-7",
+          "DEXOP-9",
+          "DEXOP-12"
+        ],
+        "validation_robot": "Unitree H1 humanoid (with EyeSight Hands)",
+        "validation_result": "160 DEXOP + 40 TeleOP demos → 0.513±0.032 cumulative success on 6-stage bulb installation",
+        "key_authors": [
+          "Hao-Shu Fang",
+          "Branden Romero",
+          "Yichen Xie",
+          "Arthur Hu",
+          "Bo-Ruei Huang",
+          "Juan Alvarez",
+          "Matthew Kim",
+          "Gabriel Margolis",
+          "Kavya Anbarasu",
+          "Masayoshi Tomizuka",
+          "Edward Adelson",
+          "Pulkit Agrawal"
+        ]
+      },
+      "notes": "legacy_category: dexterous_exoskeleton",
+      "tactile_integration": "vision_based",
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "bimanual": "yes",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "wearable_arm",
+      "form_factor": "wearable_full_arm",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://airexo.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/AirExo/collector",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2309.14975",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2309.14975"
+        }
+      ],
+      "full_name": "AirExo: Low-Cost Exoskeletons for Learning Whole-Arm Manipulation in the Wild",
+      "license": "diy_open",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "airexo",
+      "country": "china",
+      "image_url": "https://airexo.github.io/static/images/airexo.png",
+      "year_first": 2024,
+      "organization": [
+        "Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory"
+      ],
+      "bimanual": "yes",
+      "name": "AirExo",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "year_arxiv": 2023,
+        "venue": "ICRA 2024",
+        "cost_usd": 300,
+        "cost_unit": "per arm",
+        "main_camera": "Intel RealSense D415/D435",
+        "encoders": "joint-level encoders",
+        "supported_robots": [
+          "Flexiv Rizon (primary)",
+          "UR5",
+          "Franka",
+          "Kuka (with code modifications)"
+        ],
+        "modes": [
+          "teleoperation",
+          "in_the_wild"
+        ],
+        "performance": "3 min teleop + diverse in-the-wild = 20+ min teleop alone equivalent"
+      },
+      "notes": "legacy_category: exoskeleton",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": null
+    },
+    {
+      "form_category": "wearable_arm",
+      "form_factor": "wearable_full_arm",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://airexo.tech/airexo2",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/AirExo/AirExo-2",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2503.03081",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2503.03081"
+        }
+      ],
+      "full_name": "AirExo-2: Scaling up Generalizable Robotic Imitation Learning with Low-Cost Exoskeletons",
+      "license": "diy_open",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "airexo_2",
+      "country": "china",
+      "image_url": "https://airexo.tech/airexo2/static/images/airexo-2.jpg",
+      "year_first": 2025,
+      "organization": [
+        "Shanghai Jiao Tong University",
+        "Noematrix",
+        "Shanghai Innovation Institute"
+      ],
+      "name": "AirExo-2",
+      "status": "active",
+      "key_innovation": "Visual adaptor, pseudo-robot demo conversion, RISE-2 policy integration",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "venue": "CoRL 2025",
+        "cost_usd": 600,
+        "cost_comparison": "$0.6K vs ~$60K teleop platform"
+      },
+      "notes": "legacy_category: exoskeleton",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "bimanual": "yes"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "mocap_glove",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dexwild.github.io/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/dexwild/dexwild",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2505.07813",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2505.07813"
+        }
+      ],
+      "full_name": "DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies",
+      "license": "diy_open",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "dexwild",
+      "country": "us",
+      "image_url": "https://dexwild.github.io/resources/images/human_hardware_setup.png",
+      "year_first": 2025,
+      "organization": [
+        "CMU (Pathak Lab)"
+      ],
+      "name": "DexWild",
+      "tactile_integration": "none",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "external_mocap",
+      "specs": {
+        "venue": "RSS 2025",
+        "glove": "Manus Quantum Metagloves (EMF finger tracking)",
+        "wrist_tracking": "External monocular camera + ArUco markers on glove",
+        "dataset_size": {
+          "demos": 9290,
+          "episodes": 9290,
+          "tasks": 5,
+          "environments": 93,
+          "hours": 33,
+          "transitions": "3.5M+"
+        },
+        "tasks": [
+          "Florist",
+          "Clothes Folding",
+          "Spray",
+          "Toy Cleanup"
+        ],
+        "performance": "68.5% success in unseen environments (~4x baseline), 5.8x cross-embodiment",
+        "dataset_url": "https://huggingface.co/datasets/boardd/dexwild-dataset",
+        "training_framework": "DiT-Policy based cotraining",
+        "key_authors": [
+          "Tony Tao",
+          "Mohan Kumar Srirama",
+          "Jason Jingzhou Liu",
+          "Kenneth Shaw",
+          "Deepak Pathak"
+        ]
+      },
+      "notes": "legacy_category: mocap_glove",
+      "force_torque_integration": "none",
+      "bimanual": "no"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "stick_with_phone",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dobb-e.com/",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/notmahi/dobb-e",
+          "retrieved_at": "2026-06-05"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2311.16098",
+          "retrieved_at": "2026-06-05",
+          "title": "arXiv:2311.16098"
+        }
+      ],
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "dobb_e",
+      "country": "us",
+      "image_url": "https://raw.githubusercontent.com/notmahi/dobb-e/main/hardware/img/stick.png",
+      "year_first": 2023,
+      "organization": [
+        "NYU (Lerrel Pinto Lab)",
+        "Meta"
+      ],
+      "name": "Dobb-E / RUM",
+      "status": "active",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "main_camera": "iPhone wrist-mounted",
+        "data_modalities": [
+          "rgb_d",
+          "motion"
+        ],
+        "limitations": "Mostly quasi-static tasks; environment-specific fine-tuning required"
+      },
+      "notes": "legacy_category: stick_phone",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "license": "mit"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.genrobot.ai/products/das",
+          "retrieved_at": "2026-06-05",
+          "title": "DAS Gripper product page"
+        },
+        {
+          "type": "documentation",
+          "url": "https://www.genrobot.ai/docs/das-gripper/manual-en",
+          "retrieved_at": "2026-06-05",
+          "title": "DAS Gripper Manual v0.4"
+        },
+        {
+          "type": "dataset",
+          "url": "https://huggingface.co/genrobot2025",
+          "retrieved_at": "2026-06-05"
+        }
+      ],
+      "full_name": "GenRobot DAS Gripper",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "genrobot_das_gripper",
+      "country": "china",
+      "image_url": "https://cdn.shopify.com/s/files/1/0777/8874/1847/files/das_gripper_layout.jpg?v=1763967710",
+      "force_torque_integration": "none",
+      "organization": [
+        "GenRobot AI"
+      ],
+      "bimanual": "yes",
+      "name": "DAS Gripper",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "UMI-inspired handheld multimodal collector (vision, tactile, audio, IMU, magnetic encoder); MCAP output; cloud compression to ~2% of original size",
+      "commercialization_stage": "full_stack_business",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "business_model": "full_stack_business",
+        "weight_g": 490,
+        "operating_time_min": 180,
+        "tracking_details": "Magnetic encoder (gripper opening) + 6-axis IMU @ 200 Hz; BEV-odometry trajectory reconstruction",
+        "main_camera": "Triple fisheye RGB (1600×1300, 30 Hz, global shutter, 180° FOV)",
+        "data_modalities": [
+          "rgb_fisheye",
+          "imu",
+          "eef_pose",
+          "tactile",
+          "audio",
+          "gripper_width"
+        ],
+        "data_format": ".mcap",
+        "data_toolkit": "das-datakit (GitHub)",
+        "data_hierarchy": [
+          "Domain",
+          "Scenario",
+          "Task",
+          "Skill"
+        ],
+        "data_topics": [
+          "camera0/compressed",
+          "imu",
+          "magnetic_encoder",
+          "vio/eef_pose"
+        ],
+        "datasets": [
+          {
+            "name": "10Kh-RealOmin-OpenData",
+            "stage1": "950h / 39761 clips / 3.45TB",
+            "stage2": "653h / 36267 clips / 1.92TB"
+          }
+        ],
+        "total_data_hours": "10,000+",
+        "scenarios": "50+"
+      },
+      "notes": "legacy_category: commercial_data_infrastructure",
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.genrobot.ai/products/dex",
+          "retrieved_at": "2026-06-05",
+          "title": "DAS Dex product page"
+        }
+      ],
+      "full_name": "GenRobot DAS Dex",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "genrobot_das_dex",
+      "country": "china",
+      "image_url": "https://www.genrobot.ai/images/products/dex/dex1.png",
+      "force_torque_integration": "none",
+      "organization": [
+        "GenRobot AI"
+      ],
+      "name": "DAS Dex",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "23-DoF wearable dexterous hand collector; sub-millimeter fingertip trajectories; 3D tactile at 0.05 N / 1 mm; 200 Hz output",
+      "commercialization_stage": "full_stack_business",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "business_model": "full_stack_business",
+        "weight_g": 210,
+        "operating_time_min": 180,
+        "dof": 23,
+        "tracking_details": "3 mm magnetic encoder; wrist-mounted camera (150° FOV); ego-hand spatial sync <1 ms",
+        "finger_joint_tracking": "magnetic_encoder",
+        "data_modalities": [
+          "rgb",
+          "imu",
+          "eef_pose",
+          "tactile",
+          "finger_joints"
+        ],
+        "data_format": ".mcap"
+      },
+      "notes": "legacy_category: commercial_data_infrastructure",
+      "bimanual": "extensible",
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.genrobot.ai/products/finger",
+          "retrieved_at": "2026-06-05",
+          "title": "DAS Fingers product page"
+        }
+      ],
+      "full_name": "GenRobot DAS Fingers",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "genrobot_das_fingers",
+      "country": "china",
+      "image_url": "https://tos-static.tos-cn-shanghai.volces.com/static/video/finger_hero11.png",
+      "force_torque_integration": "none",
+      "organization": [
+        "GenRobot AI"
+      ],
+      "bimanual": "yes",
+      "name": "DAS Fingers",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "Bionic two-finger handheld collector; 220 mm max opening; millimeter-level trajectory; automatic voice annotation",
+      "commercialization_stage": "full_stack_business",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "business_model": "full_stack_business",
+        "weight_g": 300,
+        "operating_time_min": 210,
+        "tracking_details": "Self-developed BEV-odometry + 6-axis IMU @ 200 Hz; ego-hand multi-device sync",
+        "main_camera": "Fisheye RGB (1600×1300, 30 Hz, global shutter, >150° FOV)",
+        "gripper_width_method": "magnetic_encoder",
+        "data_modalities": [
+          "rgb_fisheye",
+          "imu",
+          "eef_pose",
+          "tactile",
+          "audio",
+          "gripper_width"
+        ],
+        "data_format": ".mcap"
+      },
+      "notes": "legacy_category: commercial_data_infrastructure",
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "sensor_module",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.genrobot.ai/products/controller",
+          "retrieved_at": "2026-06-05",
+          "title": "DAS Controller product page"
+        }
+      ],
+      "full_name": "GenRobot DAS Controller",
+      "confidence": "medium",
+      "last_verified_at": "2026-05-24",
+      "id": "genrobot_das_controller",
+      "country": "china",
+      "force_torque_integration": "none",
+      "organization": [
+        "GenRobot AI"
+      ],
+      "name": "DAS Controller",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "Arm-mounted multimodal end effector homologous with DAS collection devices; 448-point tactile @ 1 mm; one-step gripper swap",
+      "commercialization_stage": "full_stack_business",
+      "pose_tracking": null,
+      "specs": {
+        "business_model": "full_stack_business",
+        "weight_g": 610,
+        "main_camera": "1× fisheye (200° FOV) + 2× wide-angle (170° FOV), 30 FPS",
+        "gripper_width_method": "magnetic_encoder",
+        "endeffector": "interchangeable hard, soft, and tactile grippers (0–103 mm)",
+        "supported_robots": [
+          "Universal flange (various industrial arms)"
+        ],
+        "data_modalities": [
+          "rgb_fisheye",
+          "tactile",
+          "gripper_width"
+        ],
+        "data_format": ".mcap"
+      },
+      "notes": "legacy_category: commercial_data_infrastructure"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://global.agilex.ai/products/pika",
+          "retrieved_at": "2026-06-05",
+          "title": "PIKA — Pika Sense / Gripper / Station (AgileX)"
+        },
+        {
+          "type": "product_page",
+          "url": "https://www.agilex.ai/page/690ac4905e78cfa260412ca1",
+          "retrieved_at": "2026-06-05",
+          "title": "Pika Pro suite (Pika Sense specs)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://static.generation-robots.com/media/agilex-pika-user-manual.pdf",
+          "retrieved_at": "2026-06-05",
+          "title": "Pika Product User Manual v1.1.1"
+        },
+        {
+          "type": "press",
+          "url": "https://www.hackster.io/agilexrobotics/pika-fast-data-collector-solution-for-embodied-intelligence-8a3753",
+          "retrieved_at": "2026-06-05",
+          "title": "Pika: Fast Data Collector Solution for Embodied Intelligence (Hackster.io, 2025-03-07)"
+        }
+      ],
+      "full_name": "AgileX Robotics Pika Sense (handheld data collector; Pika / Pika Pro suite)",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-05",
+      "id": "agilex_pika_sense",
+      "country": "china",
+      "image_url": "https://global.agilex.ai/cdn/shop/files/Pikasence_30_3.png?v=1744099389&width=1200",
+      "force_torque_integration": "none",
+      "year_first": 2025,
+      "organization": [
+        "AgileX Robotics"
+      ],
+      "bimanual": "extensible",
+      "name": "Pika Sense",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Commercial UMI-style handheld collector: human demonstrations without a robot on-site; pairs with Pika Station for mm-level pose; homologous Pika Gripper for deployment on PiPER and other arms",
+      "commercialization_stage": "commercial_product",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "year_latest": 2026,
+        "dimensions_mm": "215 × 220 × 257",
+        "system_components": [
+          "Pika Sense",
+          "Pika Station",
+          "Pika Gripper",
+          "Pika Ego",
+          "Pika Package"
+        ],
+        "weight_g": 448,
+        "grip_force_kg": 2,
+        "operating_time_min": 540,
+        "tracking_details": "HTC Vive Tracker (VR controller / tracker, 6-DoF pose); Pika Station base for spatial anchoring; ±1.5 mm accuracy; 120 Hz pose output",
+        "main_camera": "Depth (87°×58° FOV, 90 FPS) + wide-angle (200° diagonal FOV, 90 FPS); 9-axis IMU @ 100 Hz",
+        "data_modalities": [
+          "rgb",
+          "depth",
+          "imu",
+          "eef_pose",
+          "gripper_width"
+        ],
+        "frameworks": [
+          "ROS 1",
+          "ROS 2",
+          "URDF"
+        ],
+        "homologous_end_effector": "Pika Gripper"
+      },
+      "notes": "legacy_category: commercial_data_infrastructure",
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "robot_arm_kit",
+      "form_factor": "robotic_arm",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://github.com/Seeed-Projects/reBot-DevArm",
+          "retrieved_at": "2026-06-05"
+        }
+      ],
+      "confidence": "medium",
+      "last_verified_at": "2026-05-13",
+      "id": "seeed_rebot",
+      "country": "china_global",
+      "name": "Seeed reBot Arm B601-DM",
+      "status": "active",
+      "commercialization_stage": "commercial_product",
+      "specs": {
+        "provider": "Seeed Studio",
+        "dof": "6+1",
+        "actuator": "Damiao",
+        "reach_mm": 767,
+        "payload_kg": 1.5,
+        "repeatability_mm": 0.2,
+        "frameworks": [
+          "ROS 1/2",
+          "Hugging Face LeRobot",
+          "NVIDIA Isaac Sim",
+          "Pinocchio"
+        ],
+        "price_usd_bundle": 1197,
+        "variants": [
+          "reBot Arm B601-DM (Damiao)",
+          "reBot Arm B601-RS (Robstride)"
+        ]
+      },
+      "notes": "legacy_category: lerobot_compatible_arm"
+    },
+    {
+      "form_category": "robot_arm_kit",
+      "specs": {
+        "description": "6-axis 30KG servos (magnetic feedback), dual-camera (wrist+external)",
+        "provider": "Hiwonder",
+        "integration": "Hugging Face LeRobot",
+        "nexarm_specs": "ESP32+AT32 dual-chip, K230 vision (6 TOPS), 65kg·cm magnetic encoder bus servos"
+      },
+      "form_factor": "robotic_arm",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://www.hiwonder.com/",
+          "retrieved_at": "2026-06-05"
+        }
+      ],
+      "confidence": "medium",
+      "last_verified_at": "2026-05-13",
+      "id": "hiwonder_so_arm101",
+      "country": "china",
+      "name": "Hiwonder SO-ARM101 / NexArm",
+      "status": "active",
+      "commercialization_stage": "commercial_product",
+      "notes": "legacy_category: lerobot_compatible_arm"
+    },
+    {
+      "form_category": "sensor_module",
+      "form_factor": "tactile_sensor_fingertip",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://robotiq.com/tactile-sensor-fingertips",
+          "retrieved_at": "2026-06-05",
+          "title": "Tactile Sensor Fingertips | Robotiq"
+        }
+      ],
+      "full_name": "Robotiq Tactile Sensor Fingertips (TSF-85)",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-04",
+      "id": "robotiq_tsf85",
+      "country": "canada",
+      "name": "Robotiq TSF-85",
+      "status": "active",
+      "key_innovation": "Capacitive fingertip pads (28 taxels) with 1000 Hz vibration and 3-axis IMU for Physical AI data collection on 2F grippers",
+      "commercialization_stage": "commercial_product",
+      "specs": {
+        "provider": "Robotiq",
+        "integration": [
+          "ROS2",
+          "Robotiq 2F-85 Adaptive Gripper",
+          "Robotiq 2F-140 Adaptive Gripper",
+          "NVIDIA Isaac Sim"
+        ],
+        "data": [
+          "tactile",
+          "IMU"
+        ]
+      },
+      "notes": "legacy_category: industrial_tactile_sensor"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://yubi.airoa.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/Toyota/yubi-hw",
+          "retrieved_at": "2026-06-05",
+          "title": "YUBI hardware (CAD, BOM, assembly)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://github.com/Toyota/yubi-hw/tree/main/docs",
+          "retrieved_at": "2026-06-05"
+        }
+      ],
+      "full_name": "YUBI: Yielding Universal Bidigital Interface",
+      "license": "partial_oss",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "yubi",
+      "country": "japan",
+      "image_url": "https://raw.githubusercontent.com/Toyota/yubi-hw/main/media/teaser_v3.png",
+      "force_torque_integration": "none",
+      "year_first": 2026,
+      "organization": [
+        "Toyota Motor Corporation (Frontier Research Center)",
+        "AI Robot Association"
+      ],
+      "bimanual": "yes",
+      "name": "YUBI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Open-source bidigital (two-finger) dexterous stack: glove + DYNAMIXEL gripper + stationary/portable collection rigs",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "year_latest": 2026,
+        "license_notes": "CERN Open Hardware Licence v2 - Weakly Reciprocal (CERN-OHL-W)",
+        "components": [
+          "YUBI Glove (finger motion teleoperation)",
+          "YUBI Gripper (DYNAMIXEL XM430, robot-mounted)",
+          "Stationary data collection desk",
+          "Portable data collection rig"
+        ],
+        "main_camera": "USB camera ELP-USBFHD01M-L180 (180° fisheye)",
+        "tracking_details": "Meta Quest Touch Plus controllers (6-DoF wrist pose); AS5601 magnetic angle sensors for finger joints; ESP32C6",
+        "finger_joint_tracking": "hall_effect",
+        "gripper_actuator": "DYNAMIXEL XM430",
+        "supported_robots": [
+          "UR5e"
+        ],
+        "hardware_assets": [
+          "STEP/STL CAD",
+          "BOM (CSV)",
+          "Assembly instructions (PDF)"
+        ],
+        "related_software": "yubi-sw (control, teleoperation; linked from README)",
+        "business_model": "corporate_oss",
+        "significance": "Toyota FRC open-source dexterous data collection and teleop baseline (2026 baseline release)",
+        "key_authors": [
+          "Yoshihiro Okumatsu",
+          "Daiki Fukunaga",
+          "Jumpei Arima",
+          "Yuki Noguchi",
+          "Makoto Sugiura",
+          "Takehiko Ohkawa",
+          "Masayoshi Tsuchinaga",
+          "Yusuke Mizuoka"
+        ]
+      },
+      "notes": "legacy_category: dexterous_teleop"
+    },
+    {
+      "id": "dm_dataclaw",
+      "name": "DM-DataClaw",
+      "full_name": "DM-DataClaw Data Collection Gripper",
+      "organization": [
+        "Daimon Robotics"
+      ],
+      "country": "china",
+      "year_first": 2025,
+      "image_url": "https://modelscope.cn/datasets/daimonrobotics/images/resolve/master/images/tac&dataclaw_en.png",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "vision_based",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "key_innovation": "Handheld parallel-jaw data collection gripper with vision-based tactile sensors (110,000 sensing units, 120Hz); used alongside DM-DataDex to build the Daimon-Infinity omni-modal dataset.",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.dmrobot.com/en/products/",
+          "retrieved_at": "2026-06-06"
+        },
+        {
+          "type": "press",
+          "url": "https://www.prnewswire.com/news-releases/daimon-robotics-product-line-offically-launched-accelerating-the-industrialization-of-embodied-intelligence-302428994.html",
+          "retrieved_at": "2026-06-06",
+          "title": "Daimon Robotics Product Line Launch (2025-04)"
+        },
+        {
+          "type": "article",
+          "url": "https://spectrum.ieee.org/daimon-robotics-physical-ai",
+          "retrieved_at": "2026-06-06",
+          "title": "DAIMON Robotics Wants to Give Robot Hands a Sense of Touch (IEEE Spectrum)"
+        },
+        {
+          "type": "press",
+          "url": "https://autonews.gasgoo.com/articles/news/seeds-daimon-robotics-closes-series-a-financing-round-2062738434811310081",
+          "retrieved_at": "2026-06-06",
+          "title": "Daimon Robotics closes Series A (Gasgoo)"
+        }
+      ],
+      "last_verified_at": "2026-06-06",
+      "confidence": "medium",
+      "status": "active",
+      "specs": {
+        "tactile_sensor": "DM-Tac vision-based (110,000 sensing units, 120Hz)",
+        "additional_sensors": [
+          "fisheye camera",
+          "encoder",
+          "IMU",
+          "stereo camera"
+        ],
+        "data_modalities": [
+          "tactile",
+          "rgb",
+          "motion_trajectory",
+          "action",
+          "voice_text"
+        ],
+        "dataset": "Daimon-Infinity (10,000+ hours open-sourced, 1M+ downloads on ModelScope)"
+      },
+      "notes": "Two-finger handheld gripper for parallel-jaw manipulation data collection. Part of Daimon's 3D (Device-Data-Deployment) strategy alongside DM-DataDex."
+    },
+    {
+      "id": "dm_datadex",
+      "name": "DM-DataDex",
+      "full_name": "DM-DataDex Dexterous Hand Data Collection Device",
+      "organization": [
+        "Daimon Robotics"
+      ],
+      "country": "china",
+      "year_first": 2025,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "vision_based",
+      "force_torque_integration": "none",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "image_url": "https://modelscope.cn/datasets/daimonrobotics/images/resolve/master/images/datadex_en.png",
+      "key_innovation": "Five-finger glove-type dexterous data collection device with vision-based tactile sensors (110,000 sensing units, 120Hz); used alongside DM-DataClaw to build the Daimon-Infinity omni-modal dataset.",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.dmrobot.com/en/products/",
+          "retrieved_at": "2026-06-06"
+        },
+        {
+          "type": "dataset",
+          "url": "https://modelscope.cn/datasets/daimonrobotics/Daimon-Infinity",
+          "retrieved_at": "2026-06-06",
+          "title": "Daimon-Infinity dataset (ModelScope)"
+        },
+        {
+          "type": "article",
+          "url": "https://spectrum.ieee.org/daimon-robotics-physical-ai",
+          "retrieved_at": "2026-06-06",
+          "title": "DAIMON Robotics Wants to Give Robot Hands a Sense of Touch (IEEE Spectrum)"
+        },
+        {
+          "type": "press",
+          "url": "https://autonews.gasgoo.com/articles/news/seeds-daimon-robotics-closes-series-a-financing-round-2062738434811310081",
+          "retrieved_at": "2026-06-06",
+          "title": "Daimon Robotics closes Series A (Gasgoo)"
+        }
+      ],
+      "last_verified_at": "2026-06-06",
+      "confidence": "medium",
+      "status": "active",
+      "specs": {
+        "tactile_sensor": "DM-Tac vision-based (110,000 sensing units, 120Hz)",
+        "tracking_details": "HTC Vive Tracker (VR controller / tracker, 6-DoF wrist pose)",
+        "additional_sensors": [
+          "fisheye camera",
+          "encoder",
+          "IMU",
+          "stereo camera"
+        ],
+        "data_modalities": [
+          "tactile",
+          "rgb",
+          "motion_trajectory",
+          "action",
+          "voice_text"
+        ],
+        "dataset": "Daimon-Infinity (10,000+ hours open-sourced, 1M+ downloads on ModelScope)"
+      },
+      "notes": "Five-finger glove form factor for dexterous manipulation data collection. Part of Daimon's 3D (Device-Data-Deployment) strategy. Equipment used to build the Daimon-Infinity dataset in collaboration with Google DeepMind, Northwestern University, NUS, etc."
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://www.sunday.ai/technology",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "article",
+          "url": "https://www.sunday.ai/journal/no-robot-data",
+          "retrieved_at": "2026-06-13",
+          "title": "ACT-1: A Robot Foundation Model Trained on Zero Robot Data"
+        }
+      ],
+      "full_name": "Sunday Robotics Skill Capture Glove",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "sunday_skill_capture_glove",
+      "country": "us",
+      "image_url": "https://www.sunday.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F1omys9i3%2Fproduction%2F69317e0507b6454687e7d0ae1d36f611e141f1c8-4000x2668.jpg&w=3840&q=90",
+      "year_first": 2025,
+      "organization": [
+        "Sunday Robotics"
+      ],
+      "name": "Skill Capture Glove",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "commercialization_stage": "full_stack_business",
+      "key_innovation": "UMI-inspired wearable co-designed with Memo robot 3-finger gripper (shared geometry and sensor layout); wide-FOV camera hat; crowdsourced in-home data via Memory Developers; Skill Transform pipeline (~90% glove-to-robot conversion)",
+      "specs": {
+        "glove_cost_usd": "~200–400",
+        "units_shipped": "2000+",
+        "homes": "500+",
+        "training_episodes": "10M+",
+        "data_volume_tb": "200+",
+        "gripper_design": "3-finger mitt matching Memo end-effector",
+        "companion_hardware": "Wide-FOV camera hat (matches Memo head camera)",
+        "software_pipeline": "Skill Transform",
+        "foundation_model": "ACT-1",
+        "key_founders": [
+          "Cheng Chi",
+          "Tony Zhao"
+        ]
+      },
+      "notes": "Co-founder Cheng Chi authored the UMI paper. Device is proprietary; distributed to paid Memory Developers for in-home chore demonstrations.",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "yes",
+      "license": "commercial_closed"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "mocap_glove",
+      "sources": [
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2603.17851",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2603.17851"
+        }
+      ],
+      "full_name": "DexViTac: Collecting Human Visuo-Tactile-Kinematic Demonstrations for Contact-Rich Dexterous Manipulation",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "dexvitac",
+      "country": "china",
+      "image_url": "https://arxiv.org/html/2603.17851v1/x1.png",
+      "year_first": 2026,
+      "organization": [
+        "Huazhong University of Science and Technology"
+      ],
+      "name": "DexViTac",
+      "tactile_integration": "type_unspecified",
+      "status": "active",
+      "key_innovation": "Portable visuo-tactile-kinematic collection with Manus mocap gloves, HIT LongLin-96 fingertip sensors, GoPro, and T265; kinematics-grounded tactile representation learning",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "tactile_sensor_name": "HIT LongLin-96 (8×16 taxel, 0–20 N, 1000 Hz sampling)",
+        "glove": "Manus Quantum Metagloves (IMU finger tracking)",
+        "main_camera": "GoPro (1920×1080, 60 Hz)",
+        "pose_tracking_sensor": "Intel RealSense T265",
+        "dataset": "2,400+ visuo-tactile-kinematic demonstrations; 10+ environments; 40+ tasks"
+      },
+      "notes": "Paper states flexible pressure-sensitive fingertip sensors; sensor technology type not explicitly named in primary source.",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand_passive",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://dexexo-research.github.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2603.17323",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2603.17323"
+        }
+      ],
+      "full_name": "DexEXO: A Wearability-First Dexterous Exoskeleton for Operator-Agnostic Demonstration and Learning",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "dexexo",
+      "country": "us",
+      "image_url": "https://dexexo-research.github.io/data/hardware_framework.png",
+      "year_first": 2026,
+      "organization": [
+        "UCLA"
+      ],
+      "name": "DexEXO",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Wearability-first linkage exoskeleton with passive data-capture hand for hardware-level visual and kinematic alignment; hand lengths 140–217 mm without per-user calibration",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "hand_length_range_mm": "140–217",
+        "venue_status": "Under review (project page, 2026-06)"
+      },
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "bimanual": "extensible"
+    },
+    {
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "sources": [
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.15013",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2604.15013"
+        }
+      ],
+      "full_name": "DEX-Mouse: A Low-cost Portable and Universal Interface with Force Feedback for Data Collection of Dexterous Robotic Hands",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "dex_mouse",
+      "country": "south_korea",
+      "image_url": "https://arxiv.org/html/2604.15013v1/x2.png",
+      "year_first": 2026,
+      "organization": [
+        "Sogang University"
+      ],
+      "name": "DEX-Mouse",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Calibration-free 6-DoF handheld interface with kinesthetic force feedback (<USD 150 BOM); forearm-mounted robot-hand configuration for robot-aligned data without morphological retargeting",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "cost_usd": 150,
+        "dof_active": 6,
+        "pose_tracking_sensor": "HTC VIVE Ultimate Tracker",
+        "contact_sensing": "Motor torque values as proprioceptive inputs (no external tactile sensor)"
+      },
+      "notes": "Paper describes open-source hardware and software stack; repository URL not listed in primary source.",
+      "force_torque_integration": "joint_torque",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "no",
+      "license": "diy_open"
+    },
+    {
+      "form_category": "wearable_arm",
+      "form_factor": "wearable_exoskeleton_hand",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://exo-viha2025.github.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2503.01543",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2503.01543"
+        }
+      ],
+      "full_name": "Exo-ViHa: A Cross-Platform Exoskeleton System with Visual and Haptic Feedback for Efficient Dexterous Skill Learning",
+      "confidence": "high",
+      "last_verified_at": "2026-06-13",
+      "id": "exo_viha",
+      "country": "china",
+      "image_url": "https://exo-viha2025.github.io/static/images/fig1.jpg",
+      "year_first": 2025,
+      "organization": [
+        "Tsinghua University"
+      ],
+      "name": "Exo-ViHa",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "3D-printed forearm exoskeleton with interchangeable dexterous hands; T265 pose, wrist camera, and motion-capture glove; passive haptic feedback via exoskeleton contact",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "venue": "IROS 2025",
+        "weight_g_exoskeleton": 425,
+        "weight_g_with_hand": 1100,
+        "pose_tracking_sensor": "Intel RealSense T265",
+        "hand_tracking": "Motion capture glove (type not specified in paper)"
+      },
+      "notes": "Haptic feedback is passive force sensation through exoskeleton contact, not instrumented tactile sensing.",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://baai-aether.github.io/OmniUMI/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.10647",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2604.10647"
+        }
+      ],
+      "full_name": "OmniUMI: Towards Physically Grounded Robot Learning via Human-Aligned Multimodal Interaction",
+      "confidence": "high",
+      "last_verified_at": "2026-06-13",
+      "id": "omniumi",
+      "country": "china",
+      "image_url": "https://baai-aether.github.io/OmniUMI/static/images/fig.png",
+      "year_first": 2026,
+      "organization": [
+        "Beijing Academy of Artificial Intelligence"
+      ],
+      "name": "OmniUMI",
+      "tactile_integration": "vision_based",
+      "status": "active",
+      "key_innovation": "Handheld multimodal UMI capturing RGB, depth, trajectory, marker-based tactile images, internal grasping force, and external wrench with bilateral gripper feedback",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "data_modalities": [
+          "rgb",
+          "depth",
+          "trajectory",
+          "tactile",
+          "internal_grasp_force",
+          "external_wrench"
+        ],
+        "tactile_format": "Tactile images with marker displacements (vision-based tactile)"
+      },
+      "force_torque_integration": "6axis_ft",
+      "pose_tracking": null,
+      "bimanual": "extensible"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://activeumi.github.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2510.01607",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2510.01607"
+        }
+      ],
+      "full_name": "ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-13",
+      "id": "activeumi",
+      "country": "china",
+      "image_url": "https://activeumi.github.io/activeumi_static/images/collection_overview.png",
+      "year_first": 2025,
+      "organization": [
+        "Shanghai University",
+        "Stanford University",
+        "Midea Group"
+      ],
+      "name": "ActiveUMI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Portable VR teleoperation kit with robot grippers on Meta Quest 3s controllers; records operator head motion for active egocentric perception during bimanual in-the-wild collection",
+      "commercialization_stage": "paper_only",
+      "specs": {
+        "vr_platform": "Meta Quest 3s (controllers + HMD)",
+        "task_success_rate": "70% in-distribution; 56% novel scenes/objects",
+        "main_camera": "Fisheye wrist cameras + HMD front cameras"
+      },
+      "force_torque_integration": "none",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "yes"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://hommi-robot.github.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2603.03243",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2603.03243"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/xxm19/hommi",
+          "retrieved_at": "2026-06-13"
+        }
+      ],
+      "full_name": "HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations",
+      "confidence": "high",
+      "last_verified_at": "2026-06-13",
+      "id": "hommi",
+      "country": "us",
+      "image_url": "https://hommi-robot.github.io/images/embodiment_gap.png",
+      "year_first": 2026,
+      "organization": [
+        "Stanford University",
+        "Toyota Research Institute"
+      ],
+      "name": "HoMMI",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "UMI grippers augmented with egocentric sensing for whole-body mobile manipulation; cross-embodiment hand-eye policy with embodiment-agnostic 3D visual representation",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "venue": "RSS 2026",
+        "egocentric_sensor": "iPhone-based egocentric capture (project FAQ)",
+        "base_interface": "UMI-style handheld grippers"
+      },
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "yes"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://maniwav.github.io/",
+          "retrieved_at": "2026-06-13"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2406.19464",
+          "retrieved_at": "2026-06-13",
+          "title": "arXiv:2406.19464"
+        }
+      ],
+      "full_name": "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data",
+      "confidence": "high",
+      "last_verified_at": "2026-06-13",
+      "id": "maniwav",
+      "country": "us",
+      "image_url": "https://arxiv.org/html/2406.19464v2/x1.png",
+      "year_first": 2024,
+      "organization": [
+        "Stanford University",
+        "Columbia University",
+        "Toyota Research Institute"
+      ],
+      "name": "ManiWAV",
+      "tactile_integration": "contact_microphone",
+      "status": "active",
+      "key_innovation": "UMI parallel-jaw gripper with embedded piezoelectric contact microphone ('ear-in-hand') for synchronous in-the-wild audio-visual demonstration collection",
+      "commercialization_stage": "oss_diy",
+      "specs": {
+        "base_interface": "UMI handheld gripper (3D-printed parallel jaw)",
+        "audio": "Piezoelectric contact microphone via GoPro mic port (48 kHz); synced with 60 Hz RGB",
+        "tasks": [
+          "Whiteboard wipe",
+          "Bagel flip with spatula",
+          "Pour from cup",
+          "Velcro wire strap"
+        ]
+      },
+      "notes": "Paper explicitly names piezoelectric contact microphone as contact sensing modality.",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "mit"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Open X-Embodiment (OXE)",
+      "url": "https://robotics-transformer-x.github.io/",
+      "provider": "Google DeepMind + 34 labs",
+      "type": "real / multi-embodiment",
+      "trajectories": "1M+",
+      "tasks": 527
+    },
+    {
+      "name": "DROID",
+      "url": "https://droid-dataset.github.io/",
+      "provider": "Stanford + 13 institutions",
+      "arxiv": "2403.12945",
+      "type": "real / manipulation",
+      "trajectories": "76K",
+      "hours": 350
+    },
+    {
+      "name": "RoboMIND",
+      "url": "https://x-humanoid-robomind.github.io/",
+      "provider": "Beijing Humanoid Center + PKU",
+      "type": "real / multi-embodiment",
+      "trajectories": "107K",
+      "tasks": 479
+    },
+    {
+      "name": "AgiBot World Colosseo",
+      "url": "https://agibot-world.com/",
+      "provider": "AgiBot",
+      "type": "real / manipulation",
+      "trajectories": "1M+",
+      "tasks": 217,
+      "hours": 2976
+    },
+    {
+      "name": "FastUMI-100K",
+      "url": "https://github.com/MrKeee/FastUMI-100K",
+      "provider": "Shanghai AI Lab",
+      "type": "real / manipulation",
+      "trajectories": "100K+",
+      "tasks": 54,
+      "hours": 600
+    },
+    {
+      "name": "DexWild Dataset",
+      "url": "https://huggingface.co/datasets/boardd/dexwild-dataset",
+      "provider": "CMU",
+      "type": "real / dexterous",
+      "episodes": 9505,
+      "hours": 33
+    },
+    {
+      "name": "Gen-EgoData",
+      "url": "https://huggingface.co/datasets/genrobot2025/Gen-EgoData",
+      "provider": "GenRobot",
+      "type": "real / egocentric",
+      "hours": "20,000+",
+      "tasks": 500
+    },
+    {
+      "name": "10Kh-RealOmin-OpenData",
+      "url": "https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData",
+      "provider": "GenRobot",
+      "type": "real / manipulation",
+      "hours": "13,000+",
+      "format": ".mcap"
+    },
+    {
+      "name": "Genie Sim Synthetic",
+      "url": "https://github.com/AgibotTech/genie_sim",
+      "provider": "AgiBot",
+      "type": "simulation",
+      "hours": "10,000+",
+      "tasks": 200,
+      "license": "mpl_2"
+    },
+    {
+      "name": "DAIMON Public Tactile",
+      "url": "https://modelscope.cn/datasets/daimonrobotics/Daimon-Infinity",
+      "provider": "DAIMON Robotics",
+      "type": "real / tactile",
+      "hours": "10,000+",
+      "tasks": 2000
+    }
+  ],
+  "policy_standards": [
+    {
+      "name": "MIIT Intelligent Data Collection Standard 1.0",
+      "year": "2024-11",
+      "country": "china",
+      "scope": "synchronization, format, labeling, quality grading of multimodal robot training data"
+    },
+    {
+      "name": "Shanghai Embodied Intelligence Plan",
+      "country": "china",
+      "scope": "China's first comprehensive plan, R&D + shared infrastructure"
+    },
+    {
+      "name": "China 2nd Embodied AI Conference Roadmap",
+      "stages": [
+        "2025-2027: foundation/shared datasets/open middleware",
+        "2028-2030: factory/logistics/elderly care pilots",
+        "Post-2030: generalization/mass-market"
+      ]
+    }
+  ],
+  "curated_content": [
+    {
+      "id": "rai_getting_a_grip_robotic_data_collection_2026",
+      "kind": "video",
+      "title": "Getting a Grip on Robotic Data Collection",
+      "canonical_url": "https://www.youtube.com/watch?v=8Ip5ehvsUlk",
+      "publisher": "RAI Institute",
+      "published_at": "2026-05-12",
+      "language": "en",
+      "summary": "Challenges in handheld data collection (transfer is hard when the robot gripper uses a different interface) and the Koala gripper approach of co-designing human and robot linkages. Covers sim-to-real, force sensing, and references to UMI.",
+      "tags": [
+        "handheld_data_collection",
+        "koala_gripper",
+        "umi",
+        "teleoperation",
+        "simulation",
+        "force_sensing"
+      ],
+      "related_product_ids": [
+        "umi"
+      ],
+      "companion_links": [
+        {
+          "role": "companion_blog",
+          "url": "https://rai-inst.com/resources/blog/handheld-robotic-data-collection/",
+          "title": "Handheld robotic data collection (RAI Institute blog)"
+        }
+      ],
+      "sources": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=8Ip5ehvsUlk",
+          "title": "YouTube",
+          "retrieved_at": "2026-05-14"
+        },
+        {
+          "type": "article",
+          "url": "https://rai-inst.com/resources/blog/handheld-robotic-data-collection/",
+          "title": "RAI Institute blog",
+          "retrieved_at": "2026-05-14"
+        }
+      ],
+      "last_verified_at": "2026-05-14",
+      "confidence": "high",
+      "status": "active"
+    }
+  ]
+}
