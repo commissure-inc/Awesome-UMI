@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Awesome UMI",
     "version": "0.1.0",
-    "last_updated": "2026-06-07",
+    "last_updated": "2026-06-14",
     "data_sources": "Public-only (papers, project pages, GitHub repos, press releases, curated articles and videos)",
     "scope": "UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection (excludes dedicated egocentric video platforms; see docs/SCOPE.md)"
   },
@@ -2431,6 +2431,92 @@
       "pose_tracking": "visual_inertial",
       "bimanual": "extensible",
       "license": "mit"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://x2robot.com/x2go",
+          "retrieved_at": "2026-06-14"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2604.13001",
+          "retrieved_at": "2026-06-14",
+          "title": "arXiv:2604.13001"
+        }
+      ],
+      "full_name": "XRZero-G0: Pushing the Frontier of Dexterous Robotic Manipulation with Interfaces, Quality and Ratios",
+      "license": "commercial_closed",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-14",
+      "id": "xrzero_g0",
+      "country": "china",
+      "image_url": "https://x2robot.com/pages/x2go/assets/images/head.png",
+      "force_torque_integration": "none",
+      "year_first": 2026,
+      "organization": [
+        "X Square Robot"
+      ],
+      "bimanual": "yes",
+      "name": "XRZero-G0",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Wearable VR rig (PICO 4 + heterogeneous H/G grippers + backpack compute) with closed-loop Collection–Inspection–Training–Evaluation pipeline; empirical 10:1 robot-free/real-robot data mixing achieves comparable policy performance at ~1/20 acquisition cost",
+      "commercialization_stage": "commercial_product",
+      "pose_tracking": "vr_controller_tracker",
+      "specs": {
+        "venue": "arXiv preprint (April 2026)",
+        "vr_platform": "PICO 4 (inside-out 6-DoF tracking, ≤4 mm accuracy)",
+        "grippers": [
+          "H-gripper (press-actuated, macroscopic grasps)",
+          "G-gripper (finger-driven, fine-grained manipulation)"
+        ],
+        "compute": "Backpack edge-computing unit",
+        "main_camera": "PICO 4 adjustable RGB top-view + dual wrist cameras (≥3 views)",
+        "tracking_details": "VR controller-mounted grippers; inter-gripper baseline calibrated to target dual-arm robot",
+        "trajectory_rate_hz": 30,
+        "data_validity_rate": "85%",
+        "collection_throughput_episodes_per_hr": 93.2,
+        "collection_speedup_vs_teleop": {
+          "simple": "2.33×",
+          "medium": "1.88×",
+          "hard": "1.71×"
+        },
+        "data_mixing_ratio": "10:1 robot-free to real-robot",
+        "acquisition_cost_vs_teleop": "~1/20",
+        "dataset": "G0-Dataset (2,000+ hours, 3,000 tasks; XRZero-G0-3K subset on product page)",
+        "supported_robots": [
+          "CX001",
+          "EX001"
+        ],
+        "policy_framework": [
+          "Wall-OSS",
+          "π₀",
+          "π₀.₅"
+        ],
+        "data_modalities": [
+          "multi_view_rgb",
+          "language_instructions",
+          "eef_pose_6dof"
+        ],
+        "pipeline": [
+          "Collection",
+          "Inspection",
+          "Training",
+          "Evaluation"
+        ],
+        "business_model": "full_stack_business",
+        "key_authors": [
+          "James Wang",
+          "Primo Pu",
+          "Zivid Liu",
+          "Hao Wang"
+        ]
+      },
+      "notes": "legacy_category: commercial_product"
     }
   ],
   "datasets": [
