@@ -2545,12 +2545,13 @@
       "last_verified_at": "2026-06-15",
       "id": "umi_ft",
       "country": "us",
+      "image_url": "https://umi-ft.github.io/static/videos/umift-system-design.mp4",
       "force_torque_integration": "6axis_ft",
       "year_first": 2026,
       "organization": [
         "Stanford University"
       ],
-      "bimanual": "no",
+      "bimanual": "extensible",
       "name": "UMI-FT",
       "tactile_integration": "none",
       "status": "active",
@@ -2585,7 +2586,7 @@
         ],
         "robot_free_collection": true
       },
-      "notes": "Field corrections vs. submitted candidate (verified against primary sources): pose_tracking visual_slam->visual_inertial (iPhone ARKit is visual-inertial, matching original UMI); tactile_integration type_unspecified->none (CoinFT is a force/torque sensor, captured under force_torque_integration, not a separate tactile modality); commercialization_stage paper_only->oss_diy (hardware and software are open-sourced with full build/deploy instructions); bimanual extensible->no (only single-arm tasks demonstrated/claimed)."
+      "notes": "Field corrections vs. submitted candidate (verified against primary sources): pose_tracking visual_slam->visual_inertial (iPhone ARKit is visual-inertial, matching original UMI); tactile_integration type_unspecified->none (CoinFT is a force/torque sensor, captured under force_torque_integration, not a separate tactile modality); commercialization_stage paper_only->oss_diy (hardware and software are open-sourced with full build/deploy instructions); bimanual kept as extensible (UMI-style architecture)."
     }
   ],
   "datasets": [
