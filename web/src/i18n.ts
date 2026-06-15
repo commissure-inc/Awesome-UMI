@@ -114,12 +114,14 @@ export const POSE_TRACKING_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     visual_slam: "Visual SLAM",
     visual_inertial: "Visual-inertial (VIO)",
+    lidar_inertial: "LiDAR-inertial (LIO)",
     vr_controller_tracker: "VR controller / tracker",
     external_mocap: "外部モーキャプ",
   },
   en: {
     visual_slam: "Visual SLAM",
     visual_inertial: "Visual-inertial (VIO)",
+    lidar_inertial: "LiDAR-inertial (LIO)",
     vr_controller_tracker: "VR controller / tracker",
     external_mocap: "External mocap",
   },
