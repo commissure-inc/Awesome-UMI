@@ -57,6 +57,7 @@
       "values": [
         "visual_slam",
         "visual_inertial",
+        "lidar_inertial",
         "vr_controller_tracker",
         "external_mocap"
       ]
@@ -384,7 +385,7 @@
       },
       "notes": "legacy_category: umi_derivative",
       "force_torque_integration": "none",
-      "pose_tracking": "visual_inertial",
+      "pose_tracking": "lidar_inertial",
       "bimanual": "extensible",
       "license": "partial_oss"
     },
