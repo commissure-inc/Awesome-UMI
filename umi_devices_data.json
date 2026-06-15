@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Awesome UMI",
     "version": "0.1.0",
-    "last_updated": "2026-06-14",
+    "last_updated": "2026-06-15",
     "data_sources": "Public-only (papers, project pages, GitHub repos, press releases, curated articles and videos)",
     "scope": "UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection (excludes dedicated egocentric video platforms; see docs/SCOPE.md)"
   },
@@ -2517,6 +2517,75 @@
         ]
       },
       "notes": "legacy_category: commercial_product"
+    },
+    {
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://umi-ft.github.io/",
+          "retrieved_at": "2026-06-15"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/real-stanford/UMI-FT",
+          "retrieved_at": "2026-06-15"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2601.09988",
+          "retrieved_at": "2026-06-15",
+          "title": "In-the-Wild Compliant Manipulation with UMI-FT (ICRA 2026)"
+        }
+      ],
+      "full_name": "In-the-Wild Compliant Manipulation with UMI-FT",
+      "license": "mit",
+      "confidence": "high",
+      "last_verified_at": "2026-06-15",
+      "id": "umi_ft",
+      "country": "us",
+      "force_torque_integration": "6axis_ft",
+      "year_first": 2026,
+      "organization": [
+        "Stanford University"
+      ],
+      "bimanual": "no",
+      "name": "UMI-FT",
+      "tactile_integration": "none",
+      "status": "active",
+      "key_innovation": "Adds per-finger 6-axis force/torque sensing to a handheld UMI-style parallel-jaw gripper by mounting a coin-sized capacitive CoinFT sensor on each finger, with an iPhone supplying RGB, ultrawide RGB, depth and ARKit pose; the multimodal, robot-free demonstrations train an Adaptive Compliance Policy that predicts position targets, grasp force and stiffness for compliance controllers.",
+      "commercialization_stage": "oss_diy",
+      "pose_tracking": "visual_inertial",
+      "specs": {
+        "venue": "ICRA 2026 (arXiv:2601.09988)",
+        "authors": [
+          "Hojung Choi",
+          "Yifan Hou",
+          "Chuer Pan",
+          "Seongheon Hong",
+          "Austin Patel",
+          "Xiaomeng Xu",
+          "Mark R. Cutkosky",
+          "Shuran Song"
+        ],
+        "labs": [
+          "Stanford REAL Lab (real-stanford)",
+          "Stanford Biomimetics and Dexterous Manipulation Lab (BDML)"
+        ],
+        "force_sensor": "CoinFT — coin-sized capacitive 6-axis force/torque sensor, one per finger (per-finger wrench)",
+        "sensing_device": "iPhone (ARKit): RGB, ultrawide RGB, depth, 6-DoF pose",
+        "gripper": "Handheld parallel-jaw; real-world deployment on Universal Robots arm with WSG gripper",
+        "policy": "Adaptive Compliance Policy (extends Diffusion Policy), outputs position targets + grasp force + stiffness",
+        "data_format": "Zarr: RGB/depth video, force/torque, robot states, computed virtual-target trajectories",
+        "tasks_demonstrated": [
+          "whiteboard wiping",
+          "skewering zucchini",
+          "lightbulb insertion"
+        ],
+        "robot_free_collection": true
+      },
+      "notes": "Field corrections vs. submitted candidate (verified against primary sources): pose_tracking visual_slam->visual_inertial (iPhone ARKit is visual-inertial, matching original UMI); tactile_integration type_unspecified->none (CoinFT is a force/torque sensor, captured under force_torque_integration, not a separate tactile modality); commercialization_stage paper_only->oss_diy (hardware and software are open-sourced with full build/deploy instructions); bimanual extensible->no (only single-arm tasks demonstrated/claimed)."
     }
   ],
   "datasets": [
