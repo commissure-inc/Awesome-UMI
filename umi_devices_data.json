@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "Awesome UMI",
-    "version": "0.1.0",
-    "last_updated": "2026-06-15",
+    "version": "0.1.1",
+    "last_updated": "2026-06-16",
     "data_sources": "Public-only (papers, project pages, GitHub repos, press releases, curated articles and videos)",
     "scope": "UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection (excludes dedicated egocentric video platforms; see docs/SCOPE.md)"
   },
@@ -2597,7 +2597,7 @@
         "PaXini Tech"
       ],
       "country": "china",
-      "year_first": 2025,
+      "year_first": 2026,
       "image_url": "https://paxini.com/images/pxcap3/banner.png",
       "form_category": "wearable_hand",
       "form_factor": "handheld_multi_finger",

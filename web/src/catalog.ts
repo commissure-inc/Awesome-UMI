@@ -201,6 +201,35 @@ export function filterProducts(
   });
 }
 
+export type ProductSortField = "catalog" | "year_first" | "name";
+export type SortDirection = "asc" | "desc";
+
+export function sortProducts(
+  products: Product[],
+  field: ProductSortField,
+  direction: SortDirection,
+): Product[] {
+  if (field === "catalog") return products;
+
+  const mul = direction === "asc" ? 1 : -1;
+  return [...products].sort((a, b) => {
+    if (field === "year_first") {
+      const ay = a.year_first;
+      const by = b.year_first;
+      const aMissing = ay == null;
+      const bMissing = by == null;
+      if (aMissing && bMissing) return a.id.localeCompare(b.id);
+      if (aMissing) return 1;
+      if (bMissing) return -1;
+      if (ay !== by) return (ay - by) * mul;
+      return a.name.localeCompare(b.name, "en") * mul;
+    }
+    const cmp = a.name.localeCompare(b.name, "en");
+    if (cmp !== 0) return cmp * mul;
+    return a.id.localeCompare(b.id) * mul;
+  });
+}
+
 export async function loadCatalog(url: string): Promise<CatalogData> {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to load catalog: ${res.status}`);

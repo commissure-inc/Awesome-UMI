@@ -8,7 +8,10 @@ import {
   facetOptionsForAxis,
   filterProducts,
   loadCatalog,
+  sortProducts,
   type AxisOption,
+  type ProductSortField,
+  type SortDirection,
 } from "./catalog";
 import { ContributePanel, type ContributeKind, type ContributeMode } from "./ContributePanel";
 import { UI } from "./i18n";
@@ -27,6 +30,30 @@ const FILTER_AXES = [
   "country",
   "commercialization_stage",
 ] as const;
+
+type ProductSortKey =
+  | "catalog"
+  | `${Exclude<ProductSortField, "catalog">}:${SortDirection}`;
+
+const PRODUCT_SORT_OPTIONS: ProductSortKey[] = [
+  "catalog",
+  "year_first:desc",
+  "year_first:asc",
+  "name:asc",
+  "name:desc",
+];
+
+function parseProductSortKey(key: ProductSortKey): {
+  field: ProductSortField;
+  direction: SortDirection;
+} {
+  if (key === "catalog") return { field: "catalog", direction: "asc" };
+  const [field, direction] = key.split(":") as [
+    Exclude<ProductSortField, "catalog">,
+    SortDirection,
+  ];
+  return { field, direction };
+}
 
 function emptyFilterSets(): Record<string, Set<string>> {
   const o: Record<string, Set<string>> = {};
@@ -165,6 +192,7 @@ export default function App() {
   const [contributeKind, setContributeKind] = useState<ContributeKind>("project");
   const [contributeMode, setContributeMode] = useState<ContributeMode>("add");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [productSortKey, setProductSortKey] = useState<ProductSortKey>("catalog");
 
   const openContribute = useCallback((kind: ContributeKind, mode: ContributeMode = "add") => {
     setContributeKind(kind);
@@ -226,6 +254,11 @@ export default function App() {
     );
   }, [data, scopeProducts, filterSets, yearFilter]);
 
+  const sortedProducts = useMemo(() => {
+    const { field, direction } = parseProductSortKey(productSortKey);
+    return sortProducts(filteredProducts, field, direction);
+  }, [filteredProducts, productSortKey]);
+
   const facetOptionsByAxis = useMemo(() => {
     if (!data) return {} as Record<string, AxisOption[]>;
     const out: Record<string, AxisOption[]> = {};
@@ -261,6 +294,24 @@ export default function App() {
       setYearMax(b);
     }
   }, [data]);
+
+  const productSortLabel = useCallback(
+    (key: ProductSortKey) => {
+      switch (key) {
+        case "catalog":
+          return ui.sortCatalog;
+        case "year_first:asc":
+          return ui.sortYearAsc;
+        case "year_first:desc":
+          return ui.sortYearDesc;
+        case "name:asc":
+          return ui.sortNameAsc;
+        case "name:desc":
+          return ui.sortNameDesc;
+      }
+    },
+    [ui],
+  );
 
   const footer = (
     <footer className="app-footer">
@@ -409,8 +460,22 @@ export default function App() {
                 >
                   {filtersOpen ? ui.hideFilters : ui.showFilters}
                 </button>
+                <label className="toolbar-sort">
+                  <span className="toolbar-sort-label">{ui.sortBy}</span>
+                  <select
+                    value={productSortKey}
+                    onChange={(e) => setProductSortKey(e.target.value as ProductSortKey)}
+                    aria-label={ui.sortBy}
+                  >
+                    {PRODUCT_SORT_OPTIONS.map((key) => (
+                      <option key={key} value={key}>
+                        {productSortLabel(key)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
                 <span className="toolbar-count">
-                  {filteredProducts.length} / {scopeProducts.length}
+                  {sortedProducts.length} / {scopeProducts.length}
                 </span>
               </>
             )}
@@ -428,7 +493,7 @@ export default function App() {
           <div className="content-scroll">
             {view === "projects" && (
               <div className="grid">
-                {filteredProducts.map((p) => (
+                {sortedProducts.map((p) => (
                   <article
                     key={p.id}
                     className="product-card"
