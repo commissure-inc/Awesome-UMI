@@ -2588,6 +2588,62 @@
         "robot_free_collection": true
       },
       "notes": "Field corrections vs. submitted candidate (verified against primary sources): pose_tracking visual_slam->visual_inertial (iPhone ARKit is visual-inertial, matching original UMI); tactile_integration type_unspecified->none (CoinFT is a force/torque sensor, captured under force_torque_integration, not a separate tactile modality); commercialization_stage paper_only->oss_diy (hardware and software are open-sourced with full build/deploy instructions); bimanual kept as extensible (UMI-style architecture)."
+    },
+    {
+      "id": "paxini_pxcap3",
+      "name": "PXCap III",
+      "full_name": "PXCap III Tri-Finger Data Collection Glove",
+      "organization": [
+        "PaXini Tech"
+      ],
+      "country": "china",
+      "year_first": 2025,
+      "image_url": "https://paxini.com/images/pxcap3/banner.png",
+      "form_category": "wearable_hand",
+      "form_factor": "handheld_multi_finger",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "hall_array",
+      "force_torque_integration": "none",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-16",
+      "key_innovation": "1:1 collection-execution isomorphism with PXDex III robotic hand; full tactile perception (fingertips, fingerpads, palm) via 6D Hall Array sensor; self-developed anti-magnetic encoders for high-precision joint capture",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://paxini.com/us/ax/pxcap3",
+          "retrieved_at": "2026-06-16",
+          "title": "PXCap III product page"
+        }
+      ],
+      "specs": {
+        "weight_g": 650,
+        "weight_controller_g": 125,
+        "dof": 4,
+        "tactile_sensor_name": "PaXini 6D Hall Array Multidimensional Tactile Sensor",
+        "tactile_min_force_n": 0.1,
+        "tactile_data_type": "Resultant Force & Distributed Force Array",
+        "tactile_coverage": "Fingertips, FingerPads, Palm (zero blind zones)",
+        "joint_angle_sensor": "Self-developed high-precision anti-magnetic encoder",
+        "angle_encoder_precision_deg": 0.15,
+        "main_camera": "RGB × 2 (dual 170° ultra-wide palm cameras)",
+        "fov_deg": 170,
+        "camera_resolution": "1080p",
+        "camera_fps": 30,
+        "max_grasping_diameter_mm": 55,
+        "min_pinching_diameter_mm": 2,
+        "operating_voltage": "12V DC",
+        "tracking_details": "VR Headset + Controller (≤5 mm wrist positioning precision); supports other positioning solutions",
+        "wrist_positioning_precision_mm": 5,
+        "lifespan_cycles": 1000000,
+        "communication": "USB",
+        "isomorphic_end_effector": "PXDex III (tri-finger robotic hand)",
+        "business_model": "commercial_product"
+      },
+      "notes": "Part of PaXini's full-body 6-axis F/T sensing ecosystem alongside PXDex III, DexH13/DexH5 dexterous hands, and TORA humanoid robots."
     }
   ],
   "datasets": [
