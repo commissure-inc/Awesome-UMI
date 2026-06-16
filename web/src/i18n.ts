@@ -139,6 +139,12 @@ export const UI: Record<
     clearFilters: string;
     showFilters: string;
     hideFilters: string;
+    sortBy: string;
+    sortCatalog: string;
+    sortYearAsc: string;
+    sortYearDesc: string;
+    sortNameAsc: string;
+    sortNameDesc: string;
     tabProjects: string;
     tabDatasets: string;
     tabContribute: string;
@@ -167,6 +173,12 @@ export const UI: Record<
     clearFilters: "フィルタをクリア",
     showFilters: "フィルタ",
     hideFilters: "フィルタを閉じる",
+    sortBy: "並び替え",
+    sortCatalog: "追加順",
+    sortYearAsc: "発表年（古い順）",
+    sortYearDesc: "発表年（新しい順）",
+    sortNameAsc: "名称（A→Z）",
+    sortNameDesc: "名称（Z→A）",
     tabProjects: "プロジェクト",
     tabDatasets: "データセット",
     tabContribute: "申告",
@@ -195,6 +207,12 @@ export const UI: Record<
     clearFilters: "Clear filters",
     showFilters: "Filters",
     hideFilters: "Hide filters",
+    sortBy: "Sort by",
+    sortCatalog: "Added order",
+    sortYearAsc: "Year (oldest first)",
+    sortYearDesc: "Year (newest first)",
+    sortNameAsc: "Name (A–Z)",
+    sortNameDesc: "Name (Z–A)",
     tabProjects: "Projects",
     tabDatasets: "Datasets",
     tabContribute: "Contribute",
