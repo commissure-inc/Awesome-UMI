@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Awesome UMI",
     "version": "0.1.1",
-    "last_updated": "2026-06-16",
+    "last_updated": "2026-06-17",
     "data_sources": "Public-only (papers, project pages, GitHub repos, press releases, curated articles and videos)",
     "scope": "UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection (excludes dedicated egocentric video platforms; see docs/SCOPE.md)"
   },
@@ -2644,6 +2644,78 @@
         "business_model": "commercial_product"
       },
       "notes": "Part of PaXini's full-body 6-axis F/T sensing ecosystem alongside PXDex III, DexH13/DexH5 dexterous hands, and TORA humanoid robots."
+    },
+    {
+      "id": "robo_pocket",
+      "name": "RoboPocket",
+      "full_name": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+      "organization": [
+        "Shanghai Jiao Tong University",
+        "Shanghai Innovation Institute",
+        "Noematrix Ltd."
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "image_url": "https://robo-pocket.github.io/static/images/hardware_architecture.png",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "paper_only",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "diy_open",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-17",
+      "key_innovation": "Robot-Free Instant Policy Iteration via AR Visual Foresight on a consumer smartphone; remote GPU inference with <150ms latency enables closed-loop online finetuning without physical robot deployment",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://robo-pocket.github.io/",
+          "retrieved_at": "2026-06-17"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2603.05504",
+          "retrieved_at": "2026-06-17",
+          "title": "arXiv:2603.05504"
+        }
+      ],
+      "specs": {
+        "venue": "In submission",
+        "main_camera": "iPhone Pro with custom fisheye lens mount",
+        "endeffector": "parallel_jaw Robotiq 2F-85 isomorphic (underactuated passive DoF)",
+        "cost_usd": 70,
+        "cost_breakdown": "Gripper BOM ~$70 (excludes iPhone Pro)",
+        "gripper_width_method": "ESP32 Bluetooth magnetic encoder",
+        "tracking_details": "iPhone Pro VIO + kinematic solving + AR rendering at 60Hz; 2.8mm position / 0.4° rotation error (single device)",
+        "auxiliary_sensor": "ESP32-based Bluetooth interface with magnetic encoder for gripper width",
+        "supported_robots": [
+          "Robotiq 2F-85 (isomorphic)"
+        ],
+        "robot_free_collection": true,
+        "policy_framework": [
+          "behavior_cloning",
+          "online_finetuning"
+        ],
+        "key_authors": [
+          "Junjie Fang",
+          "Wendi Chen",
+          "Han Xue",
+          "Fangyuan Zhou",
+          "Chuan Wen",
+          "Cewu Lu"
+        ],
+        "tasks_demonstrated": [
+          "block sorting",
+          "seasoning pouring",
+          "towel folding",
+          "snack bagging",
+          "mouse arrangement"
+        ]
+      },
+      "notes": "legacy_category: umi_derivative"
     }
   ],
   "datasets": [
