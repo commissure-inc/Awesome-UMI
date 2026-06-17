@@ -2780,6 +2780,74 @@
         ]
       },
       "notes": "legacy_category: dexterous_exoskeleton"
+    },
+    {
+      "id": "koala_gripper",
+      "name": "Koala",
+      "full_name": "Koala Platform (Co-Designed Handheld and Actuated Multi-Finger Gripper)",
+      "organization": [
+        "RAI Institute"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "image_url": "https://rai-inst.com/wp-content/uploads/2026/05/Capture-Handheld-Gripper-1.jpg",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "commercialization_stage": "full_stack_business",
+      "tactile_integration": "none",
+      "force_torque_integration": "joint_torque",
+      "pose_tracking": null,
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-17",
+      "key_innovation": "Co-designed handheld and electrically actuated variants share linkages, finger geometry, and sensor suite; pivoting monolithic double thumb with two underactuated linkage fingers (3 DoF + 2 underactuated) enable power, pinch, and caging grasps for force-mediated tool use",
+      "sources": [
+        {
+          "type": "article",
+          "url": "https://rai-inst.com/resources/blog/handheld-robotic-data-collection/",
+          "retrieved_at": "2026-06-17",
+          "title": "Getting a Grip on Robotic Data Collection"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=8Ip5ehvsUlk",
+          "retrieved_at": "2026-06-17",
+          "title": "Getting a Grip on Robotic Data Collection (YouTube)"
+        }
+      ],
+      "specs": {
+        "published_at": "2026-05-12",
+        "dof_active": 3,
+        "dof_underactuated": 2,
+        "endeffector": "pivoting monolithic double thumb + two underactuated linkage fingers",
+        "handheld_sizes": 3,
+        "main_camera": "HD wide-angle RGB cameras mounted on gripper (egocentric workspace view)",
+        "gripper_width_method": "magnetic position encoders",
+        "force_ratio_max": "3:1 (handheld variant, for operator comfort)",
+        "sampling_rate_hz": 100,
+        "tracking_details": "Gripper state (width, velocity, torque) via motor encoders; synchronized multimodal capture",
+        "isomorphic_end_effector": "Electrically actuated Koala gripper (ballscrew-driven motor, shared finger geometry and sensors)",
+        "data_modalities": [
+          "rgb",
+          "gripper_width",
+          "gripper_velocity",
+          "gripper_torque"
+        ],
+        "robot_free_collection": true,
+        "grasp_types": [
+          "precision pinch",
+          "power grasp",
+          "caging grasp"
+        ],
+        "tasks_demonstrated": [
+          "tool use (drill, hammer, ratchet, screwdriver)",
+          "precision manipulation (key, pencil, card)",
+          "assembly (engine, battery installation roadmap)"
+        ]
+      },
+      "notes": "legacy_category: umi_derivative; evolved from RAI's UMI-style parallel-jaw capture devices with improved linkages, encoders, and force sensing"
     }
   ],
   "datasets": [
@@ -2908,7 +2976,8 @@
         "force_sensing"
       ],
       "related_product_ids": [
-        "umi"
+        "umi",
+        "koala_gripper"
       ],
       "companion_links": [
         {
