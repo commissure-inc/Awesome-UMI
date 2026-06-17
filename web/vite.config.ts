@@ -19,9 +19,23 @@ function resolveBase(): string {
   return "/Awesome-UMI/";
 }
 
+function cloudflareAnalyticsPlugin() {
+  return {
+    name: "inject-cloudflare-analytics",
+    transformIndexHtml(html: string) {
+      const token = process.env.VITE_CF_ANALYTICS_TOKEN?.trim();
+      if (!token) return html;
+
+      const beacon = JSON.stringify({ token });
+      const snippet = `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${beacon}'></script>`;
+      return html.replace("</body>", `    ${snippet}\n  </body>`);
+    },
+  };
+}
+
 export default defineConfig({
   base: resolveBase(),
-  plugins: [react()],
+  plugins: [react(), cloudflareAnalyticsPlugin()],
   server: {
     fs: {
       allow: [path.resolve(__dirname, "..")],
