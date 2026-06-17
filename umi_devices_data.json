@@ -1457,9 +1457,10 @@
       ],
       "full_name": "GenRobot DAS Gripper",
       "confidence": "medium",
-      "last_verified_at": "2026-06-05",
+      "last_verified_at": "2026-06-17",
       "id": "genrobot_das_gripper",
       "country": "china",
+      "year_first": 2025,
       "image_url": "https://cdn.shopify.com/s/files/1/0777/8874/1847/files/das_gripper_layout.jpg?v=1763967710",
       "force_torque_integration": "none",
       "organization": [
@@ -1508,7 +1509,8 @@
           }
         ],
         "total_data_hours": "10,000+",
-        "scenarios": "50+"
+        "scenarios": "50+",
+        "venue_first_public": "CoRL 2025"
       },
       "notes": "legacy_category: commercial_data_infrastructure",
       "license": "commercial_closed"
@@ -1526,9 +1528,10 @@
       ],
       "full_name": "GenRobot DAS Dex",
       "confidence": "medium",
-      "last_verified_at": "2026-06-05",
+      "last_verified_at": "2026-06-17",
       "id": "genrobot_das_dex",
       "country": "china",
+      "year_first": 2026,
       "image_url": "https://www.genrobot.ai/images/products/dex/dex1.png",
       "force_torque_integration": "none",
       "organization": [
@@ -1554,7 +1557,8 @@
           "tactile",
           "finger_joints"
         ],
-        "data_format": ".mcap"
+        "data_format": ".mcap",
+        "venue_first_public": "Apr 2026 product launch"
       },
       "notes": "legacy_category: commercial_data_infrastructure",
       "bimanual": "extensible",
@@ -1573,9 +1577,10 @@
       ],
       "full_name": "GenRobot DAS Fingers",
       "confidence": "medium",
-      "last_verified_at": "2026-06-05",
+      "last_verified_at": "2026-06-17",
       "id": "genrobot_das_fingers",
       "country": "china",
+      "year_first": 2025,
       "image_url": "https://tos-static.tos-cn-shanghai.volces.com/static/video/finger_hero11.png",
       "force_torque_integration": "none",
       "organization": [
@@ -1603,7 +1608,8 @@
           "audio",
           "gripper_width"
         ],
-        "data_format": ".mcap"
+        "data_format": ".mcap",
+        "venue_first_public": "CoRL 2025"
       },
       "notes": "legacy_category: commercial_data_infrastructure",
       "license": "commercial_closed"
@@ -1621,9 +1627,10 @@
       ],
       "full_name": "GenRobot DAS Controller",
       "confidence": "medium",
-      "last_verified_at": "2026-05-24",
+      "last_verified_at": "2026-06-17",
       "id": "genrobot_das_controller",
       "country": "china",
+      "year_first": 2025,
       "force_torque_integration": "none",
       "organization": [
         "GenRobot AI"
@@ -1648,7 +1655,8 @@
           "tactile",
           "gripper_width"
         ],
-        "data_format": ".mcap"
+        "data_format": ".mcap",
+        "venue_first_public": "CoRL 2025"
       },
       "notes": "legacy_category: commercial_data_infrastructure"
     },
