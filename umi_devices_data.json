@@ -2716,6 +2716,70 @@
         ]
       },
       "notes": "legacy_category: umi_derivative"
+    },
+    {
+      "id": "art_glove",
+      "name": "ART-Glove",
+      "full_name": "ART-Glove: Articulated Tactile Glove for Contact-Grounded Dexterous Interaction Capture",
+      "organization": [
+        "Carnegie Mellon University"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "image_url": "https://arxiv.org/html/2606.16370v1/x2.png",
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "paper_only",
+      "tactile_integration": "piezoresistive",
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "bimanual": "extensible",
+      "license": "diy_open",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-06-17",
+      "key_innovation": "16 rigid functional surfaces with 22 anatomically aligned joints make hand-side contact geometry explicit; synchronized 22-DoF encoder joint motion and 2048-taxel piezoresistive tactile sensing at 120 Hz",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://linchangyi1.github.io/ART-Glove/",
+          "retrieved_at": "2026-06-17"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2606.16370",
+          "retrieved_at": "2026-06-17",
+          "title": "arXiv:2606.16370"
+        }
+      ],
+      "specs": {
+        "venue": "In submission",
+        "dof": 22,
+        "functional_surfaces": 16,
+        "tactile_taxels": 2048,
+        "tactile_array_layout": "64×32 piezoresistive taxels across 7 modular FPCBs",
+        "tactile_sensor_name": "Full-hand piezoresistive tactile skin (HiPi readout)",
+        "joint_angle_sensor": "AS5600L magnetic rotary encoders (22 sensed DoFs)",
+        "sampling_rate_hz": 120,
+        "shell_material": "1-mm PLA (3D printed rigid shells)",
+        "tracking_details": "On-glove encoder-based joint sensing; sub-degree MAE across three joint mechanism types",
+        "finger_joint_tracking": "22-DoF anatomically aligned (4 DoF × 4 fingers + 6 DoF thumb)",
+        "data_modalities": [
+          "joint_angles",
+          "tactile_contact"
+        ],
+        "robot_free_collection": true,
+        "key_authors": [
+          "Changyi Lin",
+          "Ding Zhao"
+        ],
+        "tasks_demonstrated": [
+          "downward ball rotation",
+          "bottle-cap screwing",
+          "USB-drive pressing"
+        ]
+      },
+      "notes": "legacy_category: dexterous_exoskeleton"
     }
   ],
   "datasets": [
