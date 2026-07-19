@@ -2856,6 +2856,80 @@
         ]
       },
       "notes": "legacy_category: umi_derivative; evolved from RAI's UMI-style parallel-jaw capture devices with improved linkages, encoders, and force sensing"
+    },
+    {
+      "id": "handumi",
+      "name": "HandUMI",
+      "full_name": "HandUMI: Hand-Worn Open-Source Variant of the Universal Manipulation Interface",
+      "organization": [
+        "RoboNet"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "image_url": "https://raw.githubusercontent.com/BrikHMP18/HandUMI/main/media/cover-handumi.png",
+      "form_category": "wearable_hand",
+      "form_factor": "finger_worn",
+      "commercialization_stage": "oss_diy",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "yes",
+      "license": "apache",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-07-19",
+      "key_innovation": "Moves the collection interface onto the operator's hand: mounts on thumb and index/middle fingers, opens and closes with a natural pinch, measures gripper width directly with a servo encoder, and swaps detachable 3D-printed tips to retarget one wearable across different parallel-jaw robot grippers",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://github.com/BrikHMP18/HandUMI",
+          "retrieved_at": "2026-07-19",
+          "title": "HandUMI hardware (STL, BOM, assembly)"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/robonet-ai/handumi-sw",
+          "retrieved_at": "2026-07-19",
+          "title": "HandUMI software (collection, calibration, retargeting)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://robonet-ai.github.io/handumi-sw/",
+          "retrieved_at": "2026-07-19"
+        }
+      ],
+      "specs": {
+        "endeffector": "interchangeable 3D-printed parallel-jaw gripper tips (detachable)",
+        "cost_usd": 110,
+        "cost_breakdown": "~$110 parts per unit (~$221 bimanual pair); VR headset (PICO 4 Ultra or Meta Quest 3) is a separate one-time purchase",
+        "main_camera": "Compact fisheye USB UVC wrist camera (wide FOV)",
+        "gripper_width_method": "servo_encoder",
+        "tracking_details": "VR headset (PICO 4 Ultra or Meta Quest 3) provides world frame; controllers mounted on each wrist via printed support give per-hand SE(3) pose (no offline camera SLAM)",
+        "gripper_tip_targets": [
+          "AgileX Piper",
+          "ARX X5 (2023)",
+          "Dream Gripper (TRLC)",
+          "Trossen WidowX AI",
+          "UMI gripper"
+        ],
+        "data_modalities": [
+          "rgb_wrist",
+          "gripper_width",
+          "eef_pose"
+        ],
+        "robot_free_collection": true,
+        "hardware_assets": [
+          "STL CAD files",
+          "BOM with purchase links"
+        ],
+        "related_software": "handumi-sw (synchronized bimanual collection, calibration, QA, replay, teleoperation, cross-robot retargeting)",
+        "hand_fit_design": "Finger cradle geometry designed from a 3D scan of the operator's hand; workflow repeatable for other operators",
+        "business_model": "independent_oss",
+        "key_authors": [
+          "Brik H. Meza"
+        ]
+      },
+      "notes": "Open-source counterpart to Generalist's proprietary hand-worn capture device, re-targeted at robot arms with parallel-jaw grippers; submitted via issue #20 as handheld_gripper, categorized wearable_hand (finger_worn) per hand-worn form"
     }
   ],
   "datasets": [
