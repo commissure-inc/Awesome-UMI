@@ -2930,6 +2930,73 @@
         ]
       },
       "notes": "Open-source counterpart to Generalist's proprietary hand-worn capture device, re-targeted at robot arms with parallel-jaw grippers; submitted via issue #20 as handheld_gripper, categorized wearable_hand (finger_worn) per hand-worn form"
+    },
+    {
+      "id": "trossen_trumi",
+      "name": "TRumi",
+      "full_name": "TRumi (Trossen Robotics Universal Manipulation Interface) — handheld manipulation data collection system",
+      "organization": [
+        "Trossen Robotics"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "image_url": "https://static.wixstatic.com/media/d3716d_cf083398c1ab467495620daf4a9db20b~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d3716d_cf083398c1ab467495620daf4a9db20b~mv2.jpg",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-07-20",
+      "key_innovation": "Hardened commercial UMI: replaces 3D-printed gear trigger with zero-backlash cam drive on dual linear rails and constant-force springs (0.4 lb pull), embeds multicolor finger identifiers in the mounts instead of stickers, and widens FOV to 177° via GoPro Ultra Wide Lens Mod",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.trossenrobotics.com/trumi",
+          "retrieved_at": "2026-07-20",
+          "title": "TRumi Handheld Manipulation Data Collection System"
+        },
+        {
+          "type": "documentation",
+          "url": "https://docs.trossenrobotics.com/trumi/index.html",
+          "retrieved_at": "2026-07-20",
+          "title": "TRumi Documentation (overview, specifications, dataset generation pipeline)"
+        },
+        {
+          "type": "press",
+          "url": "https://www.linkedin.com/posts/trossen-robotics_robot-learning-has-a-boring-bottleneck-activity-7481047718325547008-Rzzn",
+          "retrieved_at": "2026-07-20",
+          "title": "TRumi launch announcement (LinkedIn, 2026-07-09)"
+        }
+      ],
+      "specs": {
+        "endeffector": "parallel-jaw gripper with cam-driven trigger (zero backlash, dual precision linear rails, dual constant-force springs)",
+        "cost_usd": 950,
+        "cost_breakdown": "Dual TRumi Kit $949.95 without GoPros; $2,195.99 with 2× GoPro HERO13 Black + Ultra Wide Lens Mods; accessory bundle $399.95",
+        "main_camera": "GoPro HERO13 Black + Ultra Wide Lens Mod (wrist-mounted, 177° FOV; supported configuration)",
+        "trigger_pull_force_lb": 0.4,
+        "weight_g": 800,
+        "dimensions_mm": "242.9 × 215.7 × 176.0 (max)",
+        "gripper_width_method": "embedded multicolor finger identifiers (visual, no external stickers)",
+        "tracking_details": "Visual-inertial SLAM (ORB-SLAM3) on GoPro video + onboard IMU; one-time workspace mapping video for localization; metric-scale 6-DoF trajectory",
+        "data_modalities": [
+          "rgb_wrist",
+          "imu",
+          "eef_pose",
+          "gripper_width"
+        ],
+        "data_format": ".zarr / .mcap",
+        "robot_free_collection": true,
+        "durability": "CNC-machined metal components, designed for serviceability (vs fragile 3D-printed UMI parts)",
+        "related_software": "Trossen Data Collection Pipelines (SLAM, pose/aperture extraction, Zarr/MCAP dataset generation)",
+        "configurations": "single gripper or bimanual (Dual TRumi Kit)",
+        "venue_first_public": "Jul 2026 product launch"
+      },
+      "notes": "Positioned between DIY UMI builds ($400-500 print cost, fragile) and high-end handheld systems ($10K-15K/pair); complementary to leader-follower teleop, which Trossen recommends for final embodiment-specific tuning and validation"
     }
   ],
   "datasets": [
