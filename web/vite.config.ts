@@ -1,6 +1,7 @@
 import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { catalogLastUpdatedPlugin } from "./vite-catalog-last-updated";
 
 /** GitHub Pages project site base path, e.g. /Awesome-UMI/ */
 function resolveBase(): string {
@@ -35,7 +36,7 @@ function cloudflareAnalyticsPlugin() {
 
 export default defineConfig({
   base: resolveBase(),
-  plugins: [react(), cloudflareAnalyticsPlugin()],
+  plugins: [react(), catalogLastUpdatedPlugin(), cloudflareAnalyticsPlugin()],
   server: {
     fs: {
       allow: [path.resolve(__dirname, "..")],

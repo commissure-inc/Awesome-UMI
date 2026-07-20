@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import catalogUrl from "../../umi_devices_data.json?url";
+import catalogData from "virtual:catalog-data";
 import {
   axisLabel,
   axisValueLabel,
@@ -7,7 +7,6 @@ import {
   defaultYearRange,
   facetOptionsForAxis,
   filterProducts,
-  loadCatalog,
   sortProducts,
   type AxisOption,
   type ProductSortField,
@@ -211,25 +210,16 @@ export default function App() {
   }, [view]);
 
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const d = await loadCatalog(catalogUrl);
-        if (!cancelled) {
-          setData(d);
-          const [a, b] = defaultYearRange(d.filter_axes);
-          setYearMin(a);
-          setYearMax(b);
-        }
-      } catch (e) {
-        if (!cancelled) setLoadError(e instanceof Error ? e.message : String(e));
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
+    try {
+      setData(catalogData);
+      const [a, b] = defaultYearRange(catalogData.filter_axes);
+      setYearMin(a);
+      setYearMax(b);
+    } catch (e) {
+      setLoadError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   const yearBounds = data ? defaultYearRange(data.filter_axes) : ([2018, 2030] as [number, number]);
