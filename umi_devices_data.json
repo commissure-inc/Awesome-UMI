@@ -92,7 +92,8 @@
       "uk",
       "south_korea",
       "canada",
-      "china_global"
+      "china_global",
+      "peru"
     ],
     "year_range": [
       2023,
@@ -2862,9 +2863,10 @@
       "name": "HandUMI",
       "full_name": "HandUMI: Hand-Worn Open-Source Variant of the Universal Manipulation Interface",
       "organization": [
-        "RoboNet"
+        "RoboNet",
+        "NONHUMAN"
       ],
-      "country": "us",
+      "country": "peru",
       "year_first": 2026,
       "image_url": "https://raw.githubusercontent.com/BrikHMP18/HandUMI/main/media/cover-handumi.png",
       "form_category": "wearable_hand",
