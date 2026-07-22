@@ -45,7 +45,7 @@ export const AXIS_LABELS: Record<Locale, Record<string, string>> = {
 };
 
 /** form_category value labels. */
-export const FORM_CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
+const FORM_CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     handheld_gripper: "ハンドヘルド",
     wearable_hand: "ウェアラブル（手・グローブ）",
@@ -70,7 +70,7 @@ export const FORM_CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
   },
 };
 
-export const COMMERCIALIZATION_LABELS: Record<Locale, Record<string, string>> = {
+const COMMERCIALIZATION_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     paper_only: "論文のみ",
     oss_diy: "OSS / DIY",
@@ -88,7 +88,7 @@ export const COMMERCIALIZATION_LABELS: Record<Locale, Record<string, string>> = 
 };
 
 /** tactile_integration value labels. */
-export const TACTILE_INTEGRATION_LABELS: Record<Locale, Record<string, string>> = {
+const TACTILE_INTEGRATION_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     none: "なし",
     type_unspecified: "あり（方式不明）",
@@ -110,7 +110,7 @@ export const TACTILE_INTEGRATION_LABELS: Record<Locale, Record<string, string>> 
 };
 
 /** pose_tracking value labels (spatial 6DoF acquisition method). */
-export const POSE_TRACKING_LABELS: Record<Locale, Record<string, string>> = {
+const POSE_TRACKING_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     visual_slam: "Visual SLAM",
     visual_inertial: "Visual-inertial (VIO)",
@@ -125,6 +125,144 @@ export const POSE_TRACKING_LABELS: Record<Locale, Record<string, string>> = {
     vr_controller_tracker: "VR controller / tracker",
     external_mocap: "External mocap",
   },
+};
+
+/** form_factor value labels (detail-level form classification). */
+const FORM_FACTOR_LABELS: Record<Locale, Record<string, string>> = {
+  ja: {
+    handheld_parallel_jaw: "ハンドヘルド（平行グリッパ）",
+    handheld_multi_finger: "ハンドヘルド（多指）",
+    wearable_exoskeleton_hand: "手部外骨格",
+    wearable_exoskeleton_hand_passive: "手部外骨格（受動）",
+    wearable_full_arm: "腕全体ウェアラブル",
+    wearable_full_arm_chest: "腕・胸部ウェアラブル",
+    mocap_glove: "モーキャプグローブ",
+    smart_glasses: "スマートグラス",
+    stick_with_phone: "スティック＋スマホ",
+    ar_virtual: "AR / バーチャル",
+    rgb_camera_only: "RGB カメラのみ",
+    humanoid_teleop: "ヒューマノイドテレオペ",
+    seated_teleop: "着座型テレオペ",
+    finger_worn: "指装着型",
+    sensor_pad_module: "センサパッドモジュール",
+    robotic_arm: "ロボットアーム",
+    tactile_sensor_fingertip: "指先触覚センサ",
+    bimanual_imitation_kit: "両手模倣キット",
+  },
+  en: {
+    handheld_parallel_jaw: "Handheld (parallel jaw)",
+    handheld_multi_finger: "Handheld (multi-finger)",
+    wearable_exoskeleton_hand: "Hand exoskeleton",
+    wearable_exoskeleton_hand_passive: "Hand exoskeleton (passive)",
+    wearable_full_arm: "Full-arm wearable",
+    wearable_full_arm_chest: "Arm + chest wearable",
+    mocap_glove: "Mocap glove",
+    smart_glasses: "Smart glasses",
+    stick_with_phone: "Stick with phone",
+    ar_virtual: "AR / virtual",
+    rgb_camera_only: "RGB camera only",
+    humanoid_teleop: "Humanoid teleop",
+    seated_teleop: "Seated teleop",
+    finger_worn: "Finger-worn",
+    sensor_pad_module: "Sensor pad module",
+    robotic_arm: "Robotic arm",
+    tactile_sensor_fingertip: "Fingertip tactile sensor",
+    bimanual_imitation_kit: "Bimanual imitation kit",
+  },
+};
+
+/** force_torque_integration value labels. */
+const FORCE_TORQUE_LABELS: Record<Locale, Record<string, string>> = {
+  ja: {
+    none: "なし",
+    "6axis_ft": "6軸 F/T",
+    contact_microphone: "コンタクトマイク",
+    single_axis: "単軸",
+    joint_torque: "関節トルク",
+  },
+  en: {
+    none: "None",
+    "6axis_ft": "6-axis F/T",
+    contact_microphone: "Contact microphone",
+    single_axis: "Single-axis",
+    joint_torque: "Joint torque",
+  },
+};
+
+const BIMANUAL_LABELS: Record<Locale, Record<string, string>> = {
+  ja: {
+    yes: "対応",
+    no: "非対応",
+    extensible: "拡張で対応可",
+  },
+  en: {
+    yes: "Yes",
+    no: "No",
+    extensible: "Extensible",
+  },
+};
+
+const LICENSE_LABELS: Record<Locale, Record<string, string>> = {
+  ja: {
+    mit: "MIT",
+    apache: "Apache",
+    mpl_2: "MPL-2.0",
+    partial_oss: "一部 OSS",
+    commercial_closed: "商用（クローズド）",
+    diy_open: "DIY / オープン",
+  },
+  en: {
+    mit: "MIT",
+    apache: "Apache",
+    mpl_2: "MPL-2.0",
+    partial_oss: "Partial OSS",
+    commercial_closed: "Commercial (closed)",
+    diy_open: "DIY / open",
+  },
+};
+
+const COUNTRY_LABELS: Record<Locale, Record<string, string>> = {
+  ja: {
+    us: "米国",
+    china: "中国",
+    china_global: "中国 / グローバル",
+    japan: "日本",
+    germany: "ドイツ",
+    uae: "UAE",
+    russia: "ロシア",
+    uk: "英国",
+    south_korea: "韓国",
+    canada: "カナダ",
+    peru: "ペルー",
+    france: "フランス",
+  },
+  en: {
+    us: "US",
+    china: "China",
+    china_global: "China / global",
+    japan: "Japan",
+    germany: "Germany",
+    uae: "UAE",
+    russia: "Russia",
+    uk: "UK",
+    south_korea: "South Korea",
+    canada: "Canada",
+    peru: "Peru",
+    france: "France",
+  },
+};
+
+/** Value labels for every filter axis, keyed by axis name (keys match filter_axes in JSON). */
+export const AXIS_VALUE_LABELS: Record<string, Record<Locale, Record<string, string>>> = {
+  form_category: FORM_CATEGORY_LABELS,
+  form_factor: FORM_FACTOR_LABELS,
+  commercialization_stage: COMMERCIALIZATION_LABELS,
+  tactile_integration: TACTILE_INTEGRATION_LABELS,
+  force_torque_integration: FORCE_TORQUE_LABELS,
+  pose_tracking: POSE_TRACKING_LABELS,
+  bimanual: BIMANUAL_LABELS,
+  license: LICENSE_LABELS,
+  country: COUNTRY_LABELS,
 };
 
 export const UI: Record<

@@ -1,11 +1,4 @@
-import {
-  AXIS_LABELS,
-  COMMERCIALIZATION_LABELS,
-  FORM_CATEGORY_LABELS,
-  POSE_TRACKING_LABELS,
-  TACTILE_INTEGRATION_LABELS,
-  type Locale,
-} from "./i18n";
+import { AXIS_LABELS, AXIS_VALUE_LABELS, type Locale } from "./i18n";
 import type { CatalogData, FilterAxes, Product } from "./types";
 
 /** form_category values shown in the catalog UI (see docs/SCOPE.md). */
@@ -48,24 +41,10 @@ export function axisValueLabel(
   value: string,
   locale: Locale = "en",
 ): string {
-  if (axisKey === "form_category") {
-    const label = FORM_CATEGORY_LABELS[locale][value];
-    if (label) return label;
-  }
-  if (axisKey === "commercialization_stage") {
-    const label = COMMERCIALIZATION_LABELS[locale][value];
-    if (label) return label;
-  }
-  if (axisKey === "pose_tracking") {
-    const label = POSE_TRACKING_LABELS[locale][value];
-    if (label) return label;
-  }
-  if (axisKey === "tactile_integration") {
-    const label = TACTILE_INTEGRATION_LABELS[locale][value];
-    if (label) return label;
-  }
+  const label = AXIS_VALUE_LABELS[axisKey]?.[locale][value];
+  if (label) return label;
   if (value === UNSET_AXIS_VALUE) {
-    return "Not specified";
+    return locale === "ja" ? "未設定" : "Not specified";
   }
   return value;
 }

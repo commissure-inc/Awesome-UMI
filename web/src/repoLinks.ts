@@ -4,7 +4,7 @@ export const REPO_URL = `https://github.com/${REPO}`;
 export const PAGES_URL = "https://commissure-inc.github.io/Awesome-UMI/";
 
 /** Catalog release (semver); keep in sync with umi_devices_data.json metadata.version */
-export const APP_VERSION = "0.1.1";
+export const APP_VERSION = "0.1.2";
 
 /** Maintainer */
 export const COMMISSURE_URL = "https://commissure.co.jp/";

@@ -65,6 +65,9 @@ body {
 }
 
 .maintainer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   flex-shrink: 0;
   color: var(--text2);
   font-size: 10px;
@@ -74,7 +77,12 @@ body {
 
 .maintainer-link:hover {
   color: var(--text);
-  text-decoration: underline;
+}
+
+.maintainer-logo {
+  display: block;
+  height: 20px;
+  width: auto;
 }
 
 .app-header .maintainer-link + .github-link {

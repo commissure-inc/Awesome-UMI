@@ -12,6 +12,7 @@ import {
   type ProductSortField,
   type SortDirection,
 } from "./catalog";
+import { CommissureLogo } from "./CommissureLogo";
 import { ContributePanel, type ContributeKind, type ContributeMode } from "./ContributePanel";
 import { UI } from "./i18n";
 import { productDetailEntries } from "./productFields";
@@ -350,8 +351,11 @@ export default function App() {
           className="maintainer-link"
           target="_blank"
           rel="noopener noreferrer"
+          title={ui.maintainedBy}
+          aria-label={ui.maintainedBy}
         >
-          {ui.maintainedBy}
+          <span className="maintainer-prefix">maintained by</span>
+          <CommissureLogo className="maintainer-logo" />
         </a>
         <a
           href={REPO_URL}
