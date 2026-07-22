@@ -57,6 +57,7 @@ This is a working list for catalog review — not published on the live site unt
 | FingerEye | 2026 | [2604.20689](https://arxiv.org/abs/2604.20689) | Continuous vision-tactile sensing for dexterous manipulation |
 | FingerViP | 2026 | [2604.21331](https://arxiv.org/abs/2604.21331) | Fingertip visual perception for dexterous manipulation |
 | ActiveGlasses | 2026 | [2604.08534](https://arxiv.org/abs/2604.08534) | Active vision from egocentric human demonstrations |
+| Grabette | 2026 | — | Open-source handheld camera+IMU recording device by Pollen Robotics; SLAM → LeRobot datasets ([GitHub](https://github.com/pollen-robotics/grabette)) |
 | Strawberry Robotic Operation Interface (SROI) | 2025 | [2501.16717](https://arxiv.org/abs/2501.16717) | Open-source device for dexterous manipulation demos |
 | Sensorized gripper for human demonstrations | 2025 | [2503.14855](https://arxiv.org/abs/2503.14855) | Sensorized gripper hardware for human demo collection |
 | MimicTouch | 2023 | [2310.16917](https://arxiv.org/abs/2310.16917) | Multi-modal human tactile demonstrations |
