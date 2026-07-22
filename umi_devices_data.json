@@ -93,7 +93,8 @@
       "south_korea",
       "canada",
       "china_global",
-      "peru"
+      "peru",
+      "france"
     ],
     "year_range": [
       2023,
@@ -2999,6 +3000,84 @@
         "venue_first_public": "Jul 2026 product launch"
       },
       "notes": "Positioned between DIY UMI builds ($400-500 print cost, fragile) and high-end handheld systems ($10K-15K/pair); complementary to leader-follower teleop, which Trossen recommends for final embodiment-specific tuning and validation"
+    },
+    {
+      "id": "pollen_grabette",
+      "name": "Grabette",
+      "full_name": "GRABETTE — open-source robotic manipulation data recording toolkit",
+      "organization": [
+        "Pollen Robotics"
+      ],
+      "country": "france",
+      "year_first": 2026,
+      "image_url": "https://raw.githubusercontent.com/pollen-robotics/grabette/develop/packages/grabette/docs/images/grabette_face.jpg",
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "oss_diy",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "extensible",
+      "license": "apache",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-07-22",
+      "key_innovation": "Robot-agnostic wearable hand capture on Raspberry Pi: synchronized fisheye RGB + OAK-D depth/IMU, finger joint encoders, on-device session UI, and a postprocess pipeline that runs SLAM then exports LeRobot datasets for policy learning",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://github.com/pollen-robotics/grabette",
+          "retrieved_at": "2026-07-22",
+          "title": "pollen-robotics/grabette (hardware, services, SLAM → LeRobot postprocess)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3LyyWI-CiplVPtgrWkmLRYjdDqYhbVJXYt8PNa71FDzbTSMVj1YGV0Zpo5PJeBGJURaz8nZt1_v-8/pubhtml",
+          "retrieved_at": "2026-07-22",
+          "title": "Grabette + Gripette Bill of Materials"
+        },
+        {
+          "type": "documentation",
+          "url": "https://cad.onshape.com/documents/0c6175c392788391992ff2ec/w/9f773e5f0eeae1577ae36a05/e/13a89fef2591d863bb0bf186",
+          "retrieved_at": "2026-07-22",
+          "title": "Grabette + Gripette CAD (Onshape)"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "endeffector": "wearable articulated two-finger mitt (proximal + distal rotary joints; left/right builds; AS5600L encoders per joint)",
+        "main_camera": "Raspberry Pi Camera Module with fisheye lens (KannalaBrandt8), 1296×972 @ 46 fps",
+        "depth_camera": "OAK-D SR stereo RGB-D with onboard BNO IMU (200 Hz; required for trajectory recovery)",
+        "compute": "Raspberry Pi 4 (Grabette wearable); Raspberry Pi Zero 2W (Gripette robot-mounted motor service)",
+        "gripper_width_method": "proximal + distal finger joint angle encoders (AS5600L)",
+        "tracking_details": "Synchronized camera + depth + IMU → SLAM / VIO in grabette-postprocess; metric trajectories for LeRobot export",
+        "data_modalities": [
+          "rgb_fisheye",
+          "rgb_d",
+          "imu",
+          "eef_pose",
+          "gripper_width"
+        ],
+        "data_format": "LeRobot (Hugging Face)",
+        "robot_free_collection": true,
+        "policy_framework": [
+          "diffusion_policy",
+          "pi0.5"
+        ],
+        "supported_robots": [
+          "OpenArm (reference integration + Gripette)",
+          "robot-agnostic core (add integrations/<arm>/)"
+        ],
+        "hardware_assets": [
+          "Onshape CAD",
+          "BOM spreadsheet",
+          "assembly instructions"
+        ],
+        "related_software": "grabette (Pi daemon + dashboard), gripette (gripper motor gRPC), grabette-postprocess (SLAM → LeRobot), casquette POV headset (WIP)",
+        "business_model": "industry_oss",
+        "venue_first_public": "GitHub v1.0.1 (2026-07-21)"
+      },
+      "notes": "Same wearable-hand / exoskeleton-hand category as Sunday Skill Capture Glove (operator wears an articulated mitt isomorphic to the robot gripper). Core packages/ is robot-agnostic; OpenArm + Gripette under integrations/ is the reference stack."
     }
   ],
   "datasets": [

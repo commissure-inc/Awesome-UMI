@@ -96,7 +96,7 @@ These papers reference UMI but are primarily **algorithms, control stacks, or da
 
 UMI-citing hardware papers **already listed** in `umi_devices_data.json` include:
 
-Fast-UMI, MV-UMI, UMI-3D, Cloud-UMI / UMIGen, LEGATO, ViTaMIn, ViTaMIn-B, Touch in the Wild, FlexiTac, TacUMI, exUMI, TAMEn, FreeTacMan, ForceMimic, DexCap, DexUMI, RealDexUMI, DEXOP, AirExo, AirExo-2, DexWild, YUBI, DEX-Mouse, Exo-ViHa, OmniUMI, ActiveUMI, HoMMI, ManiWAV, XRZero-G0, UMI-FT, RoboPocket, DexViTac, DexEXO, ART-Glove, Koala, and related commercial kits (DAS, Pika Sense, etc.).
+Fast-UMI, MV-UMI, UMI-3D, Cloud-UMI / UMIGen, LEGATO, ViTaMIn, ViTaMIn-B, Touch in the Wild, FlexiTac, TacUMI, exUMI, TAMEn, FreeTacMan, ForceMimic, DexCap, DexUMI, RealDexUMI, DEXOP, AirExo, AirExo-2, DexWild, YUBI, DEX-Mouse, Exo-ViHa, OmniUMI, ActiveUMI, HoMMI, ManiWAV, XRZero-G0, UMI-FT, RoboPocket, DexViTac, DexEXO, ART-Glove, Koala, Grabette, and related commercial kits (DAS, Pika Sense, etc.).
 
 ## How to promote an entry
 
