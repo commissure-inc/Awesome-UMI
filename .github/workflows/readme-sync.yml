@@ -1,0 +1,32 @@
+name: README sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - umi_devices_data.json
+      - README.md
+      - scripts/generate-readme.mjs
+      - .github/workflows/readme-sync.yml
+  pull_request:
+    paths:
+      - umi_devices_data.json
+      - README.md
+      - scripts/generate-readme.mjs
+      - .github/workflows/readme-sync.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: node scripts/generate-readme.mjs --check
