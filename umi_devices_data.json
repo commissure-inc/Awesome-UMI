@@ -22,10 +22,7 @@
         "humanoid_teleop",
         "seated_teleop",
         "finger_worn",
-        "sensor_pad_module",
         "wearable_full_arm_chest",
-        "robotic_arm",
-        "tactile_sensor_fingertip",
         "bimanual_imitation_kit",
         "wearable_exoskeleton_hand_passive"
       ]
@@ -109,8 +106,6 @@
         "head_mounted",
         "teleop_station",
         "software_only",
-        "sensor_module",
-        "robot_arm_kit",
         "platform_infrastructure"
       ]
     }
@@ -592,47 +587,6 @@
       "pose_tracking": "visual_inertial",
       "bimanual": "no",
       "license": "mit"
-    },
-    {
-      "form_category": "sensor_module",
-      "form_factor": "sensor_pad_module",
-      "sources": [
-        {
-          "type": "project_page",
-          "url": "https://flexitac.github.io/",
-          "retrieved_at": "2026-06-05"
-        },
-        {
-          "type": "paper",
-          "url": "https://arxiv.org/abs/2604.28156",
-          "retrieved_at": "2026-06-05",
-          "title": "arXiv:2604.28156"
-        }
-      ],
-      "full_name": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
-      "license": "diy_open",
-      "confidence": "medium",
-      "last_verified_at": "2026-05-13",
-      "id": "flexitac",
-      "country": "us",
-      "year_first": 2026,
-      "organization": [
-        "UIUC"
-      ],
-      "name": "FlexiTac",
-      "tactile_integration": "piezoresistive",
-      "status": "active",
-      "commercialization_stage": "oss_diy",
-      "specs": {
-        "sensor_structure": "FPC-Velostat-FPC 3-layer laminate",
-        "sampling_rate_hz": 100,
-        "interface": "serial",
-        "deployment_examples": [
-          "VT-Refine (CoRL 2025)",
-          "Touch in the Wild (NeurIPS 2025)"
-        ]
-      },
-      "notes": "legacy_category: tactile_sensor_only"
     },
     {
       "form_category": "handheld_gripper",
@@ -1617,52 +1571,6 @@
       "license": "commercial_closed"
     },
     {
-      "form_category": "sensor_module",
-      "form_factor": "handheld_parallel_jaw",
-      "sources": [
-        {
-          "type": "product_page",
-          "url": "https://www.genrobot.ai/products/controller",
-          "retrieved_at": "2026-06-05",
-          "title": "DAS Controller product page"
-        }
-      ],
-      "full_name": "GenRobot DAS Controller",
-      "confidence": "medium",
-      "last_verified_at": "2026-06-17",
-      "id": "genrobot_das_controller",
-      "country": "china",
-      "year_first": 2025,
-      "force_torque_integration": "none",
-      "organization": [
-        "GenRobot AI"
-      ],
-      "name": "DAS Controller",
-      "tactile_integration": "type_unspecified",
-      "status": "active",
-      "key_innovation": "Arm-mounted multimodal end effector homologous with DAS collection devices; 448-point tactile @ 1 mm; one-step gripper swap",
-      "commercialization_stage": "full_stack_business",
-      "pose_tracking": null,
-      "specs": {
-        "business_model": "full_stack_business",
-        "weight_g": 610,
-        "main_camera": "1× fisheye (200° FOV) + 2× wide-angle (170° FOV), 30 FPS",
-        "gripper_width_method": "magnetic_encoder",
-        "endeffector": "interchangeable hard, soft, and tactile grippers (0–103 mm)",
-        "supported_robots": [
-          "Universal flange (various industrial arms)"
-        ],
-        "data_modalities": [
-          "rgb_fisheye",
-          "tactile",
-          "gripper_width"
-        ],
-        "data_format": ".mcap",
-        "venue_first_public": "CoRL 2025"
-      },
-      "notes": "legacy_category: commercial_data_infrastructure"
-    },
-    {
       "form_category": "handheld_gripper",
       "form_factor": "handheld_parallel_jaw",
       "sources": [
@@ -1740,104 +1648,6 @@
       },
       "notes": "legacy_category: commercial_data_infrastructure",
       "license": "commercial_closed"
-    },
-    {
-      "form_category": "robot_arm_kit",
-      "form_factor": "robotic_arm",
-      "sources": [
-        {
-          "type": "project_page",
-          "url": "https://github.com/Seeed-Projects/reBot-DevArm",
-          "retrieved_at": "2026-06-05"
-        }
-      ],
-      "confidence": "medium",
-      "last_verified_at": "2026-05-13",
-      "id": "seeed_rebot",
-      "country": "china_global",
-      "name": "Seeed reBot Arm B601-DM",
-      "status": "active",
-      "commercialization_stage": "commercial_product",
-      "specs": {
-        "provider": "Seeed Studio",
-        "dof": "6+1",
-        "actuator": "Damiao",
-        "reach_mm": 767,
-        "payload_kg": 1.5,
-        "repeatability_mm": 0.2,
-        "frameworks": [
-          "ROS 1/2",
-          "Hugging Face LeRobot",
-          "NVIDIA Isaac Sim",
-          "Pinocchio"
-        ],
-        "price_usd_bundle": 1197,
-        "variants": [
-          "reBot Arm B601-DM (Damiao)",
-          "reBot Arm B601-RS (Robstride)"
-        ]
-      },
-      "notes": "legacy_category: lerobot_compatible_arm"
-    },
-    {
-      "form_category": "robot_arm_kit",
-      "specs": {
-        "description": "6-axis 30KG servos (magnetic feedback), dual-camera (wrist+external)",
-        "provider": "Hiwonder",
-        "integration": "Hugging Face LeRobot",
-        "nexarm_specs": "ESP32+AT32 dual-chip, K230 vision (6 TOPS), 65kg·cm magnetic encoder bus servos"
-      },
-      "form_factor": "robotic_arm",
-      "sources": [
-        {
-          "type": "project_page",
-          "url": "https://www.hiwonder.com/",
-          "retrieved_at": "2026-06-05"
-        }
-      ],
-      "confidence": "medium",
-      "last_verified_at": "2026-05-13",
-      "id": "hiwonder_so_arm101",
-      "country": "china",
-      "name": "Hiwonder SO-ARM101 / NexArm",
-      "status": "active",
-      "commercialization_stage": "commercial_product",
-      "notes": "legacy_category: lerobot_compatible_arm"
-    },
-    {
-      "form_category": "sensor_module",
-      "form_factor": "tactile_sensor_fingertip",
-      "sources": [
-        {
-          "type": "product_page",
-          "url": "https://robotiq.com/tactile-sensor-fingertips",
-          "retrieved_at": "2026-06-05",
-          "title": "Tactile Sensor Fingertips | Robotiq"
-        }
-      ],
-      "full_name": "Robotiq Tactile Sensor Fingertips (TSF-85)",
-      "confidence": "medium",
-      "last_verified_at": "2026-06-04",
-      "id": "robotiq_tsf85",
-      "country": "canada",
-      "name": "Robotiq TSF-85",
-      "status": "active",
-      "key_innovation": "Capacitive fingertip pads (28 taxels) with 1000 Hz vibration and 3-axis IMU for Physical AI data collection on 2F grippers",
-      "commercialization_stage": "commercial_product",
-      "specs": {
-        "provider": "Robotiq",
-        "integration": [
-          "ROS2",
-          "Robotiq 2F-85 Adaptive Gripper",
-          "Robotiq 2F-140 Adaptive Gripper",
-          "NVIDIA Isaac Sim"
-        ],
-        "data": [
-          "tactile",
-          "IMU"
-        ]
-      },
-      "notes": "legacy_category: industrial_tactile_sensor"
     },
     {
       "form_category": "handheld_gripper",

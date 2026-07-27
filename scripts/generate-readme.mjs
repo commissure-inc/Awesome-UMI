@@ -15,16 +15,11 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_PATH = join(ROOT, "umi_devices_data.json");
 const README_PATH = join(ROOT, "README.md");
 
+/** Form categories in catalog scope. Keep in sync with CATALOG_FORM_CATEGORIES in web/src/catalog.ts. */
 const CATEGORY_HEADINGS = {
   handheld_gripper: "Handheld grippers",
   wearable_hand: "Wearable hands and gloves",
   wearable_arm: "Wearable arms and exoskeletons",
-  head_mounted: "Head-mounted",
-  teleop_station: "Teleoperation stations",
-  software_only: "Software",
-  sensor_module: "Sensor modules",
-  robot_arm_kit: "Robot arm kits",
-  platform_infrastructure: "Platforms and infrastructure",
 };
 
 const LICENSE_LABELS = {
@@ -217,16 +212,23 @@ function byYearThenName(a, b) {
   return a.name.localeCompare(b.name);
 }
 
+function catalogProducts(data) {
+  return data.products.filter((product) => product.form_category in CATEGORY_HEADINGS);
+}
+
 function buildSections(data) {
   const order = data.filter_axes?.form_category?.values ?? [];
-  const categories = [...new Set([...order, ...data.products.map((p) => p.form_category)])];
+  const inScope = catalogProducts(data);
+  const categories = [...new Set([...order, ...inScope.map((p) => p.form_category)])].filter(
+    (category) => category in CATEGORY_HEADINGS,
+  );
   const sections = [];
 
   for (const category of categories) {
-    const products = data.products.filter((p) => p.form_category === category).sort(byYearThenName);
+    const products = inScope.filter((p) => p.form_category === category).sort(byYearThenName);
     if (products.length === 0) continue;
     sections.push({
-      heading: CATEGORY_HEADINGS[category] ?? titleCase(category),
+      heading: CATEGORY_HEADINGS[category],
       lines: products.map(productLine),
     });
   }
@@ -258,8 +260,8 @@ function buildList(sections) {
 }
 
 function buildSummary(data) {
-  const { products, datasets = [] } = data;
-  return [`**${products.length}** devices`, `**${datasets.length}** datasets`].join(" · ");
+  const { datasets = [] } = data;
+  return [`**${catalogProducts(data).length}** devices`, `**${datasets.length}** datasets`].join(" · ");
 }
 
 function replaceBlock(markdown, name, body) {
@@ -273,6 +275,11 @@ function replaceBlock(markdown, name, body) {
 function main() {
   const data = JSON.parse(readFileSync(DATA_PATH, "utf8"));
   const sections = buildSections(data);
+
+  const outOfScope = data.products.filter((product) => !(product.form_category in CATEGORY_HEADINGS));
+  if (outOfScope.length > 0) {
+    console.warn(`Skipping ${outOfScope.length} product(s) outside catalog scope: ${outOfScope.map((p) => p.id).join(", ")}`);
+  }
 
   let markdown = readFileSync(README_PATH, "utf8");
   markdown = replaceBlock(markdown, "SUMMARY", buildSummary(data));
@@ -289,7 +296,7 @@ function main() {
   }
 
   writeFileSync(README_PATH, markdown);
-  console.log(`README.md updated (${data.products.length} devices, ${sections.length} sections).`);
+  console.log(`README.md updated (${catalogProducts(data).length} devices, ${sections.length} sections).`);
 }
 
 main();

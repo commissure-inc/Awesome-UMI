@@ -2,10 +2,10 @@
 
 > A curated list of UMI-style tactile and motion data-collection devices for robot learning.
 
-Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers, hand and arm wearables, tactile modules — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
+Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**53** devices · **10** datasets
+**48** devices · **10** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -16,8 +16,6 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Handheld grippers](#handheld-grippers)
 - [Wearable hands and gloves](#wearable-hands-and-gloves)
 - [Wearable arms and exoskeletons](#wearable-arms-and-exoskeletons)
-- [Sensor modules](#sensor-modules)
-- [Robot arm kits](#robot-arm-kits)
 - [Datasets](#datasets)
 - [Standards and policy](#standards-and-policy)
 - [Talks and articles](#talks-and-articles)
@@ -84,17 +82,6 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [AirExo-2](https://airexo.tech/airexo2) - Visual adaptor, pseudo-robot demo conversion, RISE-2 policy integration — Shanghai Jiao Tong University et al., 2025, open hardware ([paper](https://arxiv.org/abs/2503.03081), [code](https://github.com/AirExo/AirExo-2)).
 - [DexCap (DexRobot)](https://www.dex-robot.com/en/dexCap) - Wearable full-arm capture system — DexRobot, 2025, proprietary.
 - [Exo-ViHa](https://exo-viha2025.github.io/) - 3D-printed forearm exoskeleton with interchangeable dexterous hands; T265 pose, wrist camera, and motion-capture glove; passive haptic feedback via exoskeleton contact — Tsinghua University, 2025 ([paper](https://arxiv.org/abs/2503.01543)).
-
-## Sensor modules
-
-- [DAS Controller](https://www.genrobot.ai/products/controller) - Arm-mounted multimodal end effector homologous with DAS collection devices; 448-point tactile @ 1 mm; one-step gripper swap — GenRobot AI, 2025.
-- [FlexiTac](https://flexitac.github.io/) - A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems — UIUC, 2026, open hardware ([paper](https://arxiv.org/abs/2604.28156)).
-- [Robotiq TSF-85](https://robotiq.com/tactile-sensor-fingertips) - Capacitive fingertip pads (28 taxels) with 1000 Hz vibration and 3-axis IMU for Physical AI data collection on 2F grippers — Robotiq.
-
-## Robot arm kits
-
-- [Hiwonder SO-ARM101 / NexArm](https://www.hiwonder.com/) - 6-axis 30KG servos (magnetic feedback), dual-camera (wrist+external) — Hiwonder.
-- [Seeed reBot Arm B601-DM](https://github.com/Seeed-Projects/reBot-DevArm) - Robot arm kit for imitation-learning data collection and deployment — Seeed Studio.
 
 ## Datasets
 
