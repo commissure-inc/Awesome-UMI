@@ -53,8 +53,6 @@ body:
         - handheld_gripper
         - wearable_hand
         - wearable_arm
-        - sensor_module
-        - robot_arm_kit
         - unsure / other (explain below)
     validations:
       required: true

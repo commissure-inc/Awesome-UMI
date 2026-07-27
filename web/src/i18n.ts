@@ -53,8 +53,6 @@ const FORM_CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
     head_mounted: "ヘッドマウント",
     teleop_station: "テレオペ・ヒューマノイド",
     software_only: "ソフトウェアのみ",
-    sensor_module: "センサ部品",
-    robot_arm_kit: "ロボットアーム",
     platform_infrastructure: "プラットフォーム・基盤",
   },
   en: {
@@ -64,8 +62,6 @@ const FORM_CATEGORY_LABELS: Record<Locale, Record<string, string>> = {
     head_mounted: "Head-mounted",
     teleop_station: "Teleop / humanoid",
     software_only: "Software only",
-    sensor_module: "Sensor module",
-    robot_arm_kit: "Robot arm kit",
     platform_infrastructure: "Platform / infrastructure",
   },
 };
@@ -144,9 +140,6 @@ const FORM_FACTOR_LABELS: Record<Locale, Record<string, string>> = {
     humanoid_teleop: "ヒューマノイドテレオペ",
     seated_teleop: "着座型テレオペ",
     finger_worn: "指装着型",
-    sensor_pad_module: "センサパッドモジュール",
-    robotic_arm: "ロボットアーム",
-    tactile_sensor_fingertip: "指先触覚センサ",
     bimanual_imitation_kit: "両手模倣キット",
   },
   en: {
@@ -164,9 +157,6 @@ const FORM_FACTOR_LABELS: Record<Locale, Record<string, string>> = {
     humanoid_teleop: "Humanoid teleop",
     seated_teleop: "Seated teleop",
     finger_worn: "Finger-worn",
-    sensor_pad_module: "Sensor pad module",
-    robotic_arm: "Robotic arm",
-    tactile_sensor_fingertip: "Fingertip tactile sensor",
     bimanual_imitation_kit: "Bimanual imitation kit",
   },
 };
