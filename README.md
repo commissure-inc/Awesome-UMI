@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**49** devices · **11** datasets
+**50** devices · **11** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -48,6 +48,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [HiFi-UMI](https://cloud.simpleai.tech/simple-world-lab/hifi-umi/) - Head-mounted offline stereo-inertial SLAM with per-hand marker cubes yields 3 mm end-effector accuracy and natively measured inter-gripper relative pose — Simple AI (Simple World Lab), 2026, proprietary ([paper](https://arxiv.org/abs/2607.25895)).
 - [HoMMI](https://hommi-robot.github.io/) - UMI grippers augmented with egocentric sensing for whole-body mobile manipulation; cross-embodiment hand-eye policy with embodiment-agnostic 3D visual representation — Stanford University et al., 2026 ([paper](https://arxiv.org/abs/2603.03243), [code](https://github.com/xxm19/hommi)).
 - [Koala](https://rai-inst.com/resources/blog/handheld-robotic-data-collection/) - Co-designed handheld and electrically actuated variants share linkages, finger geometry, and sensor suite — RAI Institute, 2026, proprietary.
+- [Mantis UMI](https://www.almond.bot/mantis-umi) - Handheld pair sharing the exact gripper geometry of the vendor's Axol dual-arm robot for direct policy transfer — Almond AI, 2026, partially open source ([code](https://github.com/almond-bot/axol)).
 - [OmniUMI](https://baai-aether.github.io/OmniUMI/) - Handheld multimodal UMI capturing RGB, depth, trajectory, marker-based tactile images, internal grasping force, and external wrench with bilateral gripper feedback — Beijing Academy of Artificial Intelligence, 2026 ([paper](https://arxiv.org/abs/2604.10647)).
 - [RoboPocket](https://robo-pocket.github.io/) - Robot-Free Instant Policy Iteration via AR Visual Foresight on a consumer smartphone; remote GPU inference with <150ms latency enables closed-loop online finetuning without physical robot deployment — Shanghai Jiao Tong University et al., 2026, open hardware ([paper](https://arxiv.org/abs/2603.05504)).
 - [TacUMI](https://tac-umi.github.io/TacUMI/) - A Multi-Modal Universal Manipulation Interface for Contact-Rich Tasks — Technical University of Munich et al., 2026, open hardware ([paper](https://arxiv.org/abs/2601.14550), [code](https://github.com/martelzhang/TouchGuide)).
