@@ -3044,9 +3044,10 @@
         ],
         "vendor_claim_speed": "10× faster than teleoperation (vendor claim)",
         "origin": "Designed and assembled in San Francisco",
+        "venue_first_public": "Aug 2026 product launch",
         "business_model": "hardware_sales"
       },
-      "notes": "Capture-side counterpart to the vendor's Axol dual-arm robot ($7,999), in the same commercial handheld tier as Pika Sense and TRumi. The gripper hardware is a paid product but the recording and control stack (Axol SDK) is MIT-licensed and gripper CAD is published, hence partial_oss. Camera, compute, and pose tracking are all configurable add-ons, so pose_tracking records the recommended VR tracker options."
+      "notes": "Launched August 2026 as the capture-side counterpart to the vendor's Axol dual-arm robot ($7,999), in the same commercial handheld tier as Pika Sense and TRumi. The gripper hardware is a paid product but the recording and control stack (Axol SDK) is MIT-licensed and gripper CAD is published, hence partial_oss. Camera, compute, and pose tracking are all configurable add-ons, so pose_tracking records the recommended VR tracker options."
     }
   ],
   "datasets": [
