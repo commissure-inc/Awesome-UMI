@@ -2888,6 +2888,89 @@
         "venue_first_public": "GitHub v1.0.1 (2026-07-21)"
       },
       "notes": "Same wearable-hand / exoskeleton-hand category as Sunday Skill Capture Glove (operator wears an articulated mitt isomorphic to the robot gripper). Core packages/ is robot-agnostic; OpenArm + Gripette under integrations/ is the reference stack."
+    },
+    {
+      "id": "hifi_umi",
+      "name": "HiFi-UMI",
+      "full_name": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+      "organization": [
+        "Simple AI (Simple World Lab)"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "image_url": "https://cloud.simpleai.tech/simple-world-lab/assets/capture-hands-DJ4iVDo1.jpg",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "full_stack_business",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "yes",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-08-11",
+      "key_innovation": "Head-mounted offline stereo-inertial SLAM with per-hand marker cubes yields 3 mm end-effector accuracy and natively measured inter-gripper relative pose; a shared GPIO trigger synchronizes six cameras, IMUs, and encoders to under 40 µs, and a full-palm glove replaces the trigger gripper",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://cloud.simpleai.tech/simple-world-lab/hifi-umi/",
+          "retrieved_at": "2026-08-11"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2607.25895",
+          "retrieved_at": "2026-08-11",
+          "title": "arXiv:2607.25895"
+        },
+        {
+          "type": "documentation",
+          "url": "https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K",
+          "retrieved_at": "2026-08-11",
+          "title": "HiFi-UMI-2K dataset card (Hugging Face)"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "venue": "arXiv preprint (July 2026)",
+        "endeffector": "asymmetric two-finger full-palm glove gripper (thumb opposing four fingers)",
+        "main_camera": "Head-mounted stereo camera pair with integrated IMU",
+        "auxiliary_sensor": "Two non-parallel wide-angle fisheye cameras per hand (six views total), hand IMUs, gripper opening-angle encoders",
+        "fov_deg": 200,
+        "tracking_details": "Offline stereo-inertial SLAM on the head rig plus fiducial marker cubes on both hands observed in the same head-camera frame; no external tracking infrastructure",
+        "pose_accuracy": "3 mm local end-effector error over a ~2 m workspace",
+        "synchronization": "<40 µs cross-sensor offset from a single shared GPIO hardware trigger",
+        "frame_rate_fps": 25,
+        "gripper_width_method": "opening-angle encoders (<0.1° error)",
+        "data_modalities": [
+          "multi_view_rgb",
+          "imu",
+          "eef_pose_6dof",
+          "gripper_state",
+          "language_instructions"
+        ],
+        "data_format": "LeRobot v3.0",
+        "robot_free_collection": true,
+        "data_engine": "Six stages: collection with in-situ quality monitoring and voice feedback, SLAM trajectory reconstruction (98% pass), whole-body-control replay validation in simulation (98% pass), AI-assisted annotation, human verification, statistical curation and export",
+        "datasets_public": true,
+        "datasets": [
+          {
+            "name": "HiFi-UMI-2K",
+            "url": "https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K",
+            "size": "2,000 hours, 482,100+ episodes, 110+ scenes (curated from a 20,000+ hour, 4.32M-episode corpus)",
+            "license": "CC BY 4.0",
+            "arxiv": "2607.25895"
+          }
+        ],
+        "policy_framework": [
+          "StarVLA-QwenPI",
+          "OpenPI-π₀.₅",
+          "LingBot-VA"
+        ],
+        "business_model": "full_stack_business",
+        "significance": "Reports robot-free post-training on par with in-domain teleoperation on the same bimanual robot across three backbones (−2.5, +3.1, −0.6 percentage points)"
+      },
+      "notes": "legacy_category: umi_derivative; the gripper is a two-finger glove rather than a trigger-actuated parallel jaw, and pose comes from a head-mounted rig rather than wrist cameras. Hardware and processing stack are proprietary; only the HiFi-UMI-2K dataset is public (CC BY 4.0)."
     }
   ],
   "datasets": [
@@ -2974,6 +3057,16 @@
       "type": "real / tactile",
       "hours": "10,000+",
       "tasks": 2000
+    },
+    {
+      "name": "HiFi-UMI-2K",
+      "url": "https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K",
+      "provider": "Simple AI (Simple World Lab)",
+      "arxiv": "2607.25895",
+      "type": "real / robot-free manipulation",
+      "episodes": "482K+",
+      "hours": 2000,
+      "format": "LeRobot v3.0"
     }
   ],
   "policy_standards": [
