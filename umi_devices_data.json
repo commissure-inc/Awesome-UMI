@@ -2971,6 +2971,82 @@
         "significance": "Reports robot-free post-training on par with in-domain teleoperation on the same bimanual robot across three backbones (−2.5, +3.1, −0.6 percentage points)"
       },
       "notes": "legacy_category: umi_derivative; the gripper is a two-finger glove rather than a trigger-actuated parallel jaw, and pose comes from a head-mounted rig rather than wrist cameras. Hardware and processing stack are proprietary; only the HiFi-UMI-2K dataset is public (CC BY 4.0)."
+    },
+    {
+      "id": "almond_mantis_umi",
+      "name": "Mantis UMI",
+      "full_name": "Almond Mantis UMI — handheld data collection gripper pair",
+      "organization": [
+        "Almond AI"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "image_url": "https://www.almond.bot/render/mantis_closeup.jpg",
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "vr_controller_tracker",
+      "bimanual": "yes",
+      "license": "partial_oss",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-08-11",
+      "key_innovation": "Handheld pair sharing the exact gripper geometry of the vendor's Axol dual-arm robot for direct policy transfer; pose tracking is a configurable option (Vive Lighthouse, Vive Ultimate inside-out, Quest 3 controllers, or camera-only visual SLAM) rather than a fixed method, and recording runs through the MIT-licensed Axol SDK into LeRobot datasets",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.almond.bot/mantis-umi",
+          "retrieved_at": "2026-08-11",
+          "title": "Mantis UMI — Handheld Data Collection (Almond)"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/almond-bot/axol",
+          "retrieved_at": "2026-08-11",
+          "title": "almond-bot/axol — Axol SDK and CLI (MIT; bimanual IK, ZED streaming, LeRobot bindings)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://docs.almond.bot/operations/data-collection",
+          "retrieved_at": "2026-08-11",
+          "title": "Axol SDK — Data Collection (LeRobot dataset recording)"
+        },
+        {
+          "type": "article",
+          "url": "https://www.ycombinator.com/companies/almond-2",
+          "retrieved_at": "2026-08-11",
+          "title": "Almond (Y Combinator, Spring 2025) company profile"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "endeffector": "two-finger gripper with swappable tips, geometry matched to the Axol robot gripper; ergonomic trigger with one-to-one gripper control",
+        "cost_usd": 1799,
+        "cost_breakdown": "$1,799 per pair (grippers and tracker adapters only); Mantis Camera Kit +$899; pose tracking +$298 (Vive Lighthouse) / +$739 (Vive Ultimate inside-out) / +$599.99 (Quest 3); ZED Box compute from +$1,035",
+        "main_camera": "Optional Mantis Camera Kit: 2× ZED X One S Fisheye global-shutter cameras (204° FOV) on GMSL2 wrist mounts",
+        "fov_deg": 204,
+        "compute": "Optional ZED Box Mini or ZED Box edge computer (NVIDIA Jetson, GMSL2 inputs, 256 GB SSD)",
+        "tracking_details": "Configurable: 2× Vive Tracker 3.0 with SteamVR base stations (fixed capture area), 3× Vive Ultimate Tracker inside-out with chest strap (collect anywhere), Meta Quest 3 Touch Plus controllers, or bring-your-own / camera-only visual SLAM",
+        "gripper_width_method": "trigger_activated",
+        "data_format": "LeRobot",
+        "robot_free_collection": true,
+        "related_software": "Axol SDK and CLI (MIT): bimanual IK solver, CAN motor interface, VR teleoperation, ZED camera streaming, LeRobot bindings, web control panel",
+        "homologous_end_effector": "Axol robot gripper (same geometry; data transfers directly to Axol)",
+        "hardware_assets": [
+          "Gripper diagram (https://www.almond.bot/resources/gripper.pdf)",
+          "Gripper 3D model, STEP (https://www.almond.bot/resources/gripper.step)"
+        ],
+        "supported_robots": [
+          "Almond Axol (direct transfer)",
+          "end-effector-centric data intended for any robot"
+        ],
+        "vendor_claim_speed": "10× faster than teleoperation (vendor claim)",
+        "origin": "Designed and assembled in San Francisco",
+        "business_model": "hardware_sales"
+      },
+      "notes": "Capture-side counterpart to the vendor's Axol dual-arm robot ($7,999), in the same commercial handheld tier as Pika Sense and TRumi. The gripper hardware is a paid product but the recording and control stack (Axol SDK) is MIT-licensed and gripper CAD is published, hence partial_oss. Camera, compute, and pose tracking are all configurable add-ons, so pose_tracking records the recommended VR tracker options."
     }
   ],
   "datasets": [
