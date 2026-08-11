@@ -2899,8 +2899,8 @@
       "country": "china",
       "year_first": 2026,
       "image_url": "https://cloud.simpleai.tech/simple-world-lab/assets/capture-hands-DJ4iVDo1.jpg",
-      "form_category": "handheld_gripper",
-      "form_factor": "handheld_parallel_jaw",
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
       "commercialization_stage": "full_stack_business",
       "tactile_integration": "none",
       "force_torque_integration": "none",
@@ -2934,11 +2934,11 @@
         "year_latest": 2026,
         "venue": "arXiv preprint (July 2026)",
         "endeffector": "asymmetric two-finger full-palm glove gripper (thumb opposing four fingers)",
-        "main_camera": "Head-mounted stereo camera pair with integrated IMU",
-        "auxiliary_sensor": "Two non-parallel wide-angle fisheye cameras per hand (six views total), hand IMUs, gripper opening-angle encoders",
+        "main_camera": "Four wide-angle fisheye hand cameras (two non-parallel views per hand), the only views fed to the policy",
+        "auxiliary_sensor": "Head-mounted stereo pair with integrated IMU, used solely for trajectory reconstruction and never as policy input; hand IMUs; gripper opening-angle encoders (six cameras total)",
         "fov_deg": 200,
-        "tracking_details": "Offline stereo-inertial SLAM on the head rig plus fiducial marker cubes on both hands observed in the same head-camera frame; no external tracking infrastructure",
-        "pose_accuracy": "3 mm local end-effector error over a ~2 m workspace",
+        "tracking_details": "Offline stereo-inertial SLAM (ORB-SLAM3) on the head rig plus AprilTag marker cubes on both hands observed in the same head-camera frame, so inter-gripper relative pose is measured natively; global loop closure is deliberately omitted because manipulation violates the static-world assumption, and a local-consistency constraint over a dynamic sliding window is used instead; no external tracking infrastructure",
+        "pose_accuracy": "3 mm mean translational end-effector error over a ~2 m accumulated head-trajectory workspace, measured against base-station tracking used only for this evaluation; global drift is bounded to the centimeter level over long horizons",
         "synchronization": "<40 µs cross-sensor offset from a single shared GPIO hardware trigger",
         "frame_rate_fps": 25,
         "gripper_width_method": "opening-angle encoders (<0.1° error)",
@@ -2970,7 +2970,7 @@
         "business_model": "full_stack_business",
         "significance": "Reports robot-free post-training on par with in-domain teleoperation on the same bimanual robot across three backbones (−2.5, +3.1, −0.6 percentage points)"
       },
-      "notes": "legacy_category: umi_derivative; the gripper is a two-finger glove rather than a trigger-actuated parallel jaw, and pose comes from a head-mounted rig rather than wrist cameras. Hardware and processing stack are proprietary; only the HiFi-UMI-2K dataset is public (CC BY 4.0)."
+      "notes": "legacy_category: umi_derivative; classified as wearable rather than handheld because the paper's own taxonomy (Sec. 3.1.2, Tab. 1) lists the gripper as \"full-palm glove\" in contrast to the \"trigger\" devices that emulate parallel-jaw commands directly — the operator wears it, with one jaw driven by the thumb and the other by the opposing four fingers. Pose also comes from a head-mounted rig rather than wrist cameras. Hardware and processing stack are proprietary; only the HiFi-UMI-2K dataset is public (CC BY 4.0)."
     }
   ],
   "datasets": [
