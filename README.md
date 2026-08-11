@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**48** devices · **10** datasets
+**49** devices · **11** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -45,6 +45,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Touch in the Wild](https://binghao-huang.github.io/touch_in_the_wild/) - In/outdoor in-the-wild visuo-tactile sync; joint representation learning via mask reconstruction encoder — Columbia University, 2025, MIT ([paper](https://arxiv.org/abs/2507.15062), [code](https://github.com/YolandaXinyueZhu/touch_in_the_wild)).
 - [ViTaMIn](https://chuanyune.github.io/ViTaMIn_page) - No teleop robot required; visuo-tactile integration — UC Berkeley et al., 2025, open hardware ([paper](https://arxiv.org/abs/2504.06156)).
 - [ViTaMIn-B](https://chuanyune.github.io/ViTaMIn-B_page/) - Eliminates SLAM drift; bimanual 6DoF unified via Quest 3 — Tsinghua University et al., 2025, open hardware ([paper](https://arxiv.org/abs/2511.05858), [code](https://github.com/chuanyune/ViTaMIn-B_code)).
+- [HiFi-UMI](https://cloud.simpleai.tech/simple-world-lab/hifi-umi/) - Head-mounted offline stereo-inertial SLAM with per-hand marker cubes yields 3 mm end-effector accuracy and natively measured inter-gripper relative pose — Simple AI (Simple World Lab), 2026, proprietary ([paper](https://arxiv.org/abs/2607.25895)).
 - [HoMMI](https://hommi-robot.github.io/) - UMI grippers augmented with egocentric sensing for whole-body mobile manipulation; cross-embodiment hand-eye policy with embodiment-agnostic 3D visual representation — Stanford University et al., 2026 ([paper](https://arxiv.org/abs/2603.03243), [code](https://github.com/xxm19/hommi)).
 - [Koala](https://rai-inst.com/resources/blog/handheld-robotic-data-collection/) - Co-designed handheld and electrically actuated variants share linkages, finger geometry, and sensor suite — RAI Institute, 2026, proprietary.
 - [OmniUMI](https://baai-aether.github.io/OmniUMI/) - Handheld multimodal UMI capturing RGB, depth, trajectory, marker-based tactile images, internal grasping force, and external wrench with bilateral gripper feedback — Beijing Academy of Artificial Intelligence, 2026 ([paper](https://arxiv.org/abs/2604.10647)).
@@ -95,6 +96,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [10Kh-RealOmin-OpenData](https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData) - Real / manipulation — GenRobot — 13,000+ hours.
 - [Genie Sim Synthetic](https://github.com/AgibotTech/genie_sim) - Simulation — AgiBot — 10,000+ hours, 200 tasks.
 - [DAIMON Public Tactile](https://modelscope.cn/datasets/daimonrobotics/Daimon-Infinity) - Real / tactile — DAIMON Robotics — 10,000+ hours, 2000 tasks.
+- [HiFi-UMI-2K](https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K) - Real / robot-free manipulation — Simple AI (Simple World Lab) — 482K+ episodes, 2000 hours.
 
 ## Standards and policy
 
