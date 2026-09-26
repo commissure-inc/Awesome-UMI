@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**50** devices · **11** datasets
+**59** devices · **11** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -45,10 +45,14 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Touch in the Wild](https://binghao-huang.github.io/touch_in_the_wild/) - In/outdoor in-the-wild visuo-tactile sync; joint representation learning via mask reconstruction encoder — Columbia University, 2025, MIT ([paper](https://arxiv.org/abs/2507.15062), [code](https://github.com/YolandaXinyueZhu/touch_in_the_wild)).
 - [ViTaMIn](https://chuanyune.github.io/ViTaMIn_page) - No teleop robot required; visuo-tactile integration — UC Berkeley et al., 2025, open hardware ([paper](https://arxiv.org/abs/2504.06156)).
 - [ViTaMIn-B](https://chuanyune.github.io/ViTaMIn-B_page/) - Eliminates SLAM drift; bimanual 6DoF unified via Quest 3 — Tsinghua University et al., 2025, open hardware ([paper](https://arxiv.org/abs/2511.05858), [code](https://github.com/chuanyune/ViTaMIn-B_code)).
+- [FastUMI Pro](https://www.lumosbot.tech/products/fastumi-pro/) - Lumos production handheld collector, separate from the 2024 Fast-UMI rig: from 635 g, 200 Hz, with vision SLAM or VIVE tracking to 1 mm static accuracy — Lumos Robotics, 2026, proprietary.
 - [HoMMI](https://hommi-robot.github.io/) - UMI grippers augmented with egocentric sensing for whole-body mobile manipulation; cross-embodiment hand-eye policy with embodiment-agnostic 3D visual representation — Stanford University et al., 2026 ([paper](https://arxiv.org/abs/2603.03243), [code](https://github.com/xxm19/hommi)).
+- [iPhUMI](https://behavior-prompting.github.io/) - UMI gripper with the GoPro replaced by an iPhone 15 Pro, using on-device ARKit for real-time pose and supporting bimanual plus optional head-camera capture — Stanford University, 2026, MIT ([paper](https://arxiv.org/abs/2606.30457), [code](https://github.com/real-stanford/iPhUMI)).
 - [Koala](https://rai-inst.com/resources/blog/handheld-robotic-data-collection/) - Co-designed handheld and electrically actuated variants share linkages, finger geometry, and sensor suite — RAI Institute, 2026, proprietary.
 - [Mantis UMI](https://www.almond.bot/mantis-umi) - Handheld pair sharing the exact gripper geometry of the vendor's Axol dual-arm robot for direct policy transfer — Almond AI, 2026, partially open source ([code](https://github.com/almond-bot/axol)).
 - [OmniUMI](https://baai-aether.github.io/OmniUMI/) - Handheld multimodal UMI capturing RGB, depth, trajectory, marker-based tactile images, internal grasping force, and external wrench with bilateral gripper feedback — Beijing Academy of Artificial Intelligence, 2026 ([paper](https://arxiv.org/abs/2604.10647)).
+- [Orbbec UMI Finger / UMI Gripper](https://www.orbbec.com/robot-free-data-collection/) - Manufactured handheld UMI Finger and UMI Gripper with fisheye RGB, mono SLAM, IMU, and opening angle, hardware-synced to under 1 ms — Orbbec, 2026, proprietary.
+- [PolyUMI](https://polyumi-vista.github.io) - Wireless handheld gripper that records synchronized wrist video, optical tactile images, contact audio, and proprioception, and moves the same sensing finger onto the robot — Northwestern University et al., 2026, MIT ([paper](https://arxiv.org/abs/2609.29760), [code](https://github.com/cwoodhayes/PolyUMI)).
 - [RoboPocket](https://robo-pocket.github.io/) - Robot-Free Instant Policy Iteration via AR Visual Foresight on a consumer smartphone; remote GPU inference with <150ms latency enables closed-loop online finetuning without physical robot deployment — Shanghai Jiao Tong University et al., 2026, open hardware ([paper](https://arxiv.org/abs/2603.05504)).
 - [TacUMI](https://tac-umi.github.io/TacUMI/) - A Multi-Modal Universal Manipulation Interface for Contact-Rich Tasks — Technical University of Munich et al., 2026, open hardware ([paper](https://arxiv.org/abs/2601.14550), [code](https://github.com/martelzhang/TouchGuide)).
 - [TAMEn](https://opendrivelab.com/TAMEn) - Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks — Fudan University et al., 2026, Apache-2.0 ([paper](https://arxiv.org/abs/2604.07335)).
@@ -67,6 +71,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [DM-DataDex](https://www.dmrobot.com/en/products/) - Five-finger glove-type dexterous data collection device with vision-based tactile sensors (110,000 sensing units, 120Hz); used alongside DM-DataClaw to build the Daimon-Infinity omni-modal dataset — Daimon Robotics, 2025, proprietary.
 - [FreeTacMan](https://opendrivelab.com/FreeTacMan) - Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation — OpenDriveLab et al., 2025, Apache-2.0 ([paper](https://arxiv.org/abs/2506.01941)).
 - [Skill Capture Glove](https://www.sunday.ai/technology) - UMI-inspired wearable co-designed with Memo robot 3-finger gripper (shared geometry and sensor layout) — Sunday Robotics, 2025, proprietary.
+- [Aero UMI](https://chestnut.bot/master-plan.html) - Wearable exoskeleton URDF-matched and tactile-matched to Chestnut's Aero Hand, with GAIN3D inpainting so factory demos are collected without the robot present — Chestnut Robotics, 2026, proprietary.
 - [ART-Glove](https://linchangyi1.github.io/ART-Glove/) - 16 rigid functional surfaces with 22 anatomically aligned joints make hand-side contact geometry explicit — Carnegie Mellon University, 2026, open hardware ([paper](https://arxiv.org/abs/2606.16370)).
 - [DAS Dex](https://www.genrobot.ai/products/dex) - 23-DoF wearable dexterous hand collector; sub-millimeter fingertip trajectories; 3D tactile at 0.05 N / 1 mm; 200 Hz output — GenRobot AI, 2026, proprietary.
 - [DEX-Mouse](https://arxiv.org/abs/2604.15013) - Calibration-free 6-DoF handheld interface with kinesthetic force feedback (<USD 150 BOM); forearm-mounted robot-hand configuration for robot-aligned data without morphological retargeting — Sogang University, 2026, open hardware.
@@ -75,8 +80,11 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Grabette](https://github.com/pollen-robotics/grabette) - Robot-agnostic wearable hand capture on Raspberry Pi: synchronized fisheye RGB + OAK-D depth/IMU, finger joint encoders, on-device session UI, and a postprocess pipeline that runs SLAM then exports LeRobot datasets for policy learning — Pollen Robotics, 2026, Apache-2.0.
 - [HandUMI](https://github.com/BrikHMP18/HandUMI) - Moves the collection interface onto the operator's hand: mounts on thumb and index/middle fingers, opens and closes with a natural pinch, measures gripper width directly with a servo encoder, and swaps detachable 3D-printed tips to retarget one wearable across different parallel-jaw robot grippers — RoboNet et al., 2026, Apache-2.0.
 - [HiFi-UMI](https://cloud.simpleai.tech/simple-world-lab/hifi-umi/) - Head-mounted offline stereo-inertial SLAM with per-hand marker cubes yields 3 mm end-effector accuracy and natively measured inter-gripper relative pose — Simple AI (Simple World Lab), 2026, proprietary ([paper](https://arxiv.org/abs/2607.25895)).
+- [Omnibody Hand](https://rewardai.com/blog/OM-1/) - 7-DoF wearable, built on DexCap, that records tactile, proximity, global-shutter in-hand video, and electromagnetic pose at natural human speed — Reward AI, 2026, proprietary.
 - [PXCap III](https://paxini.com/us/ax/pxcap3) - 1:1 collection-execution isomorphism with PXDex III robotic hand — PaXini Tech, 2026, proprietary.
 - [RealDexUMI](https://research.beingbeyond.com/realdexumi) - Shared dexterous end-effector module with in-hand vision and fingertip tactile sensing; zero-gap collection-to-deployment data via matched observations, contacts, and hand actions — BeingBeyond, 2026, proprietary ([paper](https://arxiv.org/abs/2606.06033)).
+- [SEED-UMI](https://tengbo-yu.github.io/SEED-UMI/) - Exoskeleton worn by both the person and a 20-DoF robot hand, so encoders and a wrist camera measure the same mechanism during collection and execution — Peking University et al., 2026 ([paper](https://arxiv.org/abs/2609.11753)).
+- [TwinDEX](https://x2robot.com/en/pages/twindex) - Wearable three-finger, 9-DoF exoskeleton (7 active, 2 passive) paired with a matched robot hand for contact-rich collection without a robot in the loop — X Square Robot, 2026, proprietary.
 
 ## Wearable arms and exoskeletons
 
@@ -84,6 +92,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [AirExo-2](https://airexo.tech/airexo2) - Visual adaptor, pseudo-robot demo conversion, RISE-2 policy integration — Shanghai Jiao Tong University et al., 2025, open hardware ([paper](https://arxiv.org/abs/2503.03081), [code](https://github.com/AirExo/AirExo-2)).
 - [DexCap (DexRobot)](https://www.dex-robot.com/en/dexCap) - Wearable full-arm capture system — DexRobot, 2025, proprietary.
 - [Exo-ViHa](https://exo-viha2025.github.io/) - 3D-printed forearm exoskeleton with interchangeable dexterous hands; T265 pose, wrist camera, and motion-capture glove; passive haptic feedback via exoskeleton contact — Tsinghua University, 2025 ([paper](https://arxiv.org/abs/2503.01543)).
+- [UME](https://ume-exo.github.io/) - 7-DoF upper-limb exoskeleton that records joint configuration and torque and returns the robot's joint torque to the operator; about USD 1900 in parts — Ant Group et al., 2026 ([paper](https://arxiv.org/abs/2606.14218)).
 
 ## Datasets
 

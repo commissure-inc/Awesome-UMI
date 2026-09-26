@@ -7,7 +7,7 @@ This is a working list for catalog review — not published on the live site unt
 | Source paper | [Universal Manipulation Interface (Chi et al., RSS 2024)](https://arxiv.org/abs/2402.10329) |
 | Citation index | [Semantic Scholar](https://www.semanticscholar.org/paper/arXiv:2402.10329) (~564 citing papers, queried 2026-06-18) |
 | Catalog scope | UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection |
-| Last updated | 2026-06-18 |
+| Last updated | 2026-09-26 |
 
 ## Priority legend
 
@@ -33,7 +33,6 @@ This is a working list for catalog review — not published on the live site unt
 
 | Name | Year | arXiv | Notes |
 |------|------|-------|-------|
-| Universal Manipulation Exoskeleton | 2026 | [2606.14218](https://arxiv.org/abs/2606.14218) | Whole-body exoskeleton with real-time torque feedback |
 | AetheRock | 2026 | [2606.09777](https://arxiv.org/abs/2606.09777) | Arm-worn teaching system; gripper force + vision + tactile |
 | RoSHI | 2026 | [2604.07331](https://arxiv.org/abs/2604.07331) | Hybrid suit: sparse IMUs + Project Aria glasses |
 | WHED | 2026 | [2602.17908](https://arxiv.org/abs/2602.17908) | Wearable hand exoskeleton for in-the-wild demo capture |
@@ -91,12 +90,43 @@ These papers reference UMI but are primarily **algorithms, control stacks, or da
 | VISTA | 2026 | [2606.04708](https://arxiv.org/abs/2606.04708) | UMI data adaptation for VLA training |
 | RDT2 | 2026 | [2602.03310](https://arxiv.org/abs/2602.03310) | Scaling study on UMI data; no new IF |
 | UMI-Bench 1.0 | 2026 | [2606.10382](https://arxiv.org/abs/2606.10382) | Benchmark, not hardware |
+| DM-UMI / BRIDGE | 2026 | [2606.26603](https://arxiv.org/abs/2606.26603) | Lab rig supporting a policy paper; no standalone device release |
 
 ## Already in catalog (for reference)
 
 UMI-citing hardware papers **already listed** in `umi_devices_data.json` include:
 
 Fast-UMI, MV-UMI, UMI-3D, Cloud-UMI / UMIGen, LEGATO, ViTaMIn, ViTaMIn-B, Touch in the Wild, FlexiTac, TacUMI, exUMI, TAMEn, FreeTacMan, ForceMimic, DexCap, DexUMI, RealDexUMI, DEXOP, AirExo, AirExo-2, DexWild, YUBI, DEX-Mouse, Exo-ViHa, OmniUMI, ActiveUMI, HoMMI, ManiWAV, XRZero-G0, UMI-FT, RoboPocket, DexViTac, DexEXO, ART-Glove, Koala, Grabette, and related commercial kits (DAS, Pika Sense, etc.).
+
+Added 2026-09-26: PolyUMI, SEED-UMI, iPhUMI, Aero UMI, TwinDEX, Omnibody Hand, FastUMI Pro, Orbbec UMI Finger / UMI Gripper, UME.
+
+## Watchlist — not yet in the catalog (2026-09-26)
+
+Public enough to revisit, but thinner or still overlapping an existing entry. Pika Pro is not listed: the Pika Sense entry already covers the Pika / Pika Pro suite.
+
+| Name | Year | Source | Why it is still here |
+|------|------|--------|----------------------|
+| UMI ver.2 | 2026 | [Juejin post](https://juejin.cn/post/7659612380616245284) | 穹明智能 claims an open Vive Tracker 3.0 build. No project page or GitHub checked in yet |
+| mimic U1 | 2026 | [X post](https://x.com/mimicrobotics/status/2077755038751924520) | Wearable matched to the mimic M1 hand. Announcement is the main public source |
+| QUANXTA Zero G1 / E0 | 2026 | [Wikipedia](https://en.wikipedia.org/wiki/X_Square_Robot) | Family around XRZero-G0. Needs an official page before splitting or folding into that entry |
+| GIFT | 2026 | [2609.14173](https://arxiv.org/abs/2609.14173) | Wearable flex + calibrated fingertip-FSR glove and a head camera. Single-author preprint, one evaluated task |
+| DexFIT | 2026 | IROS 2026 paper 4021, Mon 15:38, Room 328 | "Kinematically isomorphic tactile glove." Title is on the program; abstract not public yet |
+| HaptiLink | 2026 | IROS 2026 paper 1232, Mon 14:43, Room 304/305 | "One glove, two roles" shared tactile sensing. Abstract not public yet |
+| Matrix Inno tactile gloves | 2026 | IROS 2026 exhibit | Three glove variants (pressure + pose). No stable product page yet |
+| TachinGlove | — | — | Tactile glove; not clearly a manipulation-collection interface |
+| AkaiEgo v1 | — | — | Wearable stereo. Egocentric vision, outside the handheld/wearable manipulation scope unless a manipulation interface is documented |
+| HexaCercle glove | — | X | Tactile glove aimed at AGIBOT OmniHand. Official spec is thin |
+| @acrosson modified UMI | — | personal build | Does not yet meet the paper / product / repository bar |
+
+## Dataset candidates
+
+Devices for these are already catalogued, or the dataset itself is not yet shown to be distinct.
+
+| Name | Source | Notes |
+|------|--------|-------|
+| YUBI dataset (AIRoA) | [UMI Arena](https://umi-olympics.airoa.io/) | YUBI is catalogued. Arena materials describe a large handheld-data release; confirm the public split before adding a dataset row |
+| FastUMI-10K | [FastUMI Pro product page](https://www.lumosbot.tech/products/fastumi-pro/) | Named as available through official channels. Not checked against the already-listed FastUMI-100K |
+| ROCO IROS 2026 UMI Dataset | [Hugging Face](https://huggingface.co/datasets/rocochallenge2025/roco_iros2026_umi_dataset) | LeRobot episodes for an IROS challenge. Collection device is not a new interface |
 
 ## How to promote an entry
 
