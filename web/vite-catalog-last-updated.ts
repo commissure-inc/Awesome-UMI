@@ -32,6 +32,16 @@ export function catalogLastUpdatedPlugin(): Plugin {
 
   return {
     name: "catalog-last-updated",
+    configureServer(server) {
+      // The catalog lives outside the Vite root, so it is not watched by default.
+      server.watcher.add(catalogPath);
+      server.watcher.on("change", (file) => {
+        if (path.resolve(file) !== catalogPath) return;
+        const mod = server.moduleGraph.getModuleById(RESOLVED_CATALOG_DATA_MODULE);
+        if (mod) server.moduleGraph.invalidateModule(mod);
+        server.ws.send({ type: "full-reload" });
+      });
+    },
     resolveId(id) {
       if (id === CATALOG_DATA_MODULE) return RESOLVED_CATALOG_DATA_MODULE;
     },

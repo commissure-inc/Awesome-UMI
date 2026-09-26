@@ -3048,6 +3048,500 @@
         "business_model": "hardware_sales"
       },
       "notes": "Launched August 2026 as the capture-side counterpart to the vendor's Axol dual-arm robot ($7,999), in the same commercial handheld tier as Pika Sense and TRumi. The gripper hardware is a paid product but the recording and control stack (Axol SDK) is MIT-licensed and gripper CAD is published, hence partial_oss. Camera, compute, and pose tracking are all configurable add-ons, so pose_tracking records the recommended VR tracker options."
+    },
+    {
+      "id": "polyumi",
+      "image_url": "https://polyumi-vista.github.io/assets/system.jpg",
+      "name": "PolyUMI",
+      "full_name": "PolyUMI: Accessible Visual-Tactile-Audio Data Collection for Object Inference and Manipulation",
+      "organization": [
+        "Northwestern University",
+        "TU Darmstadt",
+        "Hessian.AI",
+        "Robotics Institute Germany"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "oss_diy",
+      "tactile_integration": "vision_based",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_slam",
+      "bimanual": "no",
+      "license": "mit",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "Wireless handheld gripper that records synchronized wrist video, optical tactile images, contact audio, and proprioception, and moves the same sensing finger onto the robot",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://polyumi-vista.github.io",
+          "retrieved_at": "2026-09-26",
+          "title": "PolyUMI project page"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.29760",
+          "retrieved_at": "2026-09-26",
+          "title": "arXiv:2609.29760"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/cwoodhayes/PolyUMI",
+          "retrieved_at": "2026-09-26",
+          "title": "cwoodhayes/PolyUMI (MIT)"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "venue": "arXiv preprint",
+        "endeffector": "handheld parallel-jaw gripper; sensing finger transfers to the robot end-effector in about 10 minutes",
+        "main_camera": "GoPro Hero 12 + fisheye, 60 fps, 1920×1080",
+        "tactile_sensor": "Optical finger: internal camera through a curved mirror onto a deformable reflective surface (seven VHB layers, aluminium powder, medical-tape seal), 20 fps, 1152×648 MJPEG",
+        "audio": "Contact microphone, 16 kHz mono PCM, with live headphone monitoring",
+        "tracking_details": "Project table lists proprioception as SLAM / ArUco for 6-DoF pose and gripper width",
+        "cost_breakdown": "Sensing finger $235.96 parts; project cost table lists the handheld UMI gripper at $700.27 and the robot end-effector at $742.48",
+        "cable_free": true,
+        "policy_framework": [
+          "VisTA (token-level multimodal flow-matching policy)"
+        ],
+        "key_authors": [
+          "Conor W. Hayes",
+          "Rickmer Krohn",
+          "Aravind Ramaswami",
+          "Anunth Ramaswami",
+          "Nils Dengler",
+          "Kevin M. Lynch",
+          "J. Edward Colgate",
+          "Georgia Chalvatzaki",
+          "Matthew L. Elwin"
+        ]
+      },
+      "notes": "Equal contribution is Hayes (Northwestern) and Krohn (TU Darmstadt); corresponding author is at TU Darmstadt, so country records the first-listed affiliation. Contact audio is a separate stream from the optical tactile finger. Preprint, not a conference version."
+    },
+    {
+      "id": "seed_umi",
+      "image_url": "https://tengbo-yu.github.io/SEED-UMI/assets/figure2-hardware.png",
+      "name": "SEED-UMI",
+      "full_name": "SEED-UMI: Sharing the Exoskeleton between human and robot for onE-to-one Dexterous demonstration",
+      "organization": [
+        "Peking University",
+        "Delta Intelligence"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "paper_only",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "no",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "Exoskeleton worn by both the person and a 20-DoF robot hand, so encoders and a wrist camera measure the same mechanism during collection and execution",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://tengbo-yu.github.io/SEED-UMI/",
+          "retrieved_at": "2026-09-26",
+          "title": "SEED-UMI project page (titled CoRL 2026)"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.11753",
+          "retrieved_at": "2026-09-26",
+          "title": "arXiv:2609.11753"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "venue": "CoRL 2026 (stated on the project page)",
+        "joints": "20 independently measured joints across five fingers, matched to a fully actuated 20-DoF Wuji hand",
+        "mechanism": "Parallel four-bar linkage routes joint rotation to dorsally mounted magnetic encoders so palmar and lateral surfaces stay clear",
+        "pose_tracking_sensor": "Dorsal Intel RealSense T265, wrist trajectory in the exoskeleton frame",
+        "main_camera": "Ventral fisheye, 150°",
+        "supported_robots": [
+          "RealMan RX75 arm",
+          "20-DoF Wuji hand"
+        ],
+        "evaluation": "Five contact-rich tasks, 100 demonstrations each, 20 rollouts per task/policy/condition. Mean success 70.0% after paired fine-tuning, 57.3% with babbling-only mapping, 71.7% for teleoperation",
+        "throughput": "52 vs 18 successful AirPods demonstrations in 30 minutes with the same operator. Project page estimates about 2.9× useful training data per minute; the abstract rounds collection efficiency to 3.0×",
+        "policy_framework": [
+          "ACT",
+          "Diffusion Policy",
+          "π0.5"
+        ],
+        "key_authors": [
+          "Tengbo Yu",
+          "Jiahao Wu",
+          "Daohan Li",
+          "Bingxu Chen",
+          "Hao Liu",
+          "Xiaojian Ma",
+          "Hangxin Liu"
+        ]
+      },
+      "notes": "No public hardware repository found. The current exoskeleton is co-designed for one target hand. Tactile sensing is listed as future work, so tactile_integration is none."
+    },
+    {
+      "id": "iphumi",
+      "image_url": "https://behavior-prompting.github.io/media/iphumi/iphumi_teaser.png",
+      "name": "iPhUMI",
+      "full_name": "iPhUMI handheld data collection interface",
+      "organization": [
+        "Stanford University"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "oss_diy",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "yes",
+      "license": "mit",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "UMI gripper with the GoPro replaced by an iPhone 15 Pro, using on-device ARKit for real-time pose and supporting bimanual plus optional head-camera capture",
+      "sources": [
+        {
+          "type": "github",
+          "url": "https://github.com/real-stanford/iPhUMI",
+          "retrieved_at": "2026-09-26",
+          "title": "real-stanford/iPhUMI (MIT)"
+        },
+        {
+          "type": "project_page",
+          "url": "https://behavior-prompting.github.io/",
+          "retrieved_at": "2026-09-26",
+          "title": "Behavior Prompting Policy"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2606.30457",
+          "retrieved_at": "2026-09-26",
+          "title": "arXiv:2606.30457"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "venue": "CoRL 2026 (camera-ready PDF hosted by the authors)",
+        "main_camera": "iPhone 15 Pro",
+        "tracking_details": "On-device ARKit; multiple iPhones can share a world frame for bimanual capture. An optional third iPhone is for head tracking",
+        "hardware_delta": "Two 3D-printed parts adapt an existing UMI gripper",
+        "data_streams": "6-DoF pose, narrow and ultrawide RGB, LiDAR depth",
+        "key_authors": [
+          "Austin Patel",
+          "Ben Pekarek",
+          "Joel Enrique Castro Hernandez",
+          "Shuran Song"
+        ]
+      },
+      "notes": "Introduced as the collection interface for Behavior Prompting Policy. HoMMI and UMI-FT, already catalogued, build on this iPhone-based UMI line; this entry is the shared open interface."
+    },
+    {
+      "id": "aero_umi",
+      "image_url": "https://chestnut.bot/assets/aero-umi-v2.png",
+      "name": "Aero UMI",
+      "full_name": "Aero UMI data-collection exoskeleton",
+      "organization": [
+        "Chestnut Robotics"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "full_stack_business",
+"tactile_integration": "type_unspecified",
+        "force_torque_integration": "none",
+        "license": "commercial_closed",
+        "status": "active",
+        "confidence": "medium",
+        "last_verified_at": "2026-09-26",
+        "key_innovation": "Wearable exoskeleton URDF-matched and tactile-matched to Chestnut's Aero Hand, with GAIN3D inpainting so factory demos are collected without the robot present",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://chestnut.bot/master-plan.html",
+          "retrieved_at": "2026-09-26",
+          "title": "Chestnut's Master Plan"
+        },
+        {
+          "type": "product_page",
+          "url": "https://chestnut.bot/",
+          "retrieved_at": "2026-09-26",
+          "title": "Chestnut Robotics"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "homologous_end_effector": "Aero Hand: human-hand-sized, 18-DoF, sub-mm fingertip precision, 0.1 N tactile sensitivity, 20 kg payload, 3M+ cycle lifetime. Those figures are stated for the hand, not as separate exo measurements",
+        "matching": "URDF-matched and tactile-matched to Aero Hand",
+        "companion_algorithm": "GAIN3D, described as 3D geometry-aware inpainting with 99% usable pixels and no retargeting step",
+        "robot_free_collection": true,
+        "origin": "Santa Clara, CA"
+      },
+      "notes": "18-DoF, 0.1 N, and 20 kg are Aero Hand specifications on the master plan. An IROS 2026 booth number was not on the company pages checked. Tactile technology on the exo itself is not named, only that it is tactile-matched to the hand."
+    },
+    {
+      "id": "twindex",
+      "image_url": "https://mmx.prnewswire.com/media/MS1980301/20260902045050EDT_image_1.jpg?id=OA2925439&p=original",
+      "name": "TwinDEX",
+      "full_name": "TwinDEX co-designed wearable and robot hand",
+      "organization": [
+        "X Square Robot"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "type_unspecified",
+      "force_torque_integration": "none",
+      "bimanual": "yes",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "Wearable three-finger, 9-DoF exoskeleton (7 active, 2 passive) paired with a matched robot hand for contact-rich collection without a robot in the loop",
+      "sources": [
+        {
+          "type": "press",
+          "url": "https://www.prnewswire.com/news-releases/twindex-introduces-a-scalable-path-from-robot-free-data-collection-to-real-world-dexterous-manipulation-302867559.html",
+          "retrieved_at": "2026-09-26",
+          "title": "PR Newswire, 2026-09-02"
+        },
+        {
+          "type": "product_page",
+          "url": "https://x2robot.com/en/pages/twindex",
+          "retrieved_at": "2026-09-26",
+          "title": "TwinDEX product page"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "announced": "2026-09-02, Shenzhen",
+        "endeffector": "Three fingers, 9 DoF: 7 active and 2 passive, shared by the wearable and the robot hand",
+        "matching": "Corresponding kinematic chains, joint axes, link proportions, contact geometry, surface materials, visual appearance, and sensor placement",
+        "recorded_streams": "Multi-view RGB, 6-DoF wrist pose, finger joint states, fingertip tactile signals. Wrist-pose method is not named",
+        "throughput": "Up to 5.3× the effective throughput of on-robot teleoperation (vendor evaluation in the press release)",
+        "tasks": [
+          "cap twisting",
+          "broom and dustpan",
+          "opening a book",
+          "toolbox latches",
+          "syringe",
+          "24-sub-action chemistry experiment from a few hundred robot-free episodes"
+        ]
+      },
+      "notes": "Distinct from the catalogued XRZero-G0 rig. Specs are from the 2026-09-02 press release; the product page did not render those figures. Tactile sensor technology is not named. A paper is not linked from the release."
+    },
+    {
+      "id": "omnibody_hand",
+      "image_url": "https://rewardai.com/blog/OM-1/videos/pick-and-toss.jpg",
+      "name": "Omnibody Hand",
+      "full_name": "Reward AI Omnibody Hand",
+      "organization": [
+        "Reward AI"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "full_stack_business",
+      "tactile_integration": "type_unspecified",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "7-DoF wearable, built on DexCap, that records tactile, proximity, global-shutter in-hand video, and electromagnetic pose at natural human speed",
+      "sources": [
+        {
+          "type": "article",
+          "url": "https://rewardai.com/blog/OM-1/",
+          "retrieved_at": "2026-09-26",
+          "title": "OM-1: Frontier Robot Intelligence, Learned Firsthand from Humans"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "published": "2026-09-14 blog",
+        "dof": "7. Thumb-index pinch, thumb and index flexion, and coupled MCP flexion of the middle, ring, and little fingers. Not a joint-by-joint copy of the human hand",
+        "sensing": "High-frequency tactile, pre-contact proximity, global-shutter in-hand cameras. Force or effort along the trajectory is recorded; the sensor principle is not named",
+        "tracking_details": "Visual-inertial tracking augmented with electromagnetic sensing and disturbance compensation. On a two-stop rig, mean overshoot at the highest of eight speeds fell from 24.9 mm to 9.5 mm (60%), averaged over ten runs per speed",
+        "ergonomics": "Distal flexion mechanism absorbs finger-length differences; no per-user link adjustment",
+        "related_model": "OM-1 is trained on robot-free human demonstrations from this device. The blog says a new task can be picked up from less than 30 minutes of data",
+        "predecessor": "DexCap (RSS 2024), cited on the page as prior work by the same line of authors"
+      },
+      "notes": "Commercial successor framing to the catalogued DexCap (Stanford) entry. Country is US. The OM-1 blog does not name a headquarters, paper, CAD, or price. force_torque_integration stays none because the page does not name a force sensor."
+    },
+    {
+      "id": "fastumi_pro",
+      "image_url": "https://www.lumosbot.tech/images/products/fastumi-pro/front.webp",
+      "name": "FastUMI Pro",
+      "full_name": "Lumos FastUMI Pro",
+      "organization": [
+        "Lumos Robotics"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+"pose_tracking": "visual_slam",
+        "license": "commercial_closed",
+        "status": "active",
+        "confidence": "medium",
+        "last_verified_at": "2026-09-26",
+        "key_innovation": "Lumos production handheld collector, separate from the 2024 Fast-UMI rig: from 635 g, 200 Hz, with vision SLAM or VIVE tracking to 1 mm static accuracy",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.lumosbot.tech/products/fastumi-pro/",
+          "retrieved_at": "2026-09-26",
+          "title": "Lumos FastUMI Pro"
+        },
+        {
+          "type": "article",
+          "url": "https://www.lumosbot.tech/about/",
+          "retrieved_at": "2026-09-26",
+          "title": "Lumos Robotics about (Shenzhen and Suzhou offices)"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "weights_g": "Rotational portable 635±5; rotational full-featured 735±5; translational portable 700±5; translational full-featured 780±5",
+        "gripping_force": "2 kg max",
+        "jaw_travel_mm": "88±2",
+        "output_hz": 200,
+        "motion": "Rotational fingertips arc about a fixed axis; translational fingers stay parallel",
+        "tracking_details": "Portable: onboard pure-vision SLAM, 0.1% average relative displacement error. Full-featured: VIVE Tracker 3.0 plus base stations; vision-plus-laser with VIVE is specified at 1 mm static accuracy",
+        "main_camera": "Fisheye 1280×1280, DFOV 200°, HFOV/VFOV 172.52°, 60±1 fps",
+        "slam_cameras": "4× 640×480, HFOV 130°, 30 fps",
+        "tof": "320×240, 30±1 fps, depth error <1.5% within 2 m",
+        "imu": "6-axis ICM42688, 500 Hz",
+        "power": "5 V, max <4 W, USB 3.2 Type-C",
+        "software": "Ubuntu 20.04, ROS / ROS2",
+        "optional_modules": "Vision-tactile fingertip arrays; onboard camera module",
+        "named_dataset": "FastUMI-10K, described as available through official channels. Not verified as distinct from FastUMI-100K",
+        "origin": "Shenzhen, China (Suzhou office also listed)"
+      },
+      "notes": "Different product and company from the catalogued Fast-UMI research system (Shanghai AI Lab et al., 2024). Tactile sensing is an optional module, so the base entry is tactile none. pose_tracking records the portable pure-vision SLAM; the heavier SKUs add VIVE."
+    },
+    {
+      "id": "orbbec_umi",
+      "image_url": "https://new-orbbec3d-s3.s3.amazonaws.com/wp-content/uploads/2026/08/17135150/daq-page20260817-7-1024x674.webp",
+      "name": "Orbbec UMI Finger / UMI Gripper",
+      "full_name": "Orbbec handheld UMI Finger and UMI Gripper",
+      "organization": [
+        "Orbbec"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_parallel_jaw",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_slam",
+      "bimanual": "extensible",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "Manufactured handheld UMI Finger and UMI Gripper with fisheye RGB, mono SLAM, IMU, and opening angle, hardware-synced to under 1 ms",
+      "sources": [
+        {
+          "type": "product_page",
+          "url": "https://www.orbbec.com/robot-free-data-collection/",
+          "retrieved_at": "2026-09-26",
+          "title": "Orbbec robot-free data collection platform"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "variants": "UMI Finger opening angle 130°; UMI Gripper opening angle 60°",
+        "fisheye_rgb": "H 165° / V 130°, 2 MP",
+        "mono_slam": "H 130° / V 95°, 1.2 MP, global shutter",
+        "frame_rate": "30 fps / 60 fps",
+        "sync": "Synchronization accuracy < 1 ms on the UMI modules. Dual-EGO and Quad-EGO are specified at ≤ 1 ms",
+        "imu": "6-axis IMU plus 3-axis magnetometer",
+        "connectivity": "Wi-Fi 6 + Bluetooth 5.2",
+        "related_modules": "RGB EGO (dual or quad fisheye) and RGB-D EGO are head rigs in the same kit, not separate catalog entries. WristCam is a 2 MP fisheye under 75 g",
+        "headquarters": "Shenzhen, China; North America office in Troy, MI"
+      },
+      "notes": "EGO is documented as a companion module. Dedicated egocentric platforms stay out of the device list, so EGO is not its own entry."
+    },
+    {
+      "id": "ume",
+      "image_url": "https://arxiv.org/html/2606.14218v1/x1.png",
+      "name": "UME",
+      "full_name": "Universal Manipulation Exoskeleton",
+      "organization": [
+        "Ant Group",
+        "Stanford University"
+      ],
+      "country": "china",
+      "year_first": 2026,
+      "form_category": "wearable_arm",
+      "form_factor": "wearable_full_arm",
+      "commercialization_stage": "paper_only",
+      "tactile_integration": "none",
+      "force_torque_integration": "joint_torque",
+      "bimanual": "yes",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-09-26",
+      "key_innovation": "7-DoF upper-limb exoskeleton that records joint configuration and torque and returns the robot's joint torque to the operator; about USD 1900 in parts",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://ume-exo.github.io/",
+          "retrieved_at": "2026-09-26",
+          "title": "Universal Manipulation Exoskeleton"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2606.14218",
+          "retrieved_at": "2026-09-26",
+          "title": "arXiv:2606.14218"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "kinematics": "Matched to a human arm 3-1-3 chain: 3-DoF shoulder, 1-DoF elbow, 3-DoF wrist. Retargets to 7-DoF OpenArm, 7-DoF Franka, and 6-DoF X-ARM",
+        "cost_usd": 1900,
+        "cost_note": "Material cost of a complete UME system in the paper's bill of materials",
+        "actuators": "Quasi-direct-drive motors (Damiao-class), PLA links, 2020 extrusion",
+        "imu": "Onboard IMU for gravity compensation and mobile-base velocity, not as the arm pose sensor",
+        "modes": [
+          "teleoperation"
+        ],
+        "demonstrations": "Box pushing 26, box flipping 40, GPU picking 42, fridge drink retrieval 157",
+        "key_authors": [
+          "Litian Liang",
+          "Jingxi Xu",
+          "Xinda Qi",
+          "Yujun Cai",
+          "Houzhu Ding",
+          "Luqi Wang",
+          "Zhixin Sun",
+          "Jyh-Herng Chow",
+          "Ming Yang",
+          "Mark Cutkosky"
+        ]
+      },
+      "notes": "This is bilateral teleoperation with a robot in the loop, not robot-free handheld collection. The paper contrasts that with UMI-style devices, which record end-effector pose without joint torque. Country follows the first affiliation (Ant Group); Stanford is a co-author institution. No hardware release found."
     }
   ],
   "datasets": [
