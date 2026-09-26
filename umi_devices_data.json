@@ -3350,6 +3350,7 @@
       "organization": [
         "Reward AI"
       ],
+      "country": "us",
       "year_first": 2026,
       "form_category": "wearable_hand",
       "form_factor": "wearable_exoskeleton_hand",
@@ -3380,7 +3381,7 @@
         "related_model": "OM-1 is trained on robot-free human demonstrations from this device. The blog says a new task can be picked up from less than 30 minutes of data",
         "predecessor": "DexCap (RSS 2024), cited on the page as prior work by the same line of authors"
       },
-      "notes": "Commercial successor framing to the catalogued DexCap (Stanford) entry. No paper, CAD, price, or headquarters on the blog, so country is omitted. force_torque_integration stays none because the page does not name a force sensor."
+      "notes": "Commercial successor framing to the catalogued DexCap (Stanford) entry. Country is US. The OM-1 blog does not name a headquarters, paper, CAD, or price. force_torque_integration stays none because the page does not name a force sensor."
     },
     {
       "id": "fastumi_pro",
