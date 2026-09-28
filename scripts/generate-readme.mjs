@@ -47,6 +47,7 @@ const COUNTRY_LABELS = {
 /** Fallback descriptions for entries whose sources give no usable summary. */
 const FORM_FACTOR_PHRASES = {
   handheld_parallel_jaw: "Handheld parallel-jaw gripper for robot-free demonstration collection",
+  handheld_reacher: "Handheld reacher-grabber for robot-free data collection",
   handheld_multi_finger: "Handheld multi-finger gripper for robot-free demonstration collection",
   stick_with_phone: "Handheld stick rig that uses a smartphone as the sensor suite",
   wearable_exoskeleton_hand: "Wearable hand exoskeleton for dexterous demonstration collection",
@@ -180,6 +181,9 @@ function datasetLine(dataset) {
   if (dataset.trajectories) facts.push(`${dataset.trajectories} trajectories`);
   if (dataset.episodes) facts.push(`${dataset.episodes} episodes`);
   if (dataset.hours) facts.push(`${dataset.hours} hours`);
+  if (dataset.samples) facts.push(`${dataset.samples} samples`);
+  if (dataset.objects) facts.push(`${dataset.objects} objects`);
+  if (dataset.touches) facts.push(`${dataset.touches} touches`);
   if (dataset.tasks) facts.push(`${dataset.tasks} tasks`);
   const segments = [titleCase(dataset.type)];
   if (dataset.provider) segments.push(dataset.provider);
