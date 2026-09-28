@@ -7,7 +7,7 @@ This is a working list for catalog review — not published on the live site unt
 | Source paper | [Universal Manipulation Interface (Chi et al., RSS 2024)](https://arxiv.org/abs/2402.10329) |
 | Citation index | [Semantic Scholar](https://www.semanticscholar.org/paper/arXiv:2402.10329) (~564 citing papers, queried 2026-06-18) |
 | Catalog scope | UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection |
-| Last updated | 2026-09-26 |
+| Last updated | 2026-09-28 |
 
 ## Priority legend
 
@@ -99,6 +99,8 @@ UMI-citing hardware papers **already listed** in `umi_devices_data.json` include
 Fast-UMI, MV-UMI, UMI-3D, Cloud-UMI / UMIGen, LEGATO, ViTaMIn, ViTaMIn-B, Touch in the Wild, FlexiTac, TacUMI, exUMI, TAMEn, FreeTacMan, ForceMimic, DexCap, DexUMI, RealDexUMI, DEXOP, AirExo, AirExo-2, DexWild, YUBI, DEX-Mouse, Exo-ViHa, OmniUMI, ActiveUMI, HoMMI, ManiWAV, XRZero-G0, UMI-FT, RoboPocket, DexViTac, DexEXO, ART-Glove, Koala, Grabette, and related commercial kits (DAS, Pika Sense, etc.).
 
 Added 2026-09-26: PolyUMI, SEED-UMI, iPhUMI, Aero UMI, TwinDEX, Omnibody Hand, FastUMI Pro, Orbbec UMI Finger / UMI Gripper, UME.
+
+Added 2026-09-28: KIWI.
 
 ## Watchlist — not yet in the catalog (2026-09-26)
 
