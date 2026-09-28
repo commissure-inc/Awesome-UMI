@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**59** devices · **11** datasets
+**60** devices · **12** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -28,13 +28,14 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 <!-- BEGIN LIST -->
 ## Handheld grippers
 
-- [Dobb-E / RUM](https://dobb-e.com/) - Handheld stick rig that uses a smartphone as the sensor suite — NYU (Lerrel Pinto Lab) et al., 2023, MIT ([paper](https://arxiv.org/abs/2311.16098), [code](https://github.com/notmahi/dobb-e)).
+- [Dobb-E / RUM](https://dobb-e.com/) - Suction-cup reacher-grabber with a wrist-mounted iPhone that records RGB-D and 6-DoF pose for household demonstrations — NYU (Lerrel Pinto Lab) et al., 2023, MIT ([paper](https://arxiv.org/abs/2311.16098), [code](https://github.com/notmahi/dobb-e)).
 - [Fast-UMI](https://fastumi.com/) - No SLAM calibration required; decoupled hardware design — Shanghai AI Lab et al., 2024, MIT ([paper](https://arxiv.org/abs/2409.19499), [code](https://github.com/zxzm-zak/FastUMI_Data)).
 - [ForceMimic / ForceCapture](https://forcemimic.github.io/) - Force-Centric Imitation Learning with Force-Motion Capture System for Contact-Rich Manipulation — Shanghai Jiao Tong University, 2024, MIT ([paper](https://arxiv.org/abs/2410.07554), [code](https://github.com/ForceMimic)).
 - [LEGATO](https://ut-hcrl.github.io/LEGATO) - Cross-embodiment morphology support; same tool mountable on robot side — UT Austin Human Centered Robotics Lab et al., 2024, MIT ([paper](https://arxiv.org/abs/2411.03682)).
 - [ManiWAV](https://maniwav.github.io/) - UMI parallel-jaw gripper with embedded piezoelectric contact microphone ('ear-in-hand') for synchronous in-the-wild audio-visual demonstration collection — Stanford University et al., 2024, MIT ([paper](https://arxiv.org/abs/2406.19464)).
 - [UMI](https://umi-gripper.github.io/) - Relative-trajectory action representation, inference-time latency matching — Stanford University et al., 2024, MIT ([paper](https://arxiv.org/abs/2402.10329), [code](https://github.com/real-stanford/universal_manipulation_interface)).
 - [ActiveUMI](https://activeumi.github.io/) - Portable VR teleoperation kit with robot grippers on Meta Quest 3s controllers; records operator head motion for active egocentric perception during bimanual in-the-wild collection — Shanghai University et al., 2025 ([paper](https://arxiv.org/abs/2510.01607)).
+- [CLAMP](https://emprise.cs.cornell.edu/clamp/) - Sensorized reacher-grabber under $200 that records active and passive thermal, normal force, contact vibration, and proprioception from in-the-wild grasps — Cornell University et al., 2025, open hardware ([paper](https://arxiv.org/abs/2505.21495), [code](https://github.com/empriselab/CLAMP)).
 - [Cloud-UMI / UMIGen](https://arxiv.org/abs/2511.09302) - Records RGB and point cloud jointly; no Visual SLAM; visibility-aware optimization — Tsinghua University (Shenzhen International Graduate School), 2025, open hardware.
 - [DAS Fingers](https://www.genrobot.ai/products/finger) - Bionic two-finger handheld collector; 220 mm max opening; millimeter-level trajectory; automatic voice annotation — GenRobot AI, 2025, proprietary.
 - [DAS Gripper](https://www.genrobot.ai/products/das) - UMI-inspired handheld multimodal collector (vision, tactile, audio, IMU, magnetic encoder); MCAP output; cloud compression to ~2% of original size — GenRobot AI, 2025, proprietary.
@@ -107,6 +108,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Genie Sim Synthetic](https://github.com/AgibotTech/genie_sim) - Simulation — AgiBot — 10,000+ hours, 200 tasks.
 - [DAIMON Public Tactile](https://modelscope.cn/datasets/daimonrobotics/Daimon-Infinity) - Real / tactile — DAIMON Robotics — 10,000+ hours, 2000 tasks.
 - [HiFi-UMI-2K](https://huggingface.co/datasets/simple-world-lab/HiFi-UMI-2K) - Real / robot-free manipulation — Simple AI (Simple World Lab) — 482K+ episodes, 2000 hours.
+- [CLAMP Dataset](https://doi.org/10.7910/DVN/HNS2Z4) - Real / haptic — Cornell University (EmPRISE Lab) — 12.3M samples, 5357 objects, 25.1k touches.
 
 ## Standards and policy
 

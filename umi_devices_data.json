@@ -11,6 +11,7 @@
       "label": "Form factor",
       "values": [
         "handheld_parallel_jaw",
+        "handheld_reacher",
         "handheld_multi_finger",
         "wearable_exoskeleton_hand",
         "wearable_full_arm",
@@ -1342,7 +1343,7 @@
     },
     {
       "form_category": "handheld_gripper",
-      "form_factor": "stick_with_phone",
+      "form_factor": "handheld_reacher",
       "sources": [
         {
           "type": "project_page",
@@ -1362,7 +1363,7 @@
         }
       ],
       "confidence": "medium",
-      "last_verified_at": "2026-06-13",
+      "last_verified_at": "2026-09-28",
       "id": "dobb_e",
       "country": "us",
       "image_url": "https://raw.githubusercontent.com/notmahi/dobb-e/main/hardware/img/stick.png",
@@ -1373,6 +1374,7 @@
       ],
       "name": "Dobb-E / RUM",
       "status": "active",
+      "key_innovation": "Suction-cup reacher-grabber with a wrist-mounted iPhone that records RGB-D and 6-DoF pose for household demonstrations",
       "commercialization_stage": "oss_diy",
       "specs": {
         "main_camera": "iPhone wrist-mounted",
@@ -1382,7 +1384,7 @@
         ],
         "limitations": "Mostly quasi-static tasks; environment-specific fine-tuning required"
       },
-      "notes": "legacy_category: stick_phone",
+      "notes": "legacy_category: stick_phone. The Stick is a modified suction-cup reacher-grabber, the same end-effector family as CLAMP; the iPhone is the sensor suite, not a parallel jaw.",
       "tactile_integration": "none",
       "force_torque_integration": "none",
       "pose_tracking": "visual_inertial",
@@ -3542,6 +3544,88 @@
         ]
       },
       "notes": "This is bilateral teleoperation with a robot in the loop, not robot-free handheld collection. The paper contrasts that with UMI-style devices, which record end-effector pose without joint torque. Country follows the first affiliation (Ant Group); Stanford is a co-author institution. No hardware release found."
+    },
+    {
+      "id": "clamp",
+      "image_url": "https://arxiv.org/html/2505.21495v1/device_fig.png",
+      "name": "CLAMP",
+      "full_name": "CLAMP: Crowdsourcing a LArge-scale in-the-wild haptic dataset with an open-source device for Multimodal robot Perception",
+      "organization": [
+        "Cornell University",
+        "Horace Mann School"
+      ],
+      "country": "us",
+      "year_first": 2025,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_reacher",
+      "commercialization_stage": "oss_diy",
+      "tactile_integration": "contact_microphone",
+      "force_torque_integration": "single_axis",
+      "bimanual": "no",
+      "license": "diy_open",
+      "status": "active",
+      "confidence": "high",
+      "last_verified_at": "2026-09-28",
+      "key_innovation": "Sensorized reacher-grabber under $200 that records active and passive thermal, normal force, contact vibration, and proprioception from in-the-wild grasps",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://emprise.cs.cornell.edu/clamp/",
+          "retrieved_at": "2026-09-28",
+          "title": "CLAMP project page"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2505.21495",
+          "retrieved_at": "2026-09-28",
+          "title": "arXiv:2505.21495"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/empriselab/CLAMP",
+          "retrieved_at": "2026-09-28",
+          "title": "empriselab/CLAMP (BSD-3-Clause)"
+        },
+        {
+          "type": "documentation",
+          "url": "https://drive.google.com/drive/folders/1FkFGbOMj69s8Z-Nmrkd4y_z2_A-sAAO4?usp=sharing",
+          "retrieved_at": "2026-09-28",
+          "title": "Hardware and assembly files"
+        }
+      ],
+      "specs": {
+        "year_latest": 2025,
+        "venue": "CoRL 2025",
+        "endeffector": "Modified reacher-grabber; sensorized suction cups can mount on robot end-effectors",
+        "weight_kg": 0.59,
+        "cost_usd": 200,
+        "cost_note": "Paper states the build cost is under $200",
+        "compute": "Raspberry Pi Zero 2W and Raspberry Pi Pico on a custom PCB, with a 2.2 inch PiTFT GUI",
+        "haptic_modalities": "Active thermal (heated to 55°C), passive thermal, FSR normal force, contact microphone, and relative proprioception from a fingertip IMU and a body IMU",
+        "sample_rate_hz": "50 Hz for all sensors except the contact microphone at 100 Hz",
+        "annotation": "Still image of the object plus spoken annotation, guided by the on-device GUI",
+        "code_license": "BSD-3-Clause",
+        "supported_robots": [
+          "Franka Panda",
+          "other end-effectors via the sensorized cups"
+        ],
+        "datasets_public": true,
+        "datasets": [
+          {
+            "name": "CLAMP Dataset",
+            "url": "https://doi.org/10.7910/DVN/HNS2Z4",
+            "samples": "12.3M",
+            "objects": 5357,
+            "touches": "25.1k"
+          }
+        ],
+        "key_authors": [
+          "Pranav N. Thakkar",
+          "Shubhangi Sinha",
+          "Tapomayukh Bhattacharjee"
+        ]
+      },
+      "notes": "Collects crowdsourced haptic grasps for material and compliance recognition, not end-effector trajectory demonstrations. The end-effector is a modified reacher-grabber whose cups pivot closed, not a parallel-jaw gripper. IMUs measure relative fingertip motion, so this entry has no catalog pose-tracking method. Learning code is BSD-3-Clause; CAD and assembly files are in the project Drive folder."
     }
   ],
   "datasets": [
@@ -3638,6 +3722,17 @@
       "episodes": "482K+",
       "hours": 2000,
       "format": "LeRobot v3.0"
+    },
+    {
+      "name": "CLAMP Dataset",
+      "url": "https://doi.org/10.7910/DVN/HNS2Z4",
+      "provider": "Cornell University (EmPRISE Lab)",
+      "arxiv": "2505.21495",
+      "type": "real / haptic",
+      "samples": "12.3M",
+      "objects": 5357,
+      "touches": "25.1k",
+      "format": "npz"
     }
   ],
   "policy_standards": [

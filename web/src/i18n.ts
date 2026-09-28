@@ -127,6 +127,7 @@ const POSE_TRACKING_LABELS: Record<Locale, Record<string, string>> = {
 const FORM_FACTOR_LABELS: Record<Locale, Record<string, string>> = {
   ja: {
     handheld_parallel_jaw: "ハンドヘルド（平行グリッパ）",
+    handheld_reacher: "ハンドヘルド（リーチャー）",
     handheld_multi_finger: "ハンドヘルド（多指）",
     wearable_exoskeleton_hand: "手部外骨格",
     wearable_exoskeleton_hand_passive: "手部外骨格（受動）",
@@ -144,6 +145,7 @@ const FORM_FACTOR_LABELS: Record<Locale, Record<string, string>> = {
   },
   en: {
     handheld_parallel_jaw: "Handheld (parallel jaw)",
+    handheld_reacher: "Handheld (reacher-grabber)",
     handheld_multi_finger: "Handheld (multi-finger)",
     wearable_exoskeleton_hand: "Hand exoskeleton",
     wearable_exoskeleton_hand_passive: "Hand exoskeleton (passive)",

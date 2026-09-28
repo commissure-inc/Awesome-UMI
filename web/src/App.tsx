@@ -104,6 +104,9 @@ function datasetScale(row: Record<string, unknown>): string {
   if (s("trajectories")) parts.push(`${s("trajectories")} traj.`);
   if (s("episodes")) parts.push(`${s("episodes")} ep.`);
   if (s("hours")) parts.push(`${s("hours")}h`);
+  if (s("samples")) parts.push(`${s("samples")} samples`);
+  if (s("objects")) parts.push(`${s("objects")} objects`);
+  if (s("touches")) parts.push(`${s("touches")} touches`);
   if (s("transitions")) parts.push(`${s("transitions")} trans.`);
   if (s("tasks")) parts.push(`${s("tasks")} tasks`);
   if (s("stage1_h") || s("stage2_h")) {
