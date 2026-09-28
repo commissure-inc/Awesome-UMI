@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**60** devices · **12** datasets
+**61** devices · **12** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -49,6 +49,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [FastUMI Pro](https://www.lumosbot.tech/products/fastumi-pro/) - Lumos production handheld collector, separate from the 2024 Fast-UMI rig: from 635 g, 200 Hz, with vision SLAM or VIVE tracking to 1 mm static accuracy — Lumos Robotics, 2026, proprietary.
 - [HoMMI](https://hommi-robot.github.io/) - UMI grippers augmented with egocentric sensing for whole-body mobile manipulation; cross-embodiment hand-eye policy with embodiment-agnostic 3D visual representation — Stanford University et al., 2026 ([paper](https://arxiv.org/abs/2603.03243), [code](https://github.com/xxm19/hommi)).
 - [iPhUMI](https://behavior-prompting.github.io/) - UMI gripper with the GoPro replaced by an iPhone 15 Pro, using on-device ARKit for real-time pose and supporting bimanual plus optional head-camera capture — Stanford University, 2026, MIT ([paper](https://arxiv.org/abs/2606.30457), [code](https://github.com/real-stanford/iPhUMI)).
+- [KIWI](https://lingfeng.moe/KIWI/) - Passive chopstick grippers with wrist-mounted Insta360 X5 cameras: rear lenses register both hands in one metric map, and one demo reconstructs a 3D Gaussian scene — Autel US, 2026 ([paper](https://arxiv.org/abs/2609.22809)).
 - [Koala](https://rai-inst.com/resources/blog/handheld-robotic-data-collection/) - Co-designed handheld and electrically actuated variants share linkages, finger geometry, and sensor suite — RAI Institute, 2026, proprietary.
 - [Mantis UMI](https://www.almond.bot/mantis-umi) - Handheld pair sharing the exact gripper geometry of the vendor's Axol dual-arm robot for direct policy transfer — Almond AI, 2026, partially open source ([code](https://github.com/almond-bot/axol)).
 - [OmniUMI](https://baai-aether.github.io/OmniUMI/) - Handheld multimodal UMI capturing RGB, depth, trajectory, marker-based tactile images, internal grasping force, and external wrench with bilateral gripper feedback — Beijing Academy of Artificial Intelligence, 2026 ([paper](https://arxiv.org/abs/2604.10647)).

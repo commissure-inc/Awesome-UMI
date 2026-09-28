@@ -3626,6 +3626,86 @@
         ]
       },
       "notes": "Collects crowdsourced haptic grasps for material and compliance recognition, not end-effector trajectory demonstrations. The end-effector is a modified reacher-grabber whose cups pivot closed, not a parallel-jaw gripper. IMUs measure relative fingertip motion, so this entry has no catalog pose-tracking method. Learning code is BSD-3-Clause; CAD and assembly files are in the project Drive folder."
+    },
+    {
+      "id": "kiwi",
+      "image_url": "https://lingfeng.moe/KIWI/assets/figures/kit/a.webp",
+      "name": "KIWI",
+      "full_name": "Kinematic Interface for the Wild: Modular Bimanual Loco-Manipulation Capture from 360° Cameras Alone",
+      "organization": [
+        "Autel US"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "handheld_gripper",
+      "form_factor": "handheld_multi_finger",
+      "commercialization_stage": "paper_only",
+      "tactile_integration": "none",
+      "force_torque_integration": "none",
+      "pose_tracking": "visual_inertial",
+      "bimanual": "yes",
+      "status": "active",
+      "confidence": "high",
+      "last_verified_at": "2026-09-28",
+      "key_innovation": "Passive chopstick grippers with wrist-mounted Insta360 X5 cameras: rear lenses register both hands in one metric map, and one demo reconstructs a 3D Gaussian scene",
+      "sources": [
+        {
+          "type": "project_page",
+          "url": "https://lingfeng.moe/KIWI/",
+          "retrieved_at": "2026-09-28",
+          "title": "KIWI project page"
+        },
+        {
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2609.22809",
+          "retrieved_at": "2026-09-28",
+          "title": "arXiv:2609.22809"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "venue": "arXiv preprint, submitted 2026-09-19",
+        "endeffector": "Passive hinged chopstick gripper. An ALOHA-style parallel jaw and a bare-hand wrist cuff are also designed",
+        "chopstick_opening_mm": 195,
+        "weight_g": 367,
+        "weight_note": "Chopstick module including the Insta360 X5",
+        "main_camera": "Two Insta360 X5 cameras, one per hand. Each camera's rear fisheye faces the room and the front fisheye records the grasp. Onboard IMU and microphone",
+        "optional_head_camera": "Insta360 GO 3 plus an ArUco marker on a hat, posed from the wrist rear lenses",
+        "cost_usd": 1099.98,
+        "cost_note": "The two X5 cameras, from store.insta360.com in September 2026. The optional GO 3 adds US$349.99 (August 2026). Printed parts are not itemized",
+        "quick_release": "Modified Arca-Swiss plate shared by the camera module, handheld tools, and robot flanges",
+        "tracking_details": "Offline ORB-SLAM3 builds one front map per wrist and one shared rear map, then a per-wrist factor graph fuses those localizations with raw IMU. The rear map registers both hands without requiring the two front views to see the same workspace",
+        "pose_accuracy": "Median translation error 4.31 mm and 4.48 mm for the two hands against evaluation fiducials. The project page rounds this to 4.5 mm",
+        "localization": "Rear plus front lenses failed to localize 0.1% of query frames across six bimanual recordings. Front-only cross-hand alignment failed on 24.8% and lost one recording",
+        "synchronization": "Shared ambient audio. A same-model X5 pair was within 1.9 ms of an optical clock; mixed X5 and GO 3 offsets were within 2.5 ms and 4.7 ms",
+        "gripper_opening": "Printed red dots on each chopstick jaw, read from the front video. RMSE 0.17° against a servo encoder",
+        "outputs": [
+          "synchronized fisheye video",
+          "tool-tip 6-DoF poses",
+          "gripper opening",
+          "camera height above an estimated floor",
+          "3D Gaussian scene from the four wrist streams of one demo"
+        ],
+        "supported_robots": [
+          "Franka",
+          "YAM",
+          "OpenArm"
+        ],
+        "robot_mount_source": "Named in the project-page hardware video. The paper describes matching robot flanges without listing those arms",
+        "robot_free_collection": true,
+        "open_source": "Planned. The paper's open-source mark is for a future release, and the project page lists code as coming soon",
+        "key_authors": [
+          "Benjamin C. Yang",
+          "Weiying Wang",
+          "Shenggao Li",
+          "Keming Yan",
+          "Sasha Wilkinson",
+          "Zelin Wang",
+          "Yip Fun Yeung",
+          "Lingfeng Sun"
+        ]
+      },
+      "notes": "All authors are with Autel US. The primary tool is a passive two-finger chopstick gripper with hinged jaws, so this is filed with the other non-parallel handheld grippers. The project page shows the chopstick, on the hand and on a robot flange, as available; parallel jaw, wrist cuff, and robot hand are marked coming soon even though the paper describes the parallel jaw and wrist cuff. No public repository yet, so there is no license field. The tool carries no electronics beyond the cameras."
     }
   ],
   "datasets": [
