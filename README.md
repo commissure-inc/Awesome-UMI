@@ -5,7 +5,7 @@
 Universal Manipulation Interface (UMI) style devices let people record manipulation demonstrations without a robot in the loop — handheld grippers and hand or arm wearables — together with the datasets and standards that surround them. Every entry is compiled from public sources (papers, project pages, repositories, product pages) and can be filtered and compared on the [live catalog](https://commissure-inc.github.io/Awesome-UMI/).
 
 <!-- BEGIN SUMMARY -->
-**61** devices · **12** datasets
+**62** devices · **12** datasets
 <!-- END SUMMARY -->
 
 Entries are grouped by device form and ordered oldest first. Each line reads: name, one-line summary, then organization, first public year, and license.
@@ -85,6 +85,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 - [Omnibody Hand](https://rewardai.com/blog/OM-1/) - 7-DoF wearable, built on DexCap, that records tactile, proximity, global-shutter in-hand video, and electromagnetic pose at natural human speed — Reward AI, 2026, proprietary.
 - [PXCap III](https://paxini.com/us/ax/pxcap3) - 1:1 collection-execution isomorphism with PXDex III robotic hand — PaXini Tech, 2026, proprietary.
 - [RealDexUMI](https://research.beingbeyond.com/realdexumi) - Shared dexterous end-effector module with in-hand vision and fingertip tactile sensing; zero-gap collection-to-deployment data via matched observations, contacts, and hand actions — BeingBeyond, 2026, proprietary ([paper](https://arxiv.org/abs/2606.06033)).
+- [S1](https://www.origami-robotics.com/s1) - Soft glove that records 20 encoder joint angles and fingertip and palm pressure, and uses each angle as the position target for the matching robot-hand joint — Origami Robotics, 2026, proprietary.
 - [SEED-UMI](https://tengbo-yu.github.io/SEED-UMI/) - Exoskeleton worn by both the person and a 20-DoF robot hand, so encoders and a wrist camera measure the same mechanism during collection and execution — Peking University et al., 2026 ([paper](https://arxiv.org/abs/2609.11753)).
 - [TwinDEX](https://x2robot.com/en/pages/twindex) - Wearable three-finger, 9-DoF exoskeleton (7 active, 2 passive) paired with a matched robot hand for contact-rich collection without a robot in the loop — X Square Robot, 2026, proprietary.
 
@@ -120,6 +121,7 @@ Entries are grouped by device form and ordered oldest first. Each line reads: na
 ## Talks and articles
 
 - [Getting a Grip on Robotic Data Collection](https://www.youtube.com/watch?v=8Ip5ehvsUlk) - Video — RAI Institute, 2026-05-12 — Challenges in handheld data collection (transfer is hard when the robot gripper uses a different interface) and the Koala gripper approach of co-designing human and robot linkages.
+- [A million hours of what?](https://www.origami-robotics.com/blog/a-million-hours-of-what) - Article — Origami Robotics, 2026-10-22 — How S1 records 20 encoder joint angles, fingertip and palm pressure, and wrist video on one timeline, and uses each angle as the position target for the matching robot-hand joint.
 <!-- END LIST -->
 
 ## Web catalog
