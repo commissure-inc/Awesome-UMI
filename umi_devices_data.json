@@ -3706,6 +3706,61 @@
         ]
       },
       "notes": "All authors are with Autel US. The primary tool is a passive two-finger chopstick gripper with hinged jaws, so this is filed with the other non-parallel handheld grippers. The project page shows the chopstick, on the hand and on a robot flange, as available; parallel jaw, wrist cuff, and robot hand are marked coming soon even though the paper describes the parallel jaw and wrist cuff. No public repository yet, so there is no license field. The tool carries no electronics beyond the cameras."
+    },
+    {
+      "id": "origami_s1",
+      "image_url": "https://framerusercontent.com/assets/ivnCJcrJMZVYccFm7gAshX3hos4.jpg",
+      "name": "S1",
+      "full_name": "Origami Robotics S1 skill capture glove",
+      "organization": [
+        "Origami Robotics"
+      ],
+      "country": "us",
+      "year_first": 2026,
+      "form_category": "wearable_hand",
+      "form_factor": "wearable_exoskeleton_hand",
+      "commercialization_stage": "commercial_product",
+      "tactile_integration": "type_unspecified",
+      "force_torque_integration": "none",
+      "pose_tracking": null,
+      "bimanual": "yes",
+      "license": "commercial_closed",
+      "status": "active",
+      "confidence": "medium",
+      "last_verified_at": "2026-10-22",
+      "key_innovation": "Soft glove that records 20 encoder joint angles and fingertip and palm pressure, and uses each angle as the position target for the matching robot-hand joint",
+      "sources": [
+        {
+          "type": "article",
+          "url": "https://www.origami-robotics.com/blog/a-million-hours-of-what",
+          "retrieved_at": "2026-10-22",
+          "title": "A million hours of what?"
+        },
+        {
+          "type": "product_page",
+          "url": "https://www.origami-robotics.com/s1",
+          "retrieved_at": "2026-10-22",
+          "title": "S1 data collection gloves"
+        }
+      ],
+      "specs": {
+        "year_latest": 2026,
+        "published": "2026-10-22 blog",
+        "joints": "20 finger joint angles from joint encoders. The co-design video shows the MCP, PIP, and DIP joints moved independently",
+        "mapping": "The glove and robot hand share a joint arrangement. Each measured glove angle is a position target for the corresponding robot joint, with no geometric retargeting solver for these finger movements",
+        "tactile": "Pressure at the fingertips and palm, on the same timeline as the joint angles. The same tactile sensors are used on the glove and the robot hand. The sensor principle is not named. The product page shows traces for the thumb, index, and middle finger",
+        "main_camera": "Wrist-mounted global-shutter camera",
+        "wrist_pose": "The product page lists hand pose and wrist trajectories, including left and right wrists in metres. The tracking method is not named. OptiTrack was used to check calculated fingertip positions, not as the collection tracker",
+        "accuracy_check": "In one OptiTrack comparison, forward kinematics from the glove was millimeter-level at the index, middle, and ring fingertips, in the glove wrist frame",
+        "fit": "Soft shell, replacing an earlier rigid shell that fit only a subset of hands. Each wearer still fits and calibrates the glove before recording",
+        "earlier_version": "A rigid-shell glove was deployed in a couple of factories about seven months before this post",
+        "contact_gap": "Because fit varies, contact location and pressure distribution can differ from the robot hand at the same joint angles. A learned contact-alignment model is in development and is not part of this release",
+        "object_tracking": "In-house tracking of handled objects, including articulated objects, shown on a pipette and a stapler. A fuller description is left to a later post",
+        "derived_hand_geometry": "The product page shows 21-point skeletons and a hand surface computed from the recorded joint readings",
+        "availability": "Mass production has started. Access is by request",
+        "origin": "San Francisco, CA"
+      },
+      "notes": "The blog cites UMI for collection-to-execution correspondence and contrasts S1 with DexUMI: DexUMI preserves the target hand's joint-to-fingertip mapping, while S1 allows more variation in fit. Tactile technology is not named, so tactile_integration is type_unspecified. The wrist-trajectory method is not named, so pose_tracking is null. The millimeter figure is one wrist-frame comparison, not a general error budget. Factory photos in the post are the earlier rigid shell. A second-generation robot hand is mentioned as future work."
     }
   ],
   "datasets": [
@@ -3880,6 +3935,40 @@
         }
       ],
       "last_verified_at": "2026-05-14",
+      "confidence": "high",
+      "status": "active"
+    },
+    {
+      "id": "origami_s1_million_hours_2026",
+      "kind": "article",
+      "title": "A million hours of what?",
+      "canonical_url": "https://www.origami-robotics.com/blog/a-million-hours-of-what",
+      "publisher": "Origami Robotics",
+      "published_at": "2026-10-22",
+      "language": "en",
+      "summary": "How S1 records 20 encoder joint angles, fingertip and palm pressure, and wrist video on one timeline, and uses each angle as the position target for the matching robot-hand joint.",
+      "tags": [
+        "s1",
+        "skill_capture_glove",
+        "dexterous_data",
+        "tactile",
+        "umi",
+        "dexumi"
+      ],
+      "related_product_ids": [
+        "origami_s1",
+        "umi",
+        "dexumi"
+      ],
+      "sources": [
+        {
+          "type": "article",
+          "url": "https://www.origami-robotics.com/blog/a-million-hours-of-what",
+          "title": "Origami Robotics blog",
+          "retrieved_at": "2026-10-22"
+        }
+      ],
+      "last_verified_at": "2026-10-22",
       "confidence": "high",
       "status": "active"
     }
