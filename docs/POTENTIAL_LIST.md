@@ -7,7 +7,7 @@ This is a working list for catalog review — not published on the live site unt
 | Source paper | [Universal Manipulation Interface (Chi et al., RSS 2024)](https://arxiv.org/abs/2402.10329) |
 | Citation index | [Semantic Scholar](https://www.semanticscholar.org/paper/arXiv:2402.10329) (~564 citing papers, queried 2026-06-18) |
 | Catalog scope | UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection |
-| Last updated | 2026-09-28 |
+| Last updated | 2026-10-25 |
 
 ## Priority legend
 
@@ -28,6 +28,12 @@ This is a working list for catalog review — not published on the live site unt
 | UMI-Underwater | 2026 | [2603.27012](https://arxiv.org/abs/2603.27012) | Underwater manipulation without underwater teleop |
 | Humanoid Manipulation Interface | 2026 | [2602.06643](https://arxiv.org/abs/2602.06643) | Robot-free humanoid whole-body demonstrations |
 | EgoGuide | 2026 | [2606.14665](https://arxiv.org/abs/2606.14665) | Synchronized wrist + head cameras for UMI-style collection |
+| [FOMI](https://robbyant-research.github.io/FOMI/) | 2026 | [2610.19839](https://arxiv.org/abs/2610.19839) | Bimanual handheld UMI with scissor-linkage mechanical force feedback (no force sensors); also usable for teleop. HKUST / HKU / Robbyant |
+| [TacThru-UMI](https://tacthru.yuyang.li/) | 2025 | [2512.09851](https://arxiv.org/abs/2512.09851) | See-through-skin (STS) sensor for simultaneous visual + tactile perception on a UMI gripper. PKU / BIGAI, RA-L |
+| [N0-TacUMI](https://research.neoteai.com/n0-foundation/) | 2026 | [2608.29601](https://arxiv.org/abs/2608.29601) | Handheld parallel gripper: 160° fisheye wrist camera + two vision-based tactile sensors, low-drift IR 6-DoF tracking, magnetic aperture sensing. NeoteAI / Fudan; part of N0-Foundation |
+| [HALOMI](https://halomi-humanoid.github.io/) | 2026 | [2606.18772](https://arxiv.org/abs/2606.18772) | UMI + egocentric sensing: head + hand tracking and active ego view for humanoid loco-manipulation (Unitree G1). SJTU HIROL Lab |
+| [PanTact](https://pantact.github.io/) | 2026 | [2610.12558](https://arxiv.org/abs/2610.12558) | Bimanual UMI grippers + egocentric vision + wearable body contact patches for humanoid whole-body dexterity. Stanford / Amazon FAR / CMU |
+| [EgoMI](https://egocentric-manipulation-interface.github.io/) | 2025 | [2511.00153](https://arxiv.org/abs/2511.00153) | Quest 3S headset with head camera plus controller-mounted wrist cameras and robot flange mounts; active vision + whole-body data for semi-humanoids. UC Berkeley / xdof.ai |
 
 ## P2 — Wearable / exoskeleton / tactile interfaces
 
@@ -62,6 +68,7 @@ This is a working list for catalog review — not published on the live site unt
 | X-Capture | 2025 | [2504.02318](https://arxiv.org/abs/2504.02318) | Open-source portable multi-sensory learning device |
 | Touch-Linked Sleeve | 2025 | — | Haptic interface for augmented tactile teleop perception |
 | Grasp EveryThing (GET) | 2025 | [2505.09771](https://arxiv.org/abs/2505.09771) | 1-DoF 3-fingered gripper with tactile sensing |
+| [EgoHumanoid](https://opendrivelab.com/EgoHumanoid) | 2026 | [2602.10106](https://arxiv.org/abs/2602.10106) | Portable robot-free egocentric collection system for humanoid loco-manipulation; mainly a human + robot co-training framework, hardware details thin. OpenDriveLab |
 
 ## P4 — Teleoperation platforms (scope borderline)
 
@@ -91,6 +98,10 @@ These papers reference UMI but are primarily **algorithms, control stacks, or da
 | RDT2 | 2026 | [2602.03310](https://arxiv.org/abs/2602.03310) | Scaling study on UMI data; no new IF |
 | UMI-Bench 1.0 | 2026 | [2606.10382](https://arxiv.org/abs/2606.10382) | Benchmark, not hardware |
 | DM-UMI / BRIDGE | 2026 | [2606.26603](https://arxiv.org/abs/2606.26603) | Lab rig supporting a policy paper; no standalone device release |
+| [MILD / AprilVINS](https://mild-web.github.io/) | 2026 | [2610.09857](https://arxiv.org/abs/2610.09857) | Millimeter-level end-effector localization method + dataset for UMI-style teaching; no new gripper |
+| [Data Scaling Laws](https://data-scaling-laws.github.io/) | 2024 | [2410.18647](https://arxiv.org/abs/2410.18647) | ICLR 2025 oral; scaling study on 40k+ UMI demonstrations; no new IF |
+| [GiT (Grounded in Time)](https://kk-stephen.github.io/grounded-in-time/) | 2026 | [2610.04255](https://arxiv.org/abs/2610.04255) | Temporal-grounding dataset and benchmark incl. UMI-style bimanual demos; benchmark, not hardware |
+| [Data Pyramid](https://jasper-aaa.github.io/embodied-data-pyramid/) | 2026 | [2607.24744](https://arxiv.org/abs/2607.24744) | Survey with a UMI-data taxonomy and dataset table; useful source list, not hardware |
 
 ## Already in catalog (for reference)
 
@@ -122,13 +133,16 @@ Public enough to revisit, but thinner or still overlapping an existing entry. Pi
 
 ## Dataset candidates
 
-Devices for these are already catalogued, or the dataset itself is not yet shown to be distinct.
+Devices for these are already catalogued, listed above as candidates, or the dataset itself is not yet shown to be distinct.
 
 | Name | Source | Notes |
 |------|--------|-------|
 | YUBI dataset (AIRoA) | [UMI Arena](https://umi-olympics.airoa.io/) | YUBI is catalogued. Arena materials describe a large handheld-data release; confirm the public split before adding a dataset row |
 | FastUMI-10K | [FastUMI Pro product page](https://www.lumosbot.tech/products/fastumi-pro/) | Named as available through official channels. Not checked against the already-listed FastUMI-100K |
 | ROCO IROS 2026 UMI Dataset | [Hugging Face](https://huggingface.co/datasets/rocochallenge2025/roco_iros2026_umi_dataset) | LeRobot episodes for an IROS challenge. Collection device is not a new interface |
+| OpenNeoData | [Hugging Face](https://huggingface.co/datasets/NeoteAIEmbodied/OpenNeoData) / [N0-Foundation](https://research.neoteai.com/n0-foundation/) | 200k+ trajectories, 5,000+ hours across 6 embodiments incl. two handheld UMI device families (N0-TacUMI, P1 above); two gel visuotactile cameras on every gripper, 30 fps. Public subset of the 30k-hour NeoData corpus |
+| Hy-Embodied-0.5-VLA-Data | [Hugging Face](https://huggingface.co/datasets/tencent/Hy-Embodied-0.5-VLA-Data) / [Tencent TAIROS](https://tairos.tencent.com/openSourceModels/hy-embodied-0.5-vla) | ~2,163 hours (22 tables × ~99.9 h), 70+ bimanual tasks, Lance format, ~18.8 TB. Collected with a custom fingertip UMI device + optical mocap that is not itself catalogued |
+| Hoi! | [Project page](https://timengelbracht.github.io/Hoi-Dataset-Website/) / [2512.04884](https://arxiv.org/abs/2512.04884) | 3,048 sequences, 381 articulated objects, 38 environments, 4 embodiments incl. a handheld UMI gripper and a custom force + tactile Hoi! gripper (CAD released). ETH Zurich et al.; the Hoi! gripper may merit a device row |
 
 ## How to promote an entry
 
