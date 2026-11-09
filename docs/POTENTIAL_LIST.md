@@ -7,7 +7,7 @@ This is a working list for catalog review — not published on the live site unt
 | Source paper | [Universal Manipulation Interface (Chi et al., RSS 2024)](https://arxiv.org/abs/2402.10329) |
 | Citation index | [Semantic Scholar](https://www.semanticscholar.org/paper/arXiv:2402.10329) (~564 citing papers, queried 2026-06-18) |
 | Catalog scope | UMI-style handheld and hand/wearable interfaces for tactile and manipulation motion data collection |
-| Last updated | 2026-11-06 |
+| Last updated | 2026-11-09 |
 
 ## Priority legend
 
@@ -36,6 +36,7 @@ This is a working list for catalog review — not published on the live site unt
 | [EgoMI](https://egocentric-manipulation-interface.github.io/) | 2025 | [2511.00153](https://arxiv.org/abs/2511.00153) | Quest 3S headset with head camera plus controller-mounted wrist cameras and robot flange mounts; active vision + whole-body data for semi-humanoids. UC Berkeley / xdof.ai |
 | [OpenJaws](https://open-jaws.github.io/) | 2026 | [2610.36598](https://arxiv.org/abs/2610.36598) | Open-hardware UMI: modular 3D-printed gripper, ISO 9409-1-50-4-M6 flange, and a global-shutter fisheye stereo camera for metric self-localization; the same gripper bolts on for deployment. Apache-2.0 claimed; code, hardware, and data are still marked coming soon. NVIDIA |
 | [DexPort](https://amberxie88.github.io/dexport/) | 2026 | [2610.32969](https://arxiv.org/abs/2610.32969) | Handheld 20-DoF Wuji hand plus fisheye camera on a Quest 2 controller; the same hand–camera module is used for collection and deployment, and commanded joint targets are recorded. Explicit UMI / DexUMI lineage, separate from the catalogued SEED-UMI exoskeleton. Code and printable parts: [amazon-far/dexport](https://github.com/amazon-far/dexport). Amazon FAR / Stanford / UCSD |
+| [Specialist](https://specialist-ai.github.io/) | 2026 | — | Open handheld UMI: finger-driven gripper with an Insta360 X3 (dual fisheye, IMU, and audio) and printed AprilTag anchors; offline reconstruction yields a metric 6-DoF trajectory and gripper opening, and a matched actuated gripper shares the fingers and camera pose so policies deploy without retargeting. No computer, cable, or external tracker while collecting ($320, 315 g). Paper marked coming soon. Code: [specialist-ai/specialist](https://github.com/specialist-ai/specialist). UC Berkeley |
 
 ## P2 — Wearable / exoskeleton / tactile interfaces
 
